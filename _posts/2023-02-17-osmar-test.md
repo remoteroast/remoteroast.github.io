@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Coffee Makes Me Poop!"
+title:  "Beep Boop!"
 author: osmar
 categories: [ Jekyll, tutorial ]
 image: assets/images/12.jpg

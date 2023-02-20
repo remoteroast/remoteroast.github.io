@@ -789,6 +789,7 @@ iframe {
         border-radius: 0;
         background-image: url(../images/jumbotron.jpg);
         background-size: cover;
+        display: none;
     }
 
     .jumbotron.fortags .col-md-4 {
@@ -807,6 +808,7 @@ iframe {
     border-radius: 0;
     background-image: url(../images/jumbotron.jpg);
     background-size: cover;
+    display: none;
 }
 
 .jumbotron.fortags a {

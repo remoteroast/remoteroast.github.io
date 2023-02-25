@@ -2,12 +2,172 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remote Roast</title>
-    <description>Roasting remotely.</description>
+    <description>Rating Twin Cities coffee shops for remote work.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Feb 2023 12:31:14 -0600</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2023 12:31:14 -0600</lastBuildDate>
+    <pubDate>Sat, 25 Feb 2023 12:33:42 -0600</pubDate>
+    <lastBuildDate>Sat, 25 Feb 2023 12:33:42 -0600</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Welcome to Remote Roast!</title>
+        <description>&lt;h4&gt;Do you work remotely? Trying to find good coffee shops to work at? You&apos;ve come to the right place!&lt;/h4&gt;
+
+&lt;p&gt;In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn&apos;t break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?&lt;/p&gt;
+
+&lt;p&gt;So, data nerds that we are, we decided to put all of our findings in one place so you don&apos;t have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.&lt;/p&gt;
+
+&lt;h4&gt;Who are we?&lt;/h4&gt;
+
+&lt;div class=&quot;image-txt-container&quot;&gt;
+ &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/osmar.png&quot; alt=&quot;Osmar&quot; /&gt; 
+ &lt;a&gt;After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he&apos;s also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;image-txt-container&quot;&gt;
+   &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/juliet.jpeg&quot; alt=&quot;Juliet&quot; /&gt;  
+ &lt;a&gt;After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that is working on their debut EP. &lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;so-how-are-we-doing-this-thing&quot;&gt;So how are we doing this thing?&lt;/h4&gt;
+&lt;h5 id=&quot;like-any-good-scientists-we-have-a-rigorous-methodology-kind-of&quot;&gt;&lt;em&gt;Like any good scientists, we have a rigorous methodology… kind of&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;Most food critics keep their identities hidden. They return to a restaurant multiple times to taste everything on the menu. They get a well rounded view of the different menu items, the atmosphere and service, all while remaining anonymous so that the service they receive is not skewed.
+&lt;br /&gt;
+Unfortunately for us (and for you), we can’t afford every menu item. But on the plus side, we’re a couple of nobody Zillennials, so we fly by under the radar unrecognizable to baristas worldwide.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;but-onto-the-good-stuff&quot;&gt;&lt;em&gt;But onto the good stuff…&lt;/em&gt;&lt;/h5&gt;
+&lt;p&gt;We’ll be measuring and collecting a variety of data points about each coffee shop – some objective, some not – and sharing them with you. Here’s a look at some of our quantitative data (that’s nerd speak for numbers).&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Wifi Speed (mbps)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;410&lt;/td&gt;
+      &lt;td&gt;83.5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;30%&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ll accompany that data with illustrative descriptions like: 
+&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;The millennial pink bathroom has all the amenities a girl could dream of. Nobody judged us for going in and out every 20 minutes.&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+Next, we’ll get more into the coffee, sharing both quantitative (you know what that means now) with qualitative (read: words/categories) data points:&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$3.50&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;$4.50&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Few&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;These too will have pretentious descriptions like:
+&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;Juliet sipped on an espresso tonic with flavor notes of stone fruit and bullshit. Osmar opted for a matcha latte and questioned whether the milk was dairy or his preferred alternative until the last drop hit his colon.&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;then-the-food&quot;&gt;&lt;em&gt;Then the food…&lt;/em&gt;&lt;/h5&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Many&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;and-the-work-metrics&quot;&gt;&lt;em&gt;And the “work metrics”…&lt;/em&gt;&lt;/h5&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Many&lt;/td&gt;
+      &lt;td&gt;Chill&lt;/td&gt;
+      &lt;td&gt;Maybe&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;You get the point.
+&lt;br /&gt;
+We aim to review a new coffee shop every week and let you know what we think. Key word there is “aim”. We’re not perfect, but we’ll let you know which coffee shops are.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Feb 2023 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Welcome/</link>
+        <guid isPermaLink="true">http://localhost:4000/Welcome/</guid>
+        
+        <category>data</category>
+        
+        <category>methodology</category>
+        
+        
+        <category>Minneapolis</category>
+        
+        <category>About</category>
+        
+      </item>
     
       <item>
         <title>Beep Boop!</title>
@@ -118,122 +278,6 @@
         <category>Jekyll</category>
         
         <category>tutorial</category>
-        
-      </item>
-    
-      <item>
-        <title>Coffee Coffee Coffee</title>
-        <description>&lt;p&gt;Coffee!&lt;/p&gt;
-
-&lt;h4 id=&quot;start-with-objective-metrics&quot;&gt;Start with objective metrics&lt;/h4&gt;
-&lt;div class=&quot;table-responsive&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Wifi Speed&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;410&lt;/td&gt;
-      &lt;td&gt;83.5&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;30%&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt; Bla bla bla talk about that stuff above&lt;/p&gt;
-
-&lt;h4 id=&quot;drink-info&quot;&gt;Drink info&lt;/h4&gt;
-
-&lt;div class=&quot;table-responsive&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$3.50&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;$4.50&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Few&lt;/td&gt;
-      &lt;td&gt;Yes&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;bla bla more words about that stuff&lt;/p&gt;
-
-&lt;h4 id=&quot;and-also-the-food&quot;&gt;And also the food…&lt;/h4&gt;
-
-&lt;div class=&quot;table-responsive&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Many&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;work-metrics&quot;&gt;Work metrics&lt;/h4&gt;
-
-&lt;div class=&quot;table-responsive&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Many&lt;/td&gt;
-      &lt;td&gt;Chill&lt;/td&gt;
-      &lt;td&gt;Maybe&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 11 Jan 2023 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/juliet-test/</link>
-        <guid isPermaLink="true">http://localhost:4000/juliet-test/</guid>
-        
-        <category>good</category>
-        
-        <category>food</category>
-        
-        <category>meetings</category>
-        
-        
-        <category>Minneapolis</category>
         
       </item>
     

@@ -5,7 +5,7 @@ author: osmar
 categories: [ Jekyll, tutorial ]
 image: assets/images/12.jpg
 featured: false
-hidden: false
+hidden: true
 ---
 
 Coffee! 

@@ -1,7 +1,7 @@
 # Site
 name: "Remote Roast"
 title: "Remote Roast"
-description: "Roasting remotely."
+description: "Rating Twin Cities coffee shops for remote work."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ""
@@ -13,13 +13,18 @@ permalink: /:title/
 
 # Authors
 authors:
+  juliet + osmar:
+      name: Juliet + Osmar
+      display_name: Juliet + Osmar
+      avatar: 'assets/images/josmar.png' 
+      email: remoteroasters@gmail.com
+      description: "After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. 
+      After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. They both like americanos, but Osmar prefers iced and Juliet likes it hot ;)"
   juliet:
     name: Juliet
     display_name: Juliet
     avatar: 'assets/images/juliet.jpeg' 
     email: remoteroasters@gmail.com
-    # web: https://www.wowthemes.net
-    # twitter: https://twitter.com/wowthemesnet
     description: "After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. 
     Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while."
   osmar:
@@ -27,8 +32,6 @@ authors:
     display_name: Osmar    
     avatar: 'assets/images/osmar.png'
     email: remoteroasters@gmail.com
-    # web: https://www.wowthemes.net
-    # twitter: https://twitter.com/wowthemesnet
     description: "After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. 
     His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes."
 

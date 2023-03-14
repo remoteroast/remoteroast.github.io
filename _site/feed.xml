@@ -5,20 +5,163 @@
     <description>Rating Twin Cities coffee shops for remote work.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Mar 2023 21:55:15 -0600</pubDate>
-    <lastBuildDate>Sat, 04 Mar 2023 21:55:15 -0600</lastBuildDate>
+    <pubDate>Tue, 14 Mar 2023 16:34:24 -0500</pubDate>
+    <lastBuildDate>Tue, 14 Mar 2023 16:34:24 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>SK Coffee</title>
+        <description>&lt;h4&gt;New coffee shop alert!&lt;/h4&gt;
+
+&lt;p&gt;Anyone living in Uptown knows the clusterf*ck that driving and parking can be. Sometimes, the last thing you need on a Monday morning is to deal with, well, anything. That’s why we decided to walk to a nearby coffee shop that recently opened up on 24th and Lyndale: SK Coffee!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;lets-set-the-stage&quot;&gt;&lt;em&gt;Let’s set the stage&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;Located on Lyndale where Misfit Coffee once stood, this coffee shop’s atmosphere is welcoming to both hipsters and young professionals alike without that hint of snobbiness. I love the pops of color against the white and the wall of plants. The high ceilings and wall-length windows makes it a very bright, open space. They also have a beautiful couch surrounded by plants, and who doesn’t love a couch for those dreadful Monday mornings during which your video and microphone are always off? &lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Wifi Speed (mbps)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;410&lt;/td&gt;
+      &lt;td&gt;83.5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;50-80%&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;During that latest winter storm, neither Juliet nor I had the bravery to take either of our cars out (not because we refused to shovel and deeply regretted it soon after) and walked to SK for a whole week. Since then, we have become regulars at the expense of our budgets, and here’s a few reasons why:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;a-matcha-made-in-heaven-i-rolled-my-eyes-too&quot;&gt;&lt;em&gt;A matcha made in heaven (I rolled my eyes too)&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;During yet another short-lived phase of swearing off coffee, I started buying matcha at any place I could get my hands on it. I can say without a doubt that my favorite place to get it is– you guessed it– SK Coffee. I typically order the classic vanilla oatmilk matcha latte (yes, unapologetically dairy-free… most times … sometimes.. if you know, you know). I didn’t realize until a few matchas in that it had galium and not vanilla. Through that conversation I learned about their partnership with  &lt;a href=&quot;https://mspmag.com/eat-and-drink/3leche-it-s-all-in-the-mix/&quot;&gt; 3Leche &lt;/a&gt;. 3Leche are a group of three mixologists and bartenders that specialize in fermentation and have been expanding to non-alcoholic beverages such as coffee. SK coffee also carries their dolce de leche syrup, which I have not tried yet.&lt;/p&gt;
+
+&lt;p&gt; And yes, since this is a coffee blog, I guess I should talk about coffee. Here’s the bean juice stats for all you caffeine addicts!&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$3.50&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;$4.50&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Few&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The staff are also one of the best features of SK. As a chaotic person who’s always on the go and frequently forgets to feed himself, I have had a few occasions where I asked the staff to list out their pastries (sorry for being that person). They are very nice about it and make the ordering anxiety bearable. Oh! The food! It definitely deserves its own mini heading:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;pecans-lentils-and-cheese&quot;&gt;&lt;em&gt;Pecans, lentils, and cheese&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;I know, you’re probably like &lt;i&gt; what the heck &lt;/i&gt; but don’t worry those ingredients can all be found in separate pastries. But wow their pecan bear claw is truly divine. The only thing more splendid than that– if you’re in a ~savory~ mood– is their lentils pastry. Trust me, as a kid who was forced to eat lentil soup and still has nightmares about it, the lentils in this hot-pocket-like pastry (idk, I don’t bake, but I’m sure Juliet knows what it’s called so you could ask via comments) are WORTH it. I haven’t had one of their cheese croissants because I’m trying to be better about being dairy-free. However, my fellow lactose-intolerant folx know that will not last long especially with the quality of these pastries. (Wow, I’m really hungry right now and realizing I forgot to eat dinner). Anyways, it feels weird to not have a data table follow this so I’m just going to casually drop one now: &lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Few&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;working-from-sk-coffee&quot;&gt;&lt;em&gt;Working from SK Coffee&lt;/em&gt;&lt;/h5&gt;
+
+&lt;p&gt;Last section, I promise. If you’ve stuck with me this far, then I commend you for having a better attention span than I do. But, in the words of queen Rihanna herself, THIS is what you came forrrr (unless you’re one of my friends being forced to read this)...&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Many&lt;/td&gt;
+      &lt;td&gt;Chill&lt;/td&gt;
+      &lt;td&gt;Maybe&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;The table speaks for itself, but I will add...&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt; I’m slightly more picky than Juliet about where I take meetings, but to be fair I rarely have any. &lt;/li&gt;
+  &lt;li&gt; The staff is allowed to play their own tunes, and while I personally am an occasional fan of screamo/light metal, it was funny to see Juliet taking a meeting with that as background music. I should point out this has only happened once!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overall, local coffee shop, good vibes. Will definitely keep working from here and might venture to their St. Paul location which I only recently found out about. Stable wifi and good drinks. Juliet and I both give it a 4/5 and would definitely recommend it!&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: SK is also a roastery! If you end up becoming obsessed like us, they have &lt;a href=&quot;https://skcoffeeplease.com/subscription&quot;&gt; subscription plans &lt;/a&gt; for delivering coffee beans to your door. &lt;i&gt;Sigh&lt;/i&gt;, if only they delivered the matcha.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Mar 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/skcoffee/</link>
+        <guid isPermaLink="true">http://localhost:4000/skcoffee/</guid>
+        
+        <category>review</category>
+        
+        <category>4 stars</category>
+        
+        
+        <category>Minneapolis</category>
+        
+        <category>Whittier</category>
+        
+      </item>
     
       <item>
         <title>Quixotic Coffee</title>
         <description>&lt;h4&gt;Our first review!&lt;/h4&gt;
 
 &lt;p&gt;In the winter of 2021, in the midst of roommate drama and quarantine induced insanity, I decided I needed to get away from my desk in the basement and find someplace else to work. Quixotic was the first place I went. I was truly a modern woman as I traveled all the way from Minneapolis to St Paul, finally exercising the vast freedom of movement I had as a remote worker. I finally understood &quot;van life&quot; and the &quot;digital nomad&quot; mentality. I mean, I was working from a completely different city!&lt;/p&gt;
-&lt;p&gt;Okay, that might be a stretch. It was Saint Paul, not Costa Rica. But still, there was a sense of excitement and freedom working from neither an office, nor my desk at home. Quixotic was the start to my &quot;work from anywhere&quot; journey and what a great place it was to start with. All that said, you&apos;re not here for my trip down memory lane. You&apos;re here for the data, right?&lt;/p&gt;
+&lt;p&gt;Okay, that might be a stretch. It was Saint Paul, not Costa Rica. But still, there was a sense of excitement and freedom working from neither an office, nor my desk at home. Quixotic was the start to my &quot;work from anywhere&quot; journey and what a great place it was to start with. All that said, you're not here for my trip down memory lane. You're here for the data, right?&lt;/p&gt;
 
 &lt;h5 id=&quot;so-onto-the-bean-juicy-stuff&quot;&gt;&lt;em&gt;So onto the (bean) juicy stuff&lt;/em&gt;&lt;/h5&gt;
 
-&lt;p&gt;I&apos;ll start with our basic quantitative metrics:&lt;/p&gt;
+&lt;p&gt;I'll start with our basic quantitative metrics:&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -45,7 +188,7 @@
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;I chose Quixotic to launch my coffee-shop-remote-woman-in-STEM (god that&apos;s obnoxious) adventure because it felt comfortable and familiar. I had done homework there as a college student and what I loved - and still love - most about it is that there are several booths with tall wooden walls between them. You can be in your own personal work area while still participating in the vibrant energy of a neighborhood coffee shop. Not only that, but each table has an outlet and the wifi is reliable, so you can take Zoom calls without worrying about a dying battery or losing connection. &lt;/p&gt;
+&lt;p&gt;I chose Quixotic to launch my coffee-shop-remote-woman-in-STEM (god that's obnoxious) adventure because it felt comfortable and familiar. I had done homework there as a college student and what I loved - and still love - most about it is that there are several booths with tall wooden walls between them. You can be in your own personal work area while still participating in the vibrant energy of a neighborhood coffee shop. Not only that, but each table has an outlet and the wifi is reliable, so you can take Zoom calls without worrying about a dying battery or losing connection. &lt;/p&gt;
 
 &lt;p&gt; In addition to the booths, there is a larger closed off conference room that can be reserved if you want to work with friends or co-workers. They also have bar seating and regular tables if all of the booths are taken.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
@@ -77,8 +220,8 @@
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If you just finished a stressful meeting with the boss man or you just got a raise and you deserve a little reward, Quixotic has fun and tasty seasonal drinks that you&apos;ll end up spending all of your money on every day for several weeks until you feel bad about it but still can&apos;t stop...&lt;/p&gt;
-&lt;p&gt;Lucky for you, they also have really good drip coffee at a very reasonable price! If coffee&apos;s not your thing, there is a variety of teas, kombuchas, tea lattes, smoothies, and juices to choose from. Personally, I am a fan of their matcha as well as the &lt;a href=&quot;https://www.jinxtea.com/about&quot;&gt; Jinx teas &lt;/a&gt;they offer. &lt;/p&gt;
+&lt;p&gt;If you just finished a stressful meeting with the boss man or you just got a raise and you deserve a little reward, Quixotic has fun and tasty seasonal drinks that you'll end up spending all of your money on every day for several weeks until you feel bad about it but still can't stop...&lt;/p&gt;
+&lt;p&gt;Lucky for you, they also have really good drip coffee at a very reasonable price! If coffee's not your thing, there is a variety of teas, kombuchas, tea lattes, smoothies, and juices to choose from. Personally, I am a fan of their matcha as well as the &lt;a href=&quot;https://www.jinxtea.com/about&quot;&gt; Jinx teas &lt;/a&gt;they offer. &lt;/p&gt;
 
 &lt;h5 id=&quot;onto-the-food&quot;&gt;&lt;em&gt;Onto the food…&lt;/em&gt;&lt;/h5&gt;
 
@@ -99,7 +242,7 @@
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If you&apos;re anything like me, having coffee on an empty stomach will send you racing to the bathroom. And one bathroom in a coffee shop with 48 seats (yes, we counted) can be a big risk. But at Quixotic, you can find a variety of fresh pastries from &lt;a href=&quot;http://patisserie46.com/&quot;&gt;Patisserie 46&lt;/a&gt; and &lt;a href=&quot;http://siftglutenfree.com/&quot;&gt; Sift&lt;/a&gt; (gluten free!), and more recently they&apos;ve added smoothie and yogurt bowls from  &lt;a href=&quot;https://www.instagram.com/bomdiatreats/?hl=en&quot;&gt;Bom Dia Treats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you're anything like me, having coffee on an empty stomach will send you racing to the bathroom. And one bathroom in a coffee shop with 48 seats (yes, we counted) can be a big risk. But at Quixotic, you can find a variety of fresh pastries from &lt;a href=&quot;http://patisserie46.com/&quot;&gt;Patisserie 46&lt;/a&gt; and &lt;a href=&quot;http://siftglutenfree.com/&quot;&gt; Sift&lt;/a&gt; (gluten free!), and more recently they've added smoothie and yogurt bowls from  &lt;a href=&quot;https://www.instagram.com/bomdiatreats/?hl=en&quot;&gt;Bom Dia Treats&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h5 id=&quot;finally-onto-the-work-metrics-that-are-mostly-biased-and-completely-subjective&quot;&gt;&lt;em&gt;Finally onto the “work metrics” that are mostly biased and completely subjective…&lt;/em&gt;&lt;/h5&gt;
@@ -122,8 +265,8 @@
   &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;The work environment at Quixotic is fantastic. Most of the people there are working on something, whether it&apos;s school work or &quot;work work&quot; - whatever that means. For someone trying to dip their toes into the coffee shop work life, Quixotic is a great place to test out, especially if you can sit in a booth. Can you tell I love the booths?&lt;/p&gt;
-&lt;p&gt;The music is usually at a comfortable volume, people are generally respectful of their noise levels, and the food and coffee are reliably good. You don&apos;t have to worry about your wifi cutting out or the background noise being so loud your co-workers can&apos;t hear you in a meeting, and they don&apos;t unexpectedly start playing niche hard-core bands (more on that in another review).&lt;/p&gt;
+&lt;p&gt;The work environment at Quixotic is fantastic. Most of the people there are working on something, whether it's school work or &quot;work work&quot; - whatever that means. For someone trying to dip their toes into the coffee shop work life, Quixotic is a great place to test out, especially if you can sit in a booth. Can you tell I love the booths?&lt;/p&gt;
+&lt;p&gt;The music is usually at a comfortable volume, people are generally respectful of their noise levels, and the food and coffee are reliably good. You don't have to worry about your wifi cutting out or the background noise being so loud your co-workers can't hear you in a meeting, and they don't unexpectedly start playing niche hard-core bands (more on that in another review).&lt;/p&gt;
 &lt;p&gt;All in all, Quixotic is a great place for a remote worker. Osmar gives it a 4.5/5, but I give it a 5/5 and this is my review so what I say goes.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
@@ -146,17 +289,17 @@
     
       <item>
         <title>Welcome to Remote Roast!</title>
-        <description>&lt;h4&gt;Do you work remotely? Trying to find good coffee shops to work at? You&apos;ve come to the right place!&lt;/h4&gt;
+        <description>&lt;h4&gt;Do you work remotely? Trying to find good coffee shops to work at? You've come to the right place!&lt;/h4&gt;
 
-&lt;p&gt;In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn&apos;t break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?&lt;/p&gt;
+&lt;p&gt;In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn't break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?&lt;/p&gt;
 
-&lt;p&gt;So, data nerds that we are, we decided to put all of our findings in one place so you don&apos;t have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.&lt;/p&gt;
+&lt;p&gt;So, data nerds that we are, we decided to put all of our findings in one place so you don't have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.&lt;/p&gt;
 
 &lt;h4&gt;Who are we?&lt;/h4&gt;
 
 &lt;div class=&quot;image-txt-container&quot;&gt;
  &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/osmar.png&quot; alt=&quot;Osmar&quot; /&gt; 
- &lt;a&gt;After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he&apos;s also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. &lt;/a&gt;
+ &lt;a&gt;After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -170,6 +313,7 @@
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;so-how-are-we-doing-this-thing&quot;&gt;So how are we doing this thing?&lt;/h4&gt;
+
 &lt;h5 id=&quot;like-any-good-scientists-we-have-a-rigorous-methodology-kind-of&quot;&gt;&lt;em&gt;Like any good scientists, we have a rigorous methodology… kind of&lt;/em&gt;&lt;/h5&gt;
 
 &lt;p&gt;Most food critics keep their identities hidden. They return to a restaurant multiple times to taste everything on the menu. They get a well rounded view of the different menu items, the atmosphere and service, all while remaining anonymous so that the service they receive is not skewed.
@@ -178,6 +322,7 @@ Unfortunately for us (and for you), we can’t afford every menu item. But on th
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;but-onto-the-good-stuff&quot;&gt;&lt;em&gt;But onto the good stuff…&lt;/em&gt;&lt;/h5&gt;
+
 &lt;p&gt;We’ll be measuring and collecting a variety of data points about each coffee shop – some objective, some not – and sharing them with you. Here’s a look at some of our quantitative data (that’s nerd speak for numbers).&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
@@ -205,8 +350,9 @@ Unfortunately for us (and for you), we can’t afford every menu item. But on th
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;We’ll accompany that data with illustrative descriptions like: 
+&lt;p&gt;We’ll accompany that data with illustrative descriptions like:
 &lt;br /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;The millennial pink bathroom has all the amenities a girl could dream of. Nobody judged us for going in and out every 20 minutes.&lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
@@ -239,6 +385,7 @@ Next, we’ll get more into the coffee, sharing both quantitative (you know what
 
 &lt;p&gt;These too will have pretentious descriptions like:
 &lt;br /&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;Juliet sipped on an espresso tonic with flavor notes of stone fruit and bullshit. Osmar opted for a matcha latte and questioned whether the milk was dairy or his preferred alternative until the last drop hit his colon.&lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h5 id=&quot;then-the-food&quot;&gt;&lt;em&gt;Then the food…&lt;/em&gt;&lt;/h5&gt;

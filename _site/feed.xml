@@ -3,10 +3,10 @@
   <channel>
     <title>Remote Roast</title>
     <description>Rating Twin Cities coffee shops for remote work.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Mar 2023 16:14:33 -0500</pubDate>
-    <lastBuildDate>Tue, 21 Mar 2023 16:14:33 -0500</lastBuildDate>
+    <link>http://localhost:4000/remote-roast/</link>
+    <atom:link href="http://localhost:4000/remote-roast/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 24 Mar 2023 14:09:17 -0500</pubDate>
+    <lastBuildDate>Fri, 24 Mar 2023 14:09:17 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
       <item>
@@ -136,8 +136,8 @@
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Are you a big tea drinker but the tea gets cold before you can finish it? You can get the whole pitcher at Corner Coffee and pour it yourself! It stays nice and steamy.&lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Mar 2023 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/corner-coffee-uptown/</link>
-        <guid isPermaLink="true">http://localhost:4000/corner-coffee-uptown/</guid>
+        <link>http://localhost:4000/remote-roast/corner-coffee-uptown/</link>
+        <guid isPermaLink="true">http://localhost:4000/remote-roast/corner-coffee-uptown/</guid>
         
         <category>review</category>
         
@@ -279,8 +279,8 @@
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: SK is also a roastery! If you end up becoming obsessed like us, they have &lt;a href=&quot;https://skcoffeeplease.com/subscription&quot;&gt; subscription plans &lt;/a&gt; for delivering coffee beans to your door. &lt;i&gt;Sigh&lt;/i&gt;, if only they delivered the matcha.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Mar 2023 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/skcoffee/</link>
-        <guid isPermaLink="true">http://localhost:4000/skcoffee/</guid>
+        <link>http://localhost:4000/remote-roast/skcoffee/</link>
+        <guid isPermaLink="true">http://localhost:4000/remote-roast/skcoffee/</guid>
         
         <category>review</category>
         
@@ -414,8 +414,8 @@
 &lt;em&gt;Pro tip: If you can’t find street parking, pull into the alley just north of the shop. There’s 2 hour parking along one side. But leave a spot for us!&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 04 Mar 2023 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/quixotic/</link>
-        <guid isPermaLink="true">http://localhost:4000/quixotic/</guid>
+        <link>http://localhost:4000/remote-roast/quixotic/</link>
+        <guid isPermaLink="true">http://localhost:4000/remote-roast/quixotic/</guid>
         
         <category>review</category>
         
@@ -439,7 +439,7 @@
 &lt;h4&gt;Who are we?&lt;/h4&gt;
 
 &lt;div class=&quot;image-txt-container&quot;&gt;
- &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/osmar.png&quot; alt=&quot;Osmar&quot; /&gt; 
+ &lt;img class=&quot;author-thumb-large&quot; src=&quot;/remote-roast/assets/images/osmar.png&quot; alt=&quot;Osmar&quot; /&gt; 
  &lt;a&gt;After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he&apos;s also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. &lt;/a&gt;
 &lt;/div&gt;
 
@@ -447,7 +447,7 @@
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;image-txt-container&quot;&gt;
-   &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/juliet.jpeg&quot; alt=&quot;Juliet&quot; /&gt;  
+   &lt;img class=&quot;author-thumb-large&quot; src=&quot;/remote-roast/assets/images/juliet.jpeg&quot; alt=&quot;Juliet&quot; /&gt;  
  &lt;a&gt;After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that is working on their debut EP. &lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
@@ -578,8 +578,8 @@ Next, we’ll get more into the coffee, sharing both quantitative (you know what
 We aim to review a new coffee shop every week and let you know what we think. Key word there is “aim”. We’re not perfect, but we’ll let you know which coffee shops are.&lt;/p&gt;
 </description>
         <pubDate>Sat, 25 Feb 2023 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/Welcome/</link>
-        <guid isPermaLink="true">http://localhost:4000/Welcome/</guid>
+        <link>http://localhost:4000/remote-roast/Welcome/</link>
+        <guid isPermaLink="true">http://localhost:4000/remote-roast/Welcome/</guid>
         
         <category>data</category>
         

@@ -4,7 +4,7 @@ title: "Remote Roast"
 description: "Rating Twin Cities coffee shops for remote work."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: "/remote-roast"
+baseurl: ""
 disqus: 'remote-roast'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]

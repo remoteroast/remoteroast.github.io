@@ -17,6 +17,10 @@
 <lastmod>2023-03-21T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/dogwood-saint-paul/</loc>
+<lastmod>2023-03-31T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -45,5 +49,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/category/uptown/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/category/saint-anthony-park/</loc>
 </url>
 </urlset>

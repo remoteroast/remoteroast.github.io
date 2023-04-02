@@ -39,7 +39,7 @@ rating: 4.5
     <tr>
       <td>110</td>
       <td>86</td>
-      <td>614</td>
+      <td>14</td>
       <td>51</td>
       <td>50%</td>
       <td>2</td>

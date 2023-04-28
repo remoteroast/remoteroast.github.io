@@ -6,7 +6,7 @@ categories: [Minneapolis, Uptown]
 tags: [review, 4.5 stars]
 image: assets/images/cc_uptown.png
 description: "SK Coffee"
-featured: true # if T, show in featured
+featured: false # if T, show in featured
 hidden: false # if T, hide from all post
 rating: 4.5
 ---

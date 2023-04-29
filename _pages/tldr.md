@@ -98,6 +98,24 @@ comments: true
       <td>Yes</td>
       <td>$3.25</td>
     </tr>
+    <tr>
+      <td><a href="{{ site.baseurl }}/ninas">Nina's Coffee Cafe</a></td>
+      <td><a href="https://goo.gl/maps/Veo7SdX2p3hf5uPC8" target="_blank">St Paul</a></td>
+      <td>
+        <div class="rating-holder">
+            <div class="c-rating c-rating--regular" data-rating-value="3.5">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            </div>
+        </div>
+      </td>
+      <td>46</td>
+      <td>No</td>
+      <td>$3.00</td>
+    </tr>
   </tbody>
   </table>
 </div>

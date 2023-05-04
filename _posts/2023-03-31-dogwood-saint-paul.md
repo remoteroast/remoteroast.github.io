@@ -6,7 +6,7 @@ categories: [St Paul, Saint Anthony Park]
 tags: [review, 3.5 stars]
 image: assets/images/dogwood_sp.png
 description: "SK Coffee"
-featured: true # if T, show in featured
+featured: false # if T, show in featured
 hidden: false # if T, hide from all post
 rating: 3.5
 ---

@@ -2,13 +2,17 @@
 layout: post
 title: "Dogwood Coffee - Saint Paul"
 author: juliet
-categories: [St Paul, Saint Anthony Park]
+categories: [St Paul, Saint Anthony Park] #City must be first
 tags: [review, 3.5 stars]
 image: assets/images/dogwood_sp.png
 description: "SK Coffee"
 featured: false # if T, show in featured
 hidden: false # if T, hide from all post
 rating: 3.5
+meeting: "Yes"
+maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
+wifi: "78"
+drip: "3.25"
 ---
 
 <h4>Woof woof</h4>

@@ -2,13 +2,17 @@
 layout: post
 title: "Corner Coffee Uptown"
 author: juliet
-categories: [Minneapolis, Uptown]
+categories: [Minneapolis, Uptown] #City myst be first
 tags: [review, 4.5 stars]
 image: assets/images/cc_uptown.png
 description: "SK Coffee"
 featured: false # if T, show in featured
 hidden: false # if T, hide from all post
 rating: 4.5
+meeting: "Yes"
+maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
+wifi: "110"
+drip: "2.75"
 ---
 
 <h4>Where it all began...</h4>

@@ -23,7 +23,7 @@ var documents = [{
     "id": 4,
     "url": "http://localhost:4000/tldr",
     "title": "TL;DR",
-    "body": "All our reviews in a handy little list:         Coffee Shop   City   # Stars   Wifi speed   Suitable for meetings?   $ Small Drip Coffee         Quixotic Coffee   St Paul                   1      2      3      4      5                120   Yes   $2. 75       SK Coffee - Whittier   Minneapolis                   1      2      3      4      5                410   Maybe   $3. 50       Corner Coffee Uptown   Minneapolis                   1      2      3      4      5                110   Yes   $2. 75       Dogwood Coffee - St Paul   St Paul                   1      2      3      4      5                78   Yes   $3. 25       Nina's Coffee Cafe   St Paul                   1      2      3      4      5                46   No   $3. 00    Buy our next coffee!Thank you for your support! Help us continue to rate coffee shops! Buy Juliet a coffee Buy Osmar a coffee"
+    "body": "          Coffee Shop    City    # Stars    Wifi speed    Suitable for meetings?    $ Small Drip Coffee       {% for post in site. posts %}  {% if post. tags contains  review  %}            {{ post. title }}     {{ post. categories[0] }}                           1        2        3        4        5                        {{ post. wifi}}     {{ post. meeting}}     ${{ post. drip}}         {% endif %}  {% endfor %}  Buy our next coffee!Thank you for your support! Help us continue to rate coffee shops! Buy Juliet a coffee Buy Osmar a coffee"
     }, {
     "id": 5,
     "url": "http://localhost:4000/robots.txt",

@@ -23,7 +23,7 @@ var documents = [{
     "id": 4,
     "url": "http://localhost:4000/tldr",
     "title": "TL;DR",
-    "body": "          Coffee Shop    City    # Stars    Wifi speed    Suitable for meetings?    $ Small Drip Coffee       {% for post in site. posts %}  {% if post. tags contains  review  %}            {{ post. title }}     {{ post. categories[0] }}                           1        2        3        4        5                        {{ post. wifi}}     {{ post. meeting}}     ${{ post. drip}}         {% endif %}  {% endfor %}  Buy our next coffee!Thank you for your support! Help us continue to rate coffee shops! Buy Juliet a coffee Buy Osmar a coffee"
+    "body": "All our reviews in a handy little list:           Coffee Shop    City    # Stars    Wifi speed    Suitable for meetings?    $ Small Drip Coffee       {% for post in site. posts %}  {% if post. tags contains  review  %}            {{ post. title }}     {{ post. categories[0] }}                           1        2        3        4        5                        {{ post. wifi}}     {{ post. meeting}}     ${{ post. drip}}         {% endif %}  {% endfor %}  Buy our next coffee!Thank you for your support! Help us continue to rate coffee shops! Buy Juliet a coffee Buy Osmar a coffee"
     }, {
     "id": 5,
     "url": "http://localhost:4000/robots.txt",

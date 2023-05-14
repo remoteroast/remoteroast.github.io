@@ -4,6 +4,10 @@ title: TL;DR
 permalink: /tldr
 comments: true
 ---
+
+<h2>All our reviews in a handy little list</h2>
+<br>
+<br>
 <div class="table-responsive" style="font-size:85%">
   <table class="table">
     <thead>

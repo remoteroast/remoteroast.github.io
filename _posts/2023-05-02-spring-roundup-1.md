@@ -6,9 +6,9 @@ categories: ["2023"]
 tags: [roundup]
 image: assets/images/spring_roundup_1_2023.png
 description: "Spring Roundup 1"
-featured: true # if T, show in featured
+featured: false # if T, show in featured
 hidden: false # if T, hide from all post
-rating: 
+rating:
 ---
 
 <h2>A little recap of the first half of spring!</h2>

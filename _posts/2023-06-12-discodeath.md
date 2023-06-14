@@ -7,7 +7,7 @@ tags: [review, 4 stars]
 image: assets/images/DDmatcha_preSpill.jpeg #! REPLACE !!!!!
 description: "Death House Records"
 featured: True # if T, show in featured
-hidden: True # if T, hide from all post
+hidden: False # if T, hide from all post
 rating: 4
 meeting: "Maybe"
 maps: "https://goo.gl/maps/iirgCA9jYEwJY1UJ7" #! REPLACE !!!!!

@@ -3,6 +3,11 @@
   display: inline;
 }
 
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
 .highlight {
   background: #fff;
   border: 0;

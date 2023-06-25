@@ -5,9 +5,152 @@
     <description>Rating Twin Cities coffee shops for remote work.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Jun 2023 12:27:11 -0500</pubDate>
-    <lastBuildDate>Fri, 16 Jun 2023 12:27:11 -0500</lastBuildDate>
+    <pubDate>Sun, 25 Jun 2023 15:49:24 -0500</pubDate>
+    <lastBuildDate>Sun, 25 Jun 2023 15:49:24 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Caffetto</title>
+        <description>&lt;h5&gt;C is for coffee&lt;/h5&gt;
+
+&lt;p&gt;If you&apos;re an OG Remote Roast fan, you&apos;ll know that Osmar and I have sensitive tummies 🥺 For a while now that has meant
+lots of matcha and other teas for me in lieu of coffee. But no longer! I walked into Caffetto and confidently ordered a cappuccino. It turns out, I am better trained than Pavlov&apos;s dogs because before I even received the coffee, I found myself asking where the bathroom is. But, more on that later. First, we&apos;ll get into the data you&apos;ve been waiting for...&lt;/p&gt;
+
+&lt;h5&gt;A is for amazing prices&lt;/h5&gt;
+
+&lt;p&gt;As we know by now, price does not indicate quality. At $2.65, Caffetto has the lowest price for a small coffee of all the places we&apos;ve tried so far but certainly not the worst coffee. We&apos;re giving the coffee a 3/5. It was solidly good coffee, but nothing extra special. They&apos;ve got all your classic espresso drinks, and other less common finds like thai iced coffee.&lt;/p&gt;
+&lt;p&gt;If you&apos;re not into coffee, Caffetto has a lot of other options. Everything from your typical teas, to quirky sodas. While we didn&apos;t see any seasonal drinks, Caffetto has tons of options so there is no shortage of things to try. They also have 3 different non-dairy milk options for our lactose free friends.&lt;p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$2.65&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;$3.95&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Many&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;FF for ffun&lt;/h5&gt;
+
+&lt;p&gt;It&apos;s not every day you go to a coffee shop that has an arcade in the basement. Unless you go to Caffetto every day. While going downstairs to find the bathrooms, I walked into a basement full of old arcade games. If you need a fun little break from whatever you&apos;re doing, there are plenty of games to play.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/images/caffetto_arcade.jpeg&quot; alt=&quot;basement arcade&quot; width=&quot;100%&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+
+&lt;p&gt;Caffetto also has lots of art for sale. Stickers, pins, ceramics, and wall art are all for sale with QR codes to directly pay the artists. It&apos;s good that there&apos;s a lot to look at because you may need something to do while you wait for things to load. The wifi is enough to do basic tasks, but there&apos;s not enough speed for meetings.&lt;/p&gt;
+
+
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Wifi Speed (mbps)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;55&lt;/td&gt;
+      &lt;td&gt;40%&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;E is for environment&lt;/h5&gt;
+
+&lt;p&gt;You can probably tell from the pinball and paintings that Caffetto is not your typical sterile café. It has more of a grunge/artsy feel with mismatched tables, torn upholstery, and dim lighting. That said, it is comfortable and welcoming and it&apos;s typically not crowded or noisy. Because it&apos;s not too crowded, the number of outlets is sufficient. While they&apos;re not at every table, there are plenty to go around.&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Some&lt;/td&gt;
+      &lt;td&gt;Chill&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;TT is for tasty&lt;/h5&gt;
+
+&lt;p&gt;Caffetto has a good variety of food options but most of them are pastries. They have varying cakes and cheesecakes as well. We liked the food quite a bit and we give it a 4.&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mix&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;O is for &quot;Oh my god it&apos;s the end of the review!&quot;&lt;/h5&gt;
+&lt;p&gt;Overall, we are fans of Caffetto. It&apos;s probably best for a day with no meetings where you don&apos;t have a heavy workload as the wifi is not the best, but the environment is a great mix of fun and comfortable. There&apos;s also a decent amount of outdoor seating in the summer.&lt;/p&gt;
+
+&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Hungry? Caffetto&apos;s prime uptown location means there&apos;s a lot going on nearby! Bebe Zito&apos;s is right next door so you can pick up a cheeseburger or an ice cream cone. Or, you can head across the street to the Wedge Co-op if you&apos;re looking for healthier options.&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Jun 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/caffetto/</link>
+        <guid isPermaLink="true">http://localhost:4000/caffetto/</guid>
+        
+        <category>review</category>
+        
+        <category>3.5 stars</category>
+        
+        
+        <category>Minneapolis</category>
+        
+        <category>Uptown</category>
+        
+      </item>
     
       <item>
         <title>Disco Death Records</title>

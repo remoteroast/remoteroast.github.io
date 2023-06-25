@@ -6,7 +6,7 @@ categories: [Minneapolis, Whittier] #City must be first
 tags: [review, 2.5 stars]
 image: assets/images/spyhouse-nicollet.jpeg
 description: "Spyhouse - Nicollet"
-featured: true # if T, show in featured
+featured: false # if T, show in featured
 hidden: false # if T, hide from all post
 rating: 2.5
 meeting: "No"

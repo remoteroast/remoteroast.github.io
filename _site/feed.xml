@@ -5,21 +5,154 @@
     <description>Rating Twin Cities coffee shops for remote work.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Jun 2023 15:49:24 -0500</pubDate>
-    <lastBuildDate>Sun, 25 Jun 2023 15:49:24 -0500</lastBuildDate>
+    <pubDate>Thu, 13 Jul 2023 12:27:09 -0400</pubDate>
+    <lastBuildDate>Thu, 13 Jul 2023 12:27:09 -0400</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Bordertown Coffee</title>
+        <description>&lt;h5&gt;Borderline Dinkytown&lt;/h5&gt;
+
+&lt;p&gt;Bordertown Coffee is located in a beautiful building right outside of Dinkytown on the University of Minnesota-Twin Cities campus. Once an old abandoned house set for demolition, it's since had a long history as a coffeeshop following its purchase and restoration– still standing even after the 2002 Dinkytown riots. The building's interior matches its alluring exterior. There's a wide window on the main floor whose view is obstructred by trees but nonetheless allows for plenty of natural lighting. On that same floor, there is a (possibly functional?) fireplace under a cute caricature of Bordertown itself. Parts of a wall have insets in them for a couple of benches, and there are many seating options including couches, as well as high and top tables. Overall, it's cozy, sufficiently spacious, and a decent place to enjoy a beverage. &lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Wifi Speed (mbps)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;56&lt;/td&gt;
+      &lt;td&gt;30%&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5&gt;Borderline Prices&lt;/h5&gt;
+
+&lt;p&gt;The prices at Bordertown Coffee are pretty average. Lattes and small drip coffee aren't the cheapest here, but they are also not outrageously expensive as they are in other places. When Juliet and I first visited Bordertown, we were very disappointed with the matcha: it was poorly mixed and we could hardly taste the matcha itself. I was also unimpressed with my chai latte. However, after hearing a few good things about Bordertown, I decided to revisit it and was gladly surprised  &lt;p&gt;
+
+&lt;img src=&quot;/assets/images/caffetto_arcade.jpeg&quot; alt=&quot;basement arcade&quot; width=&quot;100%&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;4.75&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;Something border&lt;/h5&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Some&lt;/td&gt;
+      &lt;td&gt;Chill&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;Border something&lt;/h5&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mix&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;br /&gt;
+
+&lt;h5&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: &lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Jul 2023 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/bordertown/</link>
+        <guid isPermaLink="true">http://localhost:4000/bordertown/</guid>
+        
+        <category>review</category>
+        
+        <category>3.5 stars</category>
+        
+        
+        <category>Minneapolis</category>
+        
+        <category>Dinkytown</category>
+        
+      </item>
     
       <item>
         <title>Caffetto</title>
         <description>&lt;h5&gt;C is for coffee&lt;/h5&gt;
 
-&lt;p&gt;If you&apos;re an OG Remote Roast fan, you&apos;ll know that Osmar and I have sensitive tummies 🥺 For a while now that has meant
-lots of matcha and other teas for me in lieu of coffee. But no longer! I walked into Caffetto and confidently ordered a cappuccino. It turns out, I am better trained than Pavlov&apos;s dogs because before I even received the coffee, I found myself asking where the bathroom is. But, more on that later. First, we&apos;ll get into the data you&apos;ve been waiting for...&lt;/p&gt;
+&lt;p&gt;If you're an OG Remote Roast fan, you'll know that Osmar and I have sensitive tummies 🥺 For a while now that has meant
+lots of matcha and other teas for me in lieu of coffee. But no longer! I walked into Caffetto and confidently ordered a cappuccino. It turns out, I am better trained than Pavlov's dogs because before I even received the coffee, I found myself asking where the bathroom is. But, more on that later. First, we'll get into the data you've been waiting for...&lt;/p&gt;
 
 &lt;h5&gt;A is for amazing prices&lt;/h5&gt;
 
-&lt;p&gt;As we know by now, price does not indicate quality. At $2.65, Caffetto has the lowest price for a small coffee of all the places we&apos;ve tried so far but certainly not the worst coffee. We&apos;re giving the coffee a 3/5. It was solidly good coffee, but nothing extra special. They&apos;ve got all your classic espresso drinks, and other less common finds like thai iced coffee.&lt;/p&gt;
-&lt;p&gt;If you&apos;re not into coffee, Caffetto has a lot of other options. Everything from your typical teas, to quirky sodas. While we didn&apos;t see any seasonal drinks, Caffetto has tons of options so there is no shortage of things to try. They also have 3 different non-dairy milk options for our lactose free friends.&lt;p&gt;
+&lt;p&gt;As we know by now, price does not indicate quality. At $2.65, Caffetto has the lowest price for a small coffee of all the places we've tried so far but certainly not the worst coffee. We're giving the coffee a 3/5. It was solidly good coffee, but nothing extra special. They've got all your classic espresso drinks, and other less common finds like thai iced coffee.&lt;/p&gt;
+&lt;p&gt;If you're not into coffee, Caffetto has a lot of other options. Everything from your typical teas, to quirky sodas. While we didn't see any seasonal drinks, Caffetto has tons of options so there is no shortage of things to try. They also have 3 different non-dairy milk options for our lactose free friends.&lt;p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -49,13 +182,13 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;FF for ffun&lt;/h5&gt;
 
-&lt;p&gt;It&apos;s not every day you go to a coffee shop that has an arcade in the basement. Unless you go to Caffetto every day. While going downstairs to find the bathrooms, I walked into a basement full of old arcade games. If you need a fun little break from whatever you&apos;re doing, there are plenty of games to play.&lt;/p&gt;
+&lt;p&gt;It's not every day you go to a coffee shop that has an arcade in the basement. Unless you go to Caffetto every day. While going downstairs to find the bathrooms, I walked into a basement full of old arcade games. If you need a fun little break from whatever you're doing, there are plenty of games to play.&lt;/p&gt;
 
 &lt;img src=&quot;/assets/images/caffetto_arcade.jpeg&quot; alt=&quot;basement arcade&quot; width=&quot;100%&quot; /&gt;
 &lt;br /&gt;
 &lt;br /&gt;
 
-&lt;p&gt;Caffetto also has lots of art for sale. Stickers, pins, ceramics, and wall art are all for sale with QR codes to directly pay the artists. It&apos;s good that there&apos;s a lot to look at because you may need something to do while you wait for things to load. The wifi is enough to do basic tasks, but there&apos;s not enough speed for meetings.&lt;/p&gt;
+&lt;p&gt;Caffetto also has lots of art for sale. Stickers, pins, ceramics, and wall art are all for sale with QR codes to directly pay the artists. It's good that there's a lot to look at because you may need something to do while you wait for things to load. The wifi is enough to do basic tasks, but there's not enough speed for meetings.&lt;/p&gt;
 
 
 
@@ -87,7 +220,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;E is for environment&lt;/h5&gt;
 
-&lt;p&gt;You can probably tell from the pinball and paintings that Caffetto is not your typical sterile café. It has more of a grunge/artsy feel with mismatched tables, torn upholstery, and dim lighting. That said, it is comfortable and welcoming and it&apos;s typically not crowded or noisy. Because it&apos;s not too crowded, the number of outlets is sufficient. While they&apos;re not at every table, there are plenty to go around.&lt;/p&gt;
+&lt;p&gt;You can probably tell from the pinball and paintings that Caffetto is not your typical sterile café. It has more of a grunge/artsy feel with mismatched tables, torn upholstery, and dim lighting. That said, it is comfortable and welcoming and it's typically not crowded or noisy. Because it's not too crowded, the number of outlets is sufficient. While they're not at every table, there are plenty to go around.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -131,13 +264,13 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 &lt;/div&gt;
 &lt;br /&gt;
 
-&lt;h5&gt;O is for &quot;Oh my god it&apos;s the end of the review!&quot;&lt;/h5&gt;
-&lt;p&gt;Overall, we are fans of Caffetto. It&apos;s probably best for a day with no meetings where you don&apos;t have a heavy workload as the wifi is not the best, but the environment is a great mix of fun and comfortable. There&apos;s also a decent amount of outdoor seating in the summer.&lt;/p&gt;
+&lt;h5&gt;O is for &quot;Oh my god it's the end of the review!&quot;&lt;/h5&gt;
+&lt;p&gt;Overall, we are fans of Caffetto. It's probably best for a day with no meetings where you don't have a heavy workload as the wifi is not the best, but the environment is a great mix of fun and comfortable. There's also a decent amount of outdoor seating in the summer.&lt;/p&gt;
 
-&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Hungry? Caffetto&apos;s prime uptown location means there&apos;s a lot going on nearby! Bebe Zito&apos;s is right next door so you can pick up a cheeseburger or an ice cream cone. Or, you can head across the street to the Wedge Co-op if you&apos;re looking for healthier options.&lt;/p&gt;
+&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Hungry? Caffetto's prime uptown location means there's a lot going on nearby! Bebe Zito's is right next door so you can pick up a cheeseburger or an ice cream cone. Or, you can head across the street to the Wedge Co-op if you're looking for healthier options.&lt;/p&gt;
 &lt;/p&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 25 Jun 2023 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 25 Jun 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/caffetto/</link>
         <guid isPermaLink="true">http://localhost:4000/caffetto/</guid>
         
@@ -156,18 +289,18 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
         <title>Disco Death Records</title>
         <description>&lt;h4&gt;Dying for caffeine&lt;/h4&gt;
 
-&lt;p&gt;I&apos;ll be honest and admit that I was originally not enthusiastic about visiting this coffee shop. However, Juliet– being a musician and coffee fanatic– was quite excited. Since she&apos;s technically my landlord, I decided to not voice my hesitation and give it a chance. I expected to be met with some heavy metal (yes, some coffee shops do play heavy metal as we learned the hard way), hipster vibes (I&apos;m against most hip things), and satanists (I have nothing to add here but I just realized my love of parentheticals). In the end, I was glad I went because boy was I wrong!&lt;/p&gt;
+&lt;p&gt;I'll be honest and admit that I was originally not enthusiastic about visiting this coffee shop. However, Juliet– being a musician and coffee fanatic– was quite excited. Since she's technically my landlord, I decided to not voice my hesitation and give it a chance. I expected to be met with some heavy metal (yes, some coffee shops do play heavy metal as we learned the hard way), hipster vibes (I'm against most hip things), and satanists (I have nothing to add here but I just realized my love of parentheticals). In the end, I was glad I went because boy was I wrong!&lt;/p&gt;
 
 &lt;h5&gt;You had a me at horchata&lt;/h5&gt;
 
 &lt;center&gt;
-&lt;img src=&quot;/assets/images/DDearl_horch.jpeg&quot; alt=&quot;The earl grey horchata drink described below&quot; width=&quot;300&quot; height=&quot;400&quot; title=&quot;Disco Death&apos;s Earl Grey Horchata&quot; /&gt;
+&lt;img src=&quot;/assets/images/DDearl_horch.jpeg&quot; alt=&quot;The earl grey horchata drink described below&quot; width=&quot;300&quot; height=&quot;400&quot; title=&quot;Disco Death's Earl Grey Horchata&quot; /&gt;
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Reading the menu, I was immediately drawn to &quot;earl grey horchata latte&quot;. So, naturally, I ordered it. The barista then broke my heart by confirming my suspicions: it definitely had dairy in it. I must have had a devastating look on my face because they immediately followed up with: &quot;don&apos;t worry, I can make you a dairy-free version with the ingredients I have here&quot;. Shoutout to the barista for un-breaking my heart and making me one of my favorite coffee shop drinks EVER (rivaling Corner Coffee&apos;s Lavender Lemon Brew). Juliet and I were amazed and (rightfully) obsessed, so much that we worked hard to re-create it at home. (We&apos;re so extra so of course we figured it out).&lt;/p&gt;
+&lt;p&gt;Reading the menu, I was immediately drawn to &quot;earl grey horchata latte&quot;. So, naturally, I ordered it. The barista then broke my heart by confirming my suspicions: it definitely had dairy in it. I must have had a devastating look on my face because they immediately followed up with: &quot;don't worry, I can make you a dairy-free version with the ingredients I have here&quot;. Shoutout to the barista for un-breaking my heart and making me one of my favorite coffee shop drinks EVER (rivaling Corner Coffee's Lavender Lemon Brew). Juliet and I were amazed and (rightfully) obsessed, so much that we worked hard to re-create it at home. (We're so extra so of course we figured it out).&lt;/p&gt;
 
-&lt;p&gt;As for the other drinks, they&apos;re all pretty good. Disco Death has a variety of fun drinks with fun names like Satan, Hayl Satan, and Prince of Darkness as well as fun prices ($6.66). &lt;/p&gt;
+&lt;p&gt;As for the other drinks, they're all pretty good. Disco Death has a variety of fun drinks with fun names like Satan, Hayl Satan, and Prince of Darkness as well as fun prices ($6.66). &lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -197,7 +330,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;Death by poor posture&lt;/h5&gt;
 
-&lt;p&gt;While Disco Death has limited seating, it has never been at more than 50% capacity when we&apos;ve worked there. It&apos;s a chill, lowkey environment which makes it a good place for being productive with minimal distractions. The distractions that do exist, however, are quite worth it. They have a bins along a wall that are filled with records from many, many genres, and Juliet had some fun finds (I myself only recently learned that a turntable is another name for a record player so please don&apos;t ask me anything about records). I also love how reliable Disco Death is when it comes to noise level and wifi speed, but I do not love the benches. The benches are at an angle obtuse enough to hurt your back if you have poor posture (like me). It also makes it uncomfortable to lean back all the way while working. But Juliet doesn&apos;t seem to mind so maybe it is just a personal issue that I will likely not be resolving (hot take?: I don&apos;t believe in chiropractors).&lt;/p&gt;
+&lt;p&gt;While Disco Death has limited seating, it has never been at more than 50% capacity when we've worked there. It's a chill, lowkey environment which makes it a good place for being productive with minimal distractions. The distractions that do exist, however, are quite worth it. They have a bins along a wall that are filled with records from many, many genres, and Juliet had some fun finds (I myself only recently learned that a turntable is another name for a record player so please don't ask me anything about records). I also love how reliable Disco Death is when it comes to noise level and wifi speed, but I do not love the benches. The benches are at an angle obtuse enough to hurt your back if you have poor posture (like me). It also makes it uncomfortable to lean back all the way while working. But Juliet doesn't seem to mind so maybe it is just a personal issue that I will likely not be resolving (hot take?: I don't believe in chiropractors).&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -227,7 +360,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;Dead silence&lt;/h5&gt;
 
-&lt;p&gt;Disco Death is a great place to work at. It has plenty of outlets, no distractions, and it&apos;s always pretty quiet. Since it is so quiet, I am unsure if I would take a meeting from there, but that&apos;s just a personal preference. The baristas are welcoming and thoughtful. I&apos;m not sure if they worship satan, but if they do, I&apos;d definitely sell them my soul for more drinks like the earl grey horchata. &lt;/p&gt;
+&lt;p&gt;Disco Death is a great place to work at. It has plenty of outlets, no distractions, and it's always pretty quiet. Since it is so quiet, I am unsure if I would take a meeting from there, but that's just a personal preference. The baristas are welcoming and thoughtful. I'm not sure if they worship satan, but if they do, I'd definitely sell them my soul for more drinks like the earl grey horchata. &lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -249,7 +382,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;They have decent food options, but we gave them the score we did because there&apos;s not a ton of options (and they don&apos;t always have the sandwiches).&lt;/p&gt;
+&lt;p&gt;They have decent food options, but we gave them the score we did because there's not a ton of options (and they don't always have the sandwiches).&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -269,15 +402,15 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have made it this far, please join me in a moment of silence to pay respect to Juliet&apos;s spilled matcha (#31 and counting). But don&apos;t worry, the baristas were kind enough to use compressed air to get it out of her laptop. Once again, shoutout to the amazing baristas for our current drink fixation and saving Juliet&apos;s not-backed up data. &lt;/p&gt;
+&lt;p&gt;If you have made it this far, please join me in a moment of silence to pay respect to Juliet's spilled matcha (#31 and counting). But don't worry, the baristas were kind enough to use compressed air to get it out of her laptop. Once again, shoutout to the amazing baristas for our current drink fixation and saving Juliet's not-backed up data. &lt;/p&gt;
 
 &lt;center&gt;
-&lt;img src=&quot;/assets/images/DDmatcha_postSpill.jpeg&quot; alt=&quot;Juliet&apos;s spilled matcha on the corner of her laptop&quot; width=&quot;300&quot; height=&quot;390&quot; title=&quot;Spilled Matcha&quot; /&gt;
+&lt;img src=&quot;/assets/images/DDmatcha_postSpill.jpeg&quot; alt=&quot;Juliet's spilled matcha on the corner of her laptop&quot; width=&quot;300&quot; height=&quot;390&quot; title=&quot;Spilled Matcha&quot; /&gt;
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: All the specialty drinks that are featured on the front of the menus are lattes unless otherwise specified. Do &lt;i&gt;not&lt;/i&gt; do what I did in forgetting to ask for alternative-dairy milk&lt;/p&gt;
 </description>
-        <pubDate>Mon, 12 Jun 2023 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 12 Jun 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/discodeath/</link>
         <guid isPermaLink="true">http://localhost:4000/discodeath/</guid>
         
@@ -300,12 +433,12 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 &lt;p&gt;I had just quit my barista job a few months earlier. I was/am immunocompromised, so much was still unknown about COVID, and much like toilet paper, masks and sanitizer were hard to come by. I had a lot of sympathy for the Spyhouse baristas who were putting their own health in danger and not getting the support they felt they needed from their higher ups.&lt;/p&gt;
 &lt;p&gt;Spyhouse workers eventually &lt;a href=&quot;https://minnesotareformer.com/2020/11/18/spyhouse-workers-narrowly-vote-against-unionization-company-rewards-them-with-hazard-pay/&quot;&gt;voted against unionization&lt;/a&gt; and many ended up quitting as a result. Spyhouse management started paying hazard pay soon after the vote - one of the asks of employees who wanted to unionize - but many of the asks that prompted the strike were not fulfilled.&lt;/p&gt;
 
-&lt;p&gt;All this to say, I likely hold some bias against Spyhouse as an institution. But that&apos;s not what I am reviewing here. These are my thoughts on Spyhouse as a place to do remote work - not barista work. And that&apos;s the great thing about quantitative data. It doesn&apos;t care about my feelings.&lt;/p&gt;
+&lt;p&gt;All this to say, I likely hold some bias against Spyhouse as an institution. But that's not what I am reviewing here. These are my thoughts on Spyhouse as a place to do remote work - not barista work. And that's the great thing about quantitative data. It doesn't care about my feelings.&lt;/p&gt;
 &lt;br /&gt;
-&lt;h5&gt;Enough about my snowflake emotions. You&apos;re here for the review.&lt;/h5&gt;
+&lt;h5&gt;Enough about my snowflake emotions. You're here for the review.&lt;/h5&gt;
 
-&lt;p&gt;I&apos;ll get right to it: Spyhouse on Nicollet is not my favorite place to work. When I first moved to Whittier and was looking for new coffee shops to work at, Spyhouse was one of my first tries. I had stopped by their St Paul location a few times in college but every location has its own quirks and I hadn&apos;t been to the Nicollet location before.&lt;/p&gt;
-&lt;p&gt;When you walk in, it seems like a fine place to do work. It&apos;s big, there&apos;s a lot of seating, and a lot of places to plug in. It&apos;s not too loud and you can have your own space or work with friends. That changes when you open your laptop. The wifi is not only slow, but unreliable. At times it would go out completely, but when it was working it hovered around only 20mbps. For context, Comcast does not sell home wifi plans slower than 75mbps. If you&apos;re regularly using the internet for your work, this probably won&apos;t cut it.&lt;/p&gt;
+&lt;p&gt;I'll get right to it: Spyhouse on Nicollet is not my favorite place to work. When I first moved to Whittier and was looking for new coffee shops to work at, Spyhouse was one of my first tries. I had stopped by their St Paul location a few times in college but every location has its own quirks and I hadn't been to the Nicollet location before.&lt;/p&gt;
+&lt;p&gt;When you walk in, it seems like a fine place to do work. It's big, there's a lot of seating, and a lot of places to plug in. It's not too loud and you can have your own space or work with friends. That changes when you open your laptop. The wifi is not only slow, but unreliable. At times it would go out completely, but when it was working it hovered around only 20mbps. For context, Comcast does not sell home wifi plans slower than 75mbps. If you're regularly using the internet for your work, this probably won't cut it.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -335,7 +468,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;But at least you will have power!&lt;/h5&gt;
 
-&lt;p&gt;One thing we do like about Spyhouse Nicollet is there are a lot of outlets. You don&apos;t have to worry about running out of battery as you run out of patience with the internet. The environment is also pretty mellow. Some of the Spyhouse locations we&apos;ve been to have not had that low key environment, but Spyhouse Nicollet is comfortable to work at. However, despite these positives, we would not recommend meetings here as the wifi just is not reliable enough.&lt;/p&gt;
+&lt;p&gt;One thing we do like about Spyhouse Nicollet is there are a lot of outlets. You don't have to worry about running out of battery as you run out of patience with the internet. The environment is also pretty mellow. Some of the Spyhouse locations we've been to have not had that low key environment, but Spyhouse Nicollet is comfortable to work at. However, despite these positives, we would not recommend meetings here as the wifi just is not reliable enough.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -359,8 +492,8 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h5&gt;Enough about my laptop! What about my need for speed (caffeine)?&lt;/h5&gt;
 
-&lt;p&gt;In an earlier section I said your opinion of Spyhouse might be affected when you open your laptop, but really our first turn off was when we opened our wallets. While Spyhouse does not charge extra for alternative milks, their base prices are high. Kind of like when TVs are 50% off on Black Friday but the price was raised 70% the day before. Spyhouse is the most expensive coffee shop we&apos;ve reviewed so far with a small latte coming in at $6.30 and a small coffee at $3.50. The taste of the coffee is fine - not bad but nothing to write home about.&lt;/p&gt;
-&lt;p&gt;We are fans of their seasonal drinks and they have many dairy free and non-coffee options, but it was difficult for us to overlook the prices. If you&apos;re a vanilla latte girlie, be prepared to shell out close to $10 for a small.&lt;/p&gt;
+&lt;p&gt;In an earlier section I said your opinion of Spyhouse might be affected when you open your laptop, but really our first turn off was when we opened our wallets. While Spyhouse does not charge extra for alternative milks, their base prices are high. Kind of like when TVs are 50% off on Black Friday but the price was raised 70% the day before. Spyhouse is the most expensive coffee shop we've reviewed so far with a small latte coming in at $6.30 and a small coffee at $3.50. The taste of the coffee is fine - not bad but nothing to write home about.&lt;/p&gt;
+&lt;p&gt;We are fans of their seasonal drinks and they have many dairy free and non-coffee options, but it was difficult for us to overlook the prices. If you're a vanilla latte girlie, be prepared to shell out close to $10 for a small.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -408,12 +541,12 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 &lt;/div&gt;
 &lt;br /&gt;
 
-&lt;p&gt;So there you have it. Our short and (not so) sweet Spyhouse review. We probably won&apos;t be working there much, so if you don&apos;t want to be graced with our presence Spyhouse Nicollet is a great choice!&lt;/p&gt;
+&lt;p&gt;So there you have it. Our short and (not so) sweet Spyhouse review. We probably won't be working there much, so if you don't want to be graced with our presence Spyhouse Nicollet is a great choice!&lt;/p&gt;
 
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Get the most bang for your buck and get those non-dairy milks with no upcharge!&lt;/p&gt;
 &lt;/p&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 21 May 2023 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 21 May 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/spyhouse-nicollet/</link>
         <guid isPermaLink="true">http://localhost:4000/spyhouse-nicollet/</guid>
         
@@ -432,7 +565,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
         <title>Spring Round Up 1</title>
         <description>&lt;h2&gt;A little recap of the first half of spring!&lt;/h2&gt;
 
-&lt;p&gt;We started rating coffee shops at the start of Spring this year and we&apos;ve been having a great time doing it! But we know your time is precious and you may not have time to read them all, so we&apos;ve rounded them up for you in a nice little package. We&apos;ll give you the quick view (The Shots) if you&apos;ve only got a minute, but keep reading for some insights (Spilling the Beans) on where we went and how we felt about it. Yes, the headers are bad coffee puns.&lt;/p&gt;
+&lt;p&gt;We started rating coffee shops at the start of Spring this year and we've been having a great time doing it! But we know your time is precious and you may not have time to read them all, so we've rounded them up for you in a nice little package. We'll give you the quick view (The Shots) if you've only got a minute, but keep reading for some insights (Spilling the Beans) on where we went and how we felt about it. Yes, the headers are bad coffee puns.&lt;/p&gt;
 
 &lt;h3&gt;The Shots&lt;/h3&gt;
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:70%&quot;&gt;
@@ -521,7 +654,7 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
       &lt;td&gt;$3.25&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/ninas&quot;&gt;Nina&apos;s Coffee Cafe&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;/ninas&quot;&gt;Nina's Coffee Cafe&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/Veo7SdX2p3hf5uPC8&quot; target=&quot;_blank&quot;&gt;St Paul&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class=&quot;rating-holder&quot;&gt;
@@ -547,27 +680,27 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
 
 &lt;h4&gt;Quixotic Coffee&lt;/h4&gt;
 &lt;p&gt;We started our journey back in March with &lt;a href=&quot;/quixotic&quot;&gt;Quixotic Coffee&lt;/a&gt;. Quixotic was the coffee shop where Juliet first started working regularly after having frequented it in college. 
-  It&apos;s comfortable, great for meetings, and they have a lot of tasty food options. Here&apos;s what we like most:&lt;/p&gt;
+  It's comfortable, great for meetings, and they have a lot of tasty food options. Here's what we like most:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Lots of booths! You can have your own personal space while still experiencing the vibrant coffee shop environment.&lt;/li&gt;
-  &lt;li&gt;Osmar&apos;s favorite blueberry muffin can be found here (if he hasn&apos;t eaten them all).&lt;/li&gt;
+  &lt;li&gt;Osmar's favorite blueberry muffin can be found here (if he hasn't eaten them all).&lt;/li&gt;
   &lt;li&gt;Quixotic now has great smoothie and yogurt bowls.&lt;/li&gt;
-  &lt;li&gt;It&apos;s easy to find parking.&lt;/li&gt;
+  &lt;li&gt;It's easy to find parking.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;SK Coffee - Whittier&lt;/h4&gt;
-&lt;p&gt;When &lt;a href=&quot;/skcoffee&quot;&gt;SK Coffee - Whittier&lt;/a&gt; opened up just a few blocks away from our house, we knew we&apos;d have to check it out.
-Someone had to do the community the service of quality checking the new coffee spot and we selflessly volunteered to try their drinks and food. Here&apos;s what we thought about it:&lt;/p&gt;
+&lt;p&gt;When &lt;a href=&quot;/skcoffee&quot;&gt;SK Coffee - Whittier&lt;/a&gt; opened up just a few blocks away from our house, we knew we'd have to check it out.
+Someone had to do the community the service of quality checking the new coffee spot and we selflessly volunteered to try their drinks and food. Here's what we thought about it:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;We&apos;re big fans of the matcha lattes at SK.&lt;/li&gt;
+  &lt;li&gt;We're big fans of the matcha lattes at SK.&lt;/li&gt;
   &lt;li&gt;The food is top notch! They have a great lentil curry pastry that Juliet would like to eat daily.&lt;/li&gt;
   &lt;li&gt;Taking meetings at SK can be hit or miss. The music is usually at a decent level but sometimes is less suitable as the background to your Zoom call.&lt;/li&gt;
-  &lt;li&gt;SK only has 21 seats so it&apos;s often close to full. Get there early to make sure you can sit! It&apos;s worth it.&lt;/li&gt;
+  &lt;li&gt;SK only has 21 seats so it's often close to full. Get there early to make sure you can sit! It's worth it.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4&gt;Corner Coffee - Uptown&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;/corner-coffee-uptown&quot;&gt;Corner Coffee&lt;/a&gt; was one of the first places that we regularly worked at after moving to Uptown.
-There&apos;s always a place to sit, the environment is laid back but still vibrant, and the baristas will get to know you if you show up often. Some key points:&lt;/p&gt;
+There's always a place to sit, the environment is laid back but still vibrant, and the baristas will get to know you if you show up often. Some key points:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Corner Coffee always has reliable wifi and lots of outlets making it great for meetings.&lt;/li&gt;
   &lt;li&gt;The breakfast and lunch sandwiches are great and are made to order.&lt;/li&gt;
@@ -577,29 +710,29 @@ There&apos;s always a place to sit, the environment is laid back but still vibra
 
 &lt;h4&gt;Dogwood Coffee - St Paul&lt;/h4&gt;
 &lt;p&gt;While &lt;a href=&quot;/dogwood-saint-paul&quot;&gt;Dogwood Coffee - St Paul&lt;/a&gt; was not one of our favorite remote work spots, it still earned itself a 3.5 star rating.
-Although we like their coffee, the food options are lacking and the environment is somewhat uninspiring. I&apos;m running out of ways to introduce lists:&lt;/p&gt;
+Although we like their coffee, the food options are lacking and the environment is somewhat uninspiring. I'm running out of ways to introduce lists:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Dogwood has great coffee. If you like to brew at home, it&apos;s worth picking up a bag of beans.&lt;/li&gt;
+  &lt;li&gt;Dogwood has great coffee. If you like to brew at home, it's worth picking up a bag of beans.&lt;/li&gt;
   &lt;li&gt;While the food they have is good, there are very few options and their sandwiches sell out quickly leaving not many options for a meal.&lt;/li&gt;
-  &lt;li&gt;If you&apos;re looking for a non-distracting environment, Dogwood is a great choice!&lt;/li&gt;
+  &lt;li&gt;If you're looking for a non-distracting environment, Dogwood is a great choice!&lt;/li&gt;
   &lt;li&gt;There is pretty solid wifi and there has always been ample seating available when we have gone to Dogwood.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4&gt;Nina&apos;s Coffee Cafe&lt;/h4&gt;
-&lt;p&gt;We love &lt;a href=&quot;/ninas&quot;&gt;Nina&apos;s Coffee Cafe&lt;/a&gt;. But maybe not for remote work. It&apos;s a fun spot with great drinks, however, it may be too distracting and there aren&apos;t many outlets. 
+&lt;h4&gt;Nina's Coffee Cafe&lt;/h4&gt;
+&lt;p&gt;We love &lt;a href=&quot;/ninas&quot;&gt;Nina's Coffee Cafe&lt;/a&gt;. But maybe not for remote work. It's a fun spot with great drinks, however, it may be too distracting and there aren't many outlets. 
 You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;The ambiance at Nina&apos;s is great! While it may not be the best for work, it&apos;s a great social spot.&lt;/li&gt;
-  &lt;li&gt;The food is pretty good but we&apos;ve had better pastries elsewhere. Not bad, just not the best.&lt;/li&gt;
-  &lt;li&gt;Lots of dairy free milks at Nina&apos;s but beware - the drinks with caramel made Osmar&apos;s tummy hurt.&lt;/li&gt;
-  &lt;li&gt;Because it&apos;s such a fun spot with great drinks, it&apos;s often fairly crowded which makes it a bit ofa riskier option.&lt;/li&gt;
+  &lt;li&gt;The ambiance at Nina's is great! While it may not be the best for work, it's a great social spot.&lt;/li&gt;
+  &lt;li&gt;The food is pretty good but we've had better pastries elsewhere. Not bad, just not the best.&lt;/li&gt;
+  &lt;li&gt;Lots of dairy free milks at Nina's but beware - the drinks with caramel made Osmar's tummy hurt.&lt;/li&gt;
+  &lt;li&gt;Because it's such a fun spot with great drinks, it's often fairly crowded which makes it a bit ofa riskier option.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;That&apos;s what we&apos;ve got, folks! Stick around for more reviews and round ups, and check out our new &lt;a href=&quot;/tldr&quot;&gt;TL;DR&lt;/a&gt; page if you hate our writing and just want the facts.&lt;/p&gt;
+&lt;p&gt;That's what we've got, folks! Stick around for more reviews and round ups, and check out our new &lt;a href=&quot;/tldr&quot;&gt;TL;DR&lt;/a&gt; page if you hate our writing and just want the facts.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 02 May 2023 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 02 May 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/spring-roundup-1/</link>
         <guid isPermaLink="true">http://localhost:4000/spring-roundup-1/</guid>
         
@@ -611,22 +744,22 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
       </item>
     
       <item>
-        <title>Nina&apos;s Coffee Cafe</title>
+        <title>Nina's Coffee Cafe</title>
         <description>&lt;h4&gt;Time for a history lesson folx&lt;/h4&gt;
 
-&lt;p&gt;Bonus points if y&apos;all catch the theme of the section headings.&lt;/p&gt;
+&lt;p&gt;Bonus points if y'all catch the theme of the section headings.&lt;/p&gt;
 
 &lt;h5 id=&quot;rumours-who-is-nina&quot;&gt;Rumours: Who is Nina?&lt;/h5&gt;
 
-&lt;p&gt;Nina&apos;s cafe coffeeshop is named after the founder &lt;a href=&quot;https://original.newsbreak.com/@the-streets-of-st-paul-1587459/2914482884419-nina-clifford-1848-1929&quot;&gt; Nina Clifford&lt;/a&gt;– whose real name is Hannah Steinbrecher. Born in Canada, Nina arrived in St. Paul in 1885, and her options of making a living wage were limited as a widow. But folx, that did not hold her back. She established a cafe and bought two other buildings– which no longer stand today– in the red light district of St. Paul. Nina&apos;s cafe was rumoured to be a brothel back in the day, but it was actually at those other locations where she ran that business. Of course, gossip doesn&apos;t stop there. Some of you may have even heard of those tunnels that supposedly run under Nina&apos;s cafe. Well, sadly these tunnels &lt;a href=&quot;https://www.joyinminnesota.com/home/the-myth-of-ninas-coffee-cafe&quot;&gt;do not actually exist (or so they say).&lt;/a&gt; Finally, the last thing I&apos;ll clear up is that yes, it is indeed pronounced NINE-uhs and not KNEE-nahs. RIP to all of you that corrected me over the past few years.&lt;/p&gt;
+&lt;p&gt;Nina's cafe coffeeshop is named after the founder &lt;a href=&quot;https://original.newsbreak.com/@the-streets-of-st-paul-1587459/2914482884419-nina-clifford-1848-1929&quot;&gt; Nina Clifford&lt;/a&gt;– whose real name is Hannah Steinbrecher. Born in Canada, Nina arrived in St. Paul in 1885, and her options of making a living wage were limited as a widow. But folx, that did not hold her back. She established a cafe and bought two other buildings– which no longer stand today– in the red light district of St. Paul. Nina's cafe was rumoured to be a brothel back in the day, but it was actually at those other locations where she ran that business. Of course, gossip doesn't stop there. Some of you may have even heard of those tunnels that supposedly run under Nina's cafe. Well, sadly these tunnels &lt;a href=&quot;https://www.joyinminnesota.com/home/the-myth-of-ninas-coffee-cafe&quot;&gt;do not actually exist (or so they say).&lt;/a&gt; Finally, the last thing I'll clear up is that yes, it is indeed pronounced NINE-uhs and not KNEE-nahs. RIP to all of you that corrected me over the past few years.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;mystery-to-me-where-the-heck-is-the-bathroom&quot;&gt;Mystery to me: Where the heck is the bathroom?&lt;/h5&gt;
 
-&lt;p&gt;Nina&apos;s cafe is in a beautiful building that is only more breathtaking on the inside. The high ceilings and abundant natural light always puts me in a good mood. There is also plenty of seating and it&apos;s quite diverse: from couches to nooks and tables. That being said, it is a popular place and it does tend to be crowded. Regarding the bathrooms, there is only one, but it has been out of order the past few times. But no need to fear my fellow sensitive tummy folx as there are two backup bathrooms in Blair&apos;s Arcade– the building connected to Nina&apos;s. The only issue is... finding them can be a bit of a hassle, but Juliet and I have done it and are here to do the work so that you don&apos;t have to!&lt;/p&gt;
+&lt;p&gt;Nina's cafe is in a beautiful building that is only more breathtaking on the inside. The high ceilings and abundant natural light always puts me in a good mood. There is also plenty of seating and it's quite diverse: from couches to nooks and tables. That being said, it is a popular place and it does tend to be crowded. Regarding the bathrooms, there is only one, but it has been out of order the past few times. But no need to fear my fellow sensitive tummy folx as there are two backup bathrooms in Blair's Arcade– the building connected to Nina's. The only issue is... finding them can be a bit of a hassle, but Juliet and I have done it and are here to do the work so that you don't have to!&lt;/p&gt;
 
-&lt;p&gt;Directions to Narnia: alright, you&apos;re going to want to step outside the side door into the main hallway and take a right (if you take a left, you will be exiting the building, so uh don&apos;t do that). Walk down that mirror hallway past the hair salon and the fountains. Once you step foot on the carpet, you&apos;re going to want to go just a bit further until you see the first hallway to the left. Turn left into it and then left again at the end. There, you will see two doors with the lockpads and all that&apos;s left to do is punch it in and lock the door behind you!&lt;/p&gt;
+&lt;p&gt;Directions to Narnia: alright, you're going to want to step outside the side door into the main hallway and take a right (if you take a left, you will be exiting the building, so uh don't do that). Walk down that mirror hallway past the hair salon and the fountains. Once you step foot on the carpet, you're going to want to go just a bit further until you see the first hallway to the left. Turn left into it and then left again at the end. There, you will see two doors with the lockpads and all that's left to do is punch it in and lock the door behind you!&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -656,7 +789,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;mirage-are-you-actually-working&quot;&gt;Mirage: Are you actually working?&lt;/h5&gt;
 
-&lt;p&gt;Although Nina&apos;s Cafe is a really nice spot to be in and fulfill your desire for a coffeshop work aesthetic, it may not be the best place if you really need to focus. If you&apos;re like me and are easily distracted, you are better off bringing some noise cancellation headphones and doing work that does not require all of your attention. It is usually pretty full, so there is always quite a bit going on. I would not take a meeting here nor would I come here if I had a lot of reading to get done. Nina&apos;s cafe is still a great place to have a fun drink and catch up with a friend. They also have a free parking lot nearby!&lt;/p&gt;
+&lt;p&gt;Although Nina's Cafe is a really nice spot to be in and fulfill your desire for a coffeshop work aesthetic, it may not be the best place if you really need to focus. If you're like me and are easily distracted, you are better off bringing some noise cancellation headphones and doing work that does not require all of your attention. It is usually pretty full, so there is always quite a bit going on. I would not take a meeting here nor would I come here if I had a lot of reading to get done. Nina's cafe is still a great place to have a fun drink and catch up with a friend. They also have a free parking lot nearby!&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -680,7 +813,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;the-dance-to-eat-or-not-to-eat&quot;&gt;The Dance: To eat or not to eat&lt;/h5&gt;
 
-&lt;p&gt;The coffee at Nina&apos;s is pretty decent (so Juliet tells me) and they have a few fun, and really good, teas. They have a few seasonal drinks that are always fun and I would definitely recommend. They also have a few dairy-free milks and we love having options. Here is some coffee data:&lt;/p&gt;
+&lt;p&gt;The coffee at Nina's is pretty decent (so Juliet tells me) and they have a few fun, and really good, teas. They have a few seasonal drinks that are always fun and I would definitely recommend. They also have a few dairy-free milks and we love having options. Here is some coffee data:&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -708,7 +841,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt; While the food at Nina&apos;s isn&apos;t terrible, it was not my favorite. I&apos;ve only tried three different pastries and was not in love with any of them nor would I have them again. They also have a breakfast burrito and quiche that I may be trying sometime in the near future, because I will definitely be coming back to Nina&apos;s.&lt;/p&gt;
+&lt;p&gt; While the food at Nina's isn't terrible, it was not my favorite. I've only tried three different pastries and was not in love with any of them nor would I have them again. They also have a breakfast burrito and quiche that I may be trying sometime in the near future, because I will definitely be coming back to Nina's.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -730,7 +863,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: some drinks made with caramel have quite a bit of dairy in them. Even with a dairy-free milk, I would caution my lactose-unfriendly peeps to stay clear of them no matter how good they are :( &lt;/p&gt;
 </description>
-        <pubDate>Thu, 27 Apr 2023 00:00:00 -0500</pubDate>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/ninas/</link>
         <guid isPermaLink="true">http://localhost:4000/ninas/</guid>
         
@@ -749,7 +882,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
         <title>Dogwood Coffee - Saint Paul</title>
         <description>&lt;h4&gt;Woof woof&lt;/h4&gt;
 
-&lt;p&gt;Just kidding. This review isn&apos;t about dogs. Tricked ya!&lt;/p&gt;
+&lt;p&gt;Just kidding. This review isn't about dogs. Tricked ya!&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -757,7 +890,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;p&gt;Yes, I am going to make puns. Stop reading now if you hate sophisticated humor. &lt;/p&gt;
 
-&lt;p&gt;I had been to Dogwood a number of times before trying it out as a remote work spot. I had brewed their coffee at home and had some college homework sessions at a couple of their locations. But the first time I went to Dogwood&apos;s Saint Paul location for remote work was actually because I couldn&apos;t find a seat at &lt;a href=&quot;https://remoteroast.github.io/quixotic/&quot;&gt;Quixotic.&lt;/a&gt; That was the first time I went somewhere new to work where I didn&apos;t know if I could rely on the wifi. I wished at that time that there was a website where I could see which coffee shops were good for remote work. And now, here we are!&lt;/p&gt;
+&lt;p&gt;I had been to Dogwood a number of times before trying it out as a remote work spot. I had brewed their coffee at home and had some college homework sessions at a couple of their locations. But the first time I went to Dogwood's Saint Paul location for remote work was actually because I couldn't find a seat at &lt;a href=&quot;https://remoteroast.github.io/quixotic/&quot;&gt;Quixotic.&lt;/a&gt; That was the first time I went somewhere new to work where I didn't know if I could rely on the wifi. I wished at that time that there was a website where I could see which coffee shops were good for remote work. And now, here we are!&lt;/p&gt;
 &lt;p&gt;Lucky for me, the wifi was enough for my Zoom call, there was a place to sit, and I could get a good coffee.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
@@ -787,7 +920,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 &lt;h5 id=&quot;is-it-affurdable&quot;&gt;Is it af&lt;em&gt;fur&lt;/em&gt;dable?&lt;/h5&gt;
-&lt;p&gt;Dogwood roasts their own beans. I often buy them for my own brewing at home, so it&apos;s no surprise I like their coffee. But for those of you whose red flag is not drinking coffee, there are other drinks like hot teas, tea lattes, and golden milk. I particularly like their chai. Dogwood also has good seasonal drinks and a couple of dairy free options. And while the prices are not the cheapest of the coffee shops we&apos;ve collected data on, they&apos;re not the most expensive either.&lt;/p&gt;
+&lt;p&gt;Dogwood roasts their own beans. I often buy them for my own brewing at home, so it's no surprise I like their coffee. But for those of you whose red flag is not drinking coffee, there are other drinks like hot teas, tea lattes, and golden milk. I particularly like their chai. Dogwood also has good seasonal drinks and a couple of dairy free options. And while the prices are not the cheapest of the coffee shops we've collected data on, they're not the most expensive either.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -818,7 +951,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;bone-appetit&quot;&gt;&lt;em&gt;Bone&lt;/em&gt; Appetit&lt;/h5&gt;
 
-&lt;p&gt;When considering all of the great food we&apos;ve had at coffee shops, I&apos;d say the food at dogwood is fine. I&apos;m not particularly excited by it and there are not many options besides pastries, but what they do have is good. They have a couple of sandwiches but they sell out quickly. The other meal-type option is oatmeal which is just fine.&lt;/p&gt;
+&lt;p&gt;When considering all of the great food we've had at coffee shops, I'd say the food at dogwood is fine. I'm not particularly excited by it and there are not many options besides pastries, but what they do have is good. They have a couple of sandwiches but they sell out quickly. The other meal-type option is oatmeal which is just fine.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -840,9 +973,9 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;howl-is-the-work-environment&quot;&gt;&lt;em&gt;Howl&lt;/em&gt; is the work environment?&lt;/h5&gt;
 
-&lt;p&gt;As far as the work environment goes, Dogwood has a low key, non-distracting ambiance that is well suited for focusing on work and is great for taking calls. There are booths to silo yourself from the rest of the patrons. Or, if you&apos;re feeling social, there are tables that seat larger groups.&lt;/p&gt;
+&lt;p&gt;As far as the work environment goes, Dogwood has a low key, non-distracting ambiance that is well suited for focusing on work and is great for taking calls. There are booths to silo yourself from the rest of the patrons. Or, if you're feeling social, there are tables that seat larger groups.&lt;/p&gt;
 
-&lt;p&gt;If you&apos;re easily distracted, Dogwood in Saint Paul may be a good spot for you. The music isn&apos;t too loud, there is not typically a big crowd, and there are not many distractions on the walls. There is not a lot of decor and the booths are all wood, so there is a bit of an echo since there isn&apos;t much around to absorb sound. Still, the environment is comfortable and it is a good place to get focused work done.&lt;/p&gt;
+&lt;p&gt;If you're easily distracted, Dogwood in Saint Paul may be a good spot for you. The music isn't too loud, there is not typically a big crowd, and there are not many distractions on the walls. There is not a lot of decor and the booths are all wood, so there is a bit of an echo since there isn't much around to absorb sound. Still, the environment is comfortable and it is a good place to get focused work done.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -863,11 +996,11 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/table&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;All in all, Dogwood Coffee in Saint Paul is a solid option. While it&apos;s not one of our top choices, that&apos;s not because it has any problems. There&apos;s a lot we like about it - including that it has a parking lot - but we give it a 3.5. Which, if you&apos;re data nerds like us, you&apos;ll recognize as being above average.&lt;/p&gt;
+&lt;p&gt;All in all, Dogwood Coffee in Saint Paul is a solid option. While it's not one of our top choices, that's not because it has any problems. There's a lot we like about it - including that it has a parking lot - but we give it a 3.5. Which, if you're data nerds like us, you'll recognize as being above average.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Grab a bag of beans! I&apos;m a fan of their light roasts.&lt;/p&gt;
+&lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Grab a bag of beans! I'm a fan of their light roasts.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 31 Mar 2023 00:00:00 -0500</pubDate>
+        <pubDate>Fri, 31 Mar 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/dogwood-saint-paul/</link>
         <guid isPermaLink="true">http://localhost:4000/dogwood-saint-paul/</guid>
         
@@ -892,7 +1025,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;whats-so-good-about-working-from-corner-coffee&quot;&gt;What’s so good about working from Corner Coffee?&lt;/h5&gt;
 
-&lt;p&gt;Ironically located one door down from the corner of Hennepin and 28th, Corner Coffee has an ideal working environment that accommodates many working styles. Want to be comfy and chill out while you work? They have couches and warm seasonal drinks. Working with a group? There are long tables with lots of seating. Need privacy for a meeting? There&apos;s a room with a sliding door so you can shut yourself in like the antisocial hermit you are. &lt;/p&gt;
+&lt;p&gt;Ironically located one door down from the corner of Hennepin and 28th, Corner Coffee has an ideal working environment that accommodates many working styles. Want to be comfy and chill out while you work? They have couches and warm seasonal drinks. Working with a group? There are long tables with lots of seating. Need privacy for a meeting? There's a room with a sliding door so you can shut yourself in like the antisocial hermit you are. &lt;/p&gt;
 
 &lt;p&gt;In addition to all of that, there are not one but &lt;i&gt;TWO&lt;/i&gt; bathrooms, strong wifi, and there is always a place to sit.&lt;/p&gt;
 
@@ -922,12 +1055,12 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;Osmar and I both have ~sensitive tummies~ which means we can&apos;t always drink coffee and sometimes milk translates to loss of integrity as we make our 10th trip to the bathroom in the hour...&lt;/p&gt;
+&lt;p&gt;Osmar and I both have ~sensitive tummies~ which means we can't always drink coffee and sometimes milk translates to loss of integrity as we make our 10th trip to the bathroom in the hour...&lt;/p&gt;
 &lt;h5 id=&quot;but-whether-or-not-we-can-have-caffeine&quot;&gt;But whether or not we can have caffeine…&lt;/h5&gt;
 
 &lt;p&gt;Corner Coffee has great seasonal drinks for coffee lovers and h8rs alike! Personal favorites include the Chaider and the Lavender Lemon Cold Brew. They also have great hot and cold teas, as well as your classic coffee and espresso drinks. And, if you like the smell of coffee, Corner Coffee also roasts beans in house and while the fire alarm did go off one time, usually it just fills the room with the smell of fresh beans (the coffee kind).&lt;/p&gt;
 
-&lt;p&gt; If you read the seasonal drinks and rolled your eyes at the concoctions because you&apos;re too cool to admit that coffee can taste good with additions other than cream and sugar, here are the simple stats for you bean water aficionados:&lt;/p&gt;
+&lt;p&gt; If you read the seasonal drinks and rolled your eyes at the concoctions because you're too cool to admit that coffee can taste good with additions other than cream and sugar, here are the simple stats for you bean water aficionados:&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -955,14 +1088,14 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;Another thing we have come to appreciate at Corner Coffee are the baristas! Everyone made an effort to learn our names, know our drink preferences, and they always say hi. They also frequently will bring food and drinks right to where we&apos;re sitting. As a former barista at a fast paced coffee shop named after a reindeer, I know that&apos;s not always what you want to do. But I take that as a sign that they like what they&apos;re doing and the environment they work in.&lt;/p&gt;
+&lt;p&gt;Another thing we have come to appreciate at Corner Coffee are the baristas! Everyone made an effort to learn our names, know our drink preferences, and they always say hi. They also frequently will bring food and drinks right to where we're sitting. As a former barista at a fast paced coffee shop named after a reindeer, I know that's not always what you want to do. But I take that as a sign that they like what they're doing and the environment they work in.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;sammies-galore&quot;&gt;Sammies galore!&lt;/h5&gt;
 
-&lt;p&gt;Sometimes you&apos;re so busy that you rush out the door, go-gurt in hand, and when you get to the coffee shop, all you can think about is food. Only me with the go-gurt? That&apos;s fine because Corner Coffee has something better.&lt;/p&gt;
+&lt;p&gt;Sometimes you're so busy that you rush out the door, go-gurt in hand, and when you get to the coffee shop, all you can think about is food. Only me with the go-gurt? That's fine because Corner Coffee has something better.&lt;/p&gt;
 
-&lt;p&gt;Open your nostrils folks, because Corner Coffee has delicious breakfast sandwiches made to order and when you smell that bacon, you may just order one yourself. We&apos;re also big fans of the BLT. They do have bacon-less options too -- shout out to my Kosher cousins.&lt;/p&gt;
+&lt;p&gt;Open your nostrils folks, because Corner Coffee has delicious breakfast sandwiches made to order and when you smell that bacon, you may just order one yourself. We're also big fans of the BLT. They do have bacon-less options too -- shout out to my Kosher cousins.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -984,7 +1117,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 
 &lt;h5 id=&quot;oh-shit-my-computer-is-about-to-die&quot;&gt;Oh shit, my computer is about to die!&lt;/h5&gt;
 
-&lt;p&gt;Have you caught yourself saying that before? Don&apos;t fear! An outlet is near! Corner Coffee is very well suited for remote work with outlets along every wall and a chill work environment. The music is usually at a reasonable volume, many of the people inside are also working, and it&apos;s easy and comfortable to take a meeting.&lt;/p&gt;
+&lt;p&gt;Have you caught yourself saying that before? Don't fear! An outlet is near! Corner Coffee is very well suited for remote work with outlets along every wall and a chill work environment. The music is usually at a reasonable volume, many of the people inside are also working, and it's easy and comfortable to take a meeting.&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -1004,11 +1137,11 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;That&apos;s what we&apos;ve got for Corner Coffee!&lt;/p&gt;
+&lt;p&gt;That's what we've got for Corner Coffee!&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: Are you a big tea drinker but the tea gets cold before you can finish it? You can get the whole pitcher at Corner Coffee and pour it yourself! It stays nice and steamy.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 21 Mar 2023 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 21 Mar 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/corner-coffee-uptown/</link>
         <guid isPermaLink="true">http://localhost:4000/corner-coffee-uptown/</guid>
         
@@ -1151,7 +1284,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt; &lt;i&gt;Pro tip&lt;/i&gt;: SK is also a roastery! If you end up becoming obsessed like us, they have &lt;a href=&quot;https://skcoffeeplease.com/subscription&quot;&gt; subscription plans &lt;/a&gt; for delivering coffee beans to your door. &lt;i&gt;Sigh&lt;/i&gt;, if only they delivered the matcha.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 14 Mar 2023 00:00:00 -0500</pubDate>
+        <pubDate>Tue, 14 Mar 2023 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/skcoffee/</link>
         <guid isPermaLink="true">http://localhost:4000/skcoffee/</guid>
         
@@ -1171,11 +1304,11 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
         <description>&lt;h4&gt;Our first review!&lt;/h4&gt;
 
 &lt;p&gt;In the winter of 2021, in the midst of roommate drama and quarantine induced insanity, I decided I needed to get away from my desk in the basement and find someplace else to work. Quixotic was the first place I went. I was truly a modern woman as I traveled all the way from Minneapolis to St Paul, finally exercising the vast freedom of movement I had as a remote worker. I finally understood &quot;van life&quot; and the &quot;digital nomad&quot; mentality. I mean, I was working from a completely different city!&lt;/p&gt;
-&lt;p&gt;Okay, that might be a stretch. It was Saint Paul, not Costa Rica. But still, there was a sense of excitement and freedom working from neither an office, nor my desk at home. Quixotic was the start to my &quot;work from anywhere&quot; journey and what a great place it was to start with. All that said, you&apos;re not here for my trip down memory lane. You&apos;re here for the data, right?&lt;/p&gt;
+&lt;p&gt;Okay, that might be a stretch. It was Saint Paul, not Costa Rica. But still, there was a sense of excitement and freedom working from neither an office, nor my desk at home. Quixotic was the start to my &quot;work from anywhere&quot; journey and what a great place it was to start with. All that said, you're not here for my trip down memory lane. You're here for the data, right?&lt;/p&gt;
 
 &lt;h5 id=&quot;so-onto-the-bean-juicy-stuff&quot;&gt;&lt;em&gt;So onto the (bean) juicy stuff&lt;/em&gt;&lt;/h5&gt;
 
-&lt;p&gt;I&apos;ll start with our basic quantitative metrics:&lt;/p&gt;
+&lt;p&gt;I'll start with our basic quantitative metrics:&lt;/p&gt;
 
 &lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
   &lt;table class=&quot;table&quot;&gt;
@@ -1202,7 +1335,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;I chose Quixotic to launch my coffee-shop-remote-woman-in-STEM (god that&apos;s obnoxious) adventure because it felt comfortable and familiar. I had done homework there as a college student and what I loved - and still love - most about it is that there are several booths with tall wooden walls between them. You can be in your own personal work area while still participating in the vibrant energy of a neighborhood coffee shop. Not only that, but each table has an outlet and the wifi is reliable, so you can take Zoom calls without worrying about a dying battery or losing connection. &lt;/p&gt;
+&lt;p&gt;I chose Quixotic to launch my coffee-shop-remote-woman-in-STEM (god that's obnoxious) adventure because it felt comfortable and familiar. I had done homework there as a college student and what I loved - and still love - most about it is that there are several booths with tall wooden walls between them. You can be in your own personal work area while still participating in the vibrant energy of a neighborhood coffee shop. Not only that, but each table has an outlet and the wifi is reliable, so you can take Zoom calls without worrying about a dying battery or losing connection. &lt;/p&gt;
 
 &lt;p&gt; In addition to the booths, there is a larger closed off conference room that can be reserved if you want to work with friends or co-workers. They also have bar seating and regular tables if all of the booths are taken.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
@@ -1234,8 +1367,8 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If you just finished a stressful meeting with the boss man or you just got a raise and you deserve a little reward, Quixotic has fun and tasty seasonal drinks that you&apos;ll end up spending all of your money on every day for several weeks until you feel bad about it but still can&apos;t stop...&lt;/p&gt;
-&lt;p&gt;Lucky for you, they also have really good drip coffee at a very reasonable price! If coffee&apos;s not your thing, there is a variety of teas, kombuchas, tea lattes, smoothies, and juices to choose from. Personally, I am a fan of their matcha as well as the &lt;a href=&quot;https://www.jinxtea.com/about&quot;&gt; Jinx teas &lt;/a&gt;they offer. &lt;/p&gt;
+&lt;p&gt;If you just finished a stressful meeting with the boss man or you just got a raise and you deserve a little reward, Quixotic has fun and tasty seasonal drinks that you'll end up spending all of your money on every day for several weeks until you feel bad about it but still can't stop...&lt;/p&gt;
+&lt;p&gt;Lucky for you, they also have really good drip coffee at a very reasonable price! If coffee's not your thing, there is a variety of teas, kombuchas, tea lattes, smoothies, and juices to choose from. Personally, I am a fan of their matcha as well as the &lt;a href=&quot;https://www.jinxtea.com/about&quot;&gt; Jinx teas &lt;/a&gt;they offer. &lt;/p&gt;
 
 &lt;h5 id=&quot;onto-the-food&quot;&gt;&lt;em&gt;Onto the food…&lt;/em&gt;&lt;/h5&gt;
 
@@ -1256,7 +1389,7 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If you&apos;re anything like me, having coffee on an empty stomach will send you racing to the bathroom. And one bathroom in a coffee shop with 48 seats (yes, we counted) can be a big risk. But at Quixotic, you can find a variety of fresh pastries from &lt;a href=&quot;http://patisserie46.com/&quot;&gt;Patisserie 46&lt;/a&gt; and &lt;a href=&quot;http://siftglutenfree.com/&quot;&gt; Sift&lt;/a&gt; (gluten free!), and more recently they&apos;ve added smoothie and yogurt bowls from  &lt;a href=&quot;https://www.instagram.com/bomdiatreats/?hl=en&quot;&gt;Bom Dia Treats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you're anything like me, having coffee on an empty stomach will send you racing to the bathroom. And one bathroom in a coffee shop with 48 seats (yes, we counted) can be a big risk. But at Quixotic, you can find a variety of fresh pastries from &lt;a href=&quot;http://patisserie46.com/&quot;&gt;Patisserie 46&lt;/a&gt; and &lt;a href=&quot;http://siftglutenfree.com/&quot;&gt; Sift&lt;/a&gt; (gluten free!), and more recently they've added smoothie and yogurt bowls from  &lt;a href=&quot;https://www.instagram.com/bomdiatreats/?hl=en&quot;&gt;Bom Dia Treats&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h5 id=&quot;finally-onto-the-work-metrics-that-are-mostly-biased-and-completely-subjective&quot;&gt;&lt;em&gt;Finally onto the “work metrics” that are mostly biased and completely subjective…&lt;/em&gt;&lt;/h5&gt;
@@ -1279,14 +1412,14 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
   &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;The work environment at Quixotic is fantastic. Most of the people there are working on something, whether it&apos;s school work or &quot;work work&quot; - whatever that means. For someone trying to dip their toes into the coffee shop work life, Quixotic is a great place to test out, especially if you can sit in a booth. Can you tell I love the booths?&lt;/p&gt;
-&lt;p&gt;The music is usually at a comfortable volume, people are generally respectful of their noise levels, and the food and coffee are reliably good. You don&apos;t have to worry about your wifi cutting out or the background noise being so loud your co-workers can&apos;t hear you in a meeting, and they don&apos;t unexpectedly start playing niche hard-core bands (more on that in another review).&lt;/p&gt;
+&lt;p&gt;The work environment at Quixotic is fantastic. Most of the people there are working on something, whether it's school work or &quot;work work&quot; - whatever that means. For someone trying to dip their toes into the coffee shop work life, Quixotic is a great place to test out, especially if you can sit in a booth. Can you tell I love the booths?&lt;/p&gt;
+&lt;p&gt;The music is usually at a comfortable volume, people are generally respectful of their noise levels, and the food and coffee are reliably good. You don't have to worry about your wifi cutting out or the background noise being so loud your co-workers can't hear you in a meeting, and they don't unexpectedly start playing niche hard-core bands (more on that in another review).&lt;/p&gt;
 &lt;p&gt;All in all, Quixotic is a great place for a remote worker. Osmar gives it a 4.5/5, but I give it a 5/5 and this is my review so what I say goes.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;em&gt;Pro tip: If you can’t find street parking, pull into the alley just north of the shop. There’s 2 hour parking along one side. But leave a spot for us!&lt;/em&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 04 Mar 2023 00:00:00 -0600</pubDate>
+        <pubDate>Sat, 04 Mar 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/quixotic/</link>
         <guid isPermaLink="true">http://localhost:4000/quixotic/</guid>
         
@@ -1298,168 +1431,6 @@ You can decide for yourself based on our quick notes:&lt;/p&gt;
         <category>St Paul</category>
         
         <category>Highland Park</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Remote Roast!</title>
-        <description>&lt;h4&gt;Do you work remotely? Trying to find good coffee shops to work at? You&apos;ve come to the right place!&lt;/h4&gt;
-
-&lt;p&gt;In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn&apos;t break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?&lt;/p&gt;
-
-&lt;p&gt;So, data nerds that we are, we decided to put all of our findings in one place so you don&apos;t have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.&lt;/p&gt;
-
-&lt;h4&gt;Who are we?&lt;/h4&gt;
-
-&lt;div class=&quot;image-txt-container&quot;&gt;
- &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/osmar.png&quot; alt=&quot;Osmar&quot; /&gt; 
- &lt;a&gt;After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he&apos;s also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;image-txt-container&quot;&gt;
-   &lt;img class=&quot;author-thumb-large&quot; src=&quot;/assets/images/juliet.jpeg&quot; alt=&quot;Juliet&quot; /&gt;  
- &lt;a&gt;After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that is working on their debut EP. &lt;/a&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;so-how-are-we-doing-this-thing&quot;&gt;So how are we doing this thing?&lt;/h4&gt;
-
-&lt;h5 id=&quot;like-any-good-scientists-we-have-a-rigorous-methodology-kind-of&quot;&gt;&lt;em&gt;Like any good scientists, we have a rigorous methodology… kind of&lt;/em&gt;&lt;/h5&gt;
-
-&lt;p&gt;Most food critics keep their identities hidden. They return to a restaurant multiple times to taste everything on the menu. They get a well rounded view of the different menu items, the atmosphere and service, all while remaining anonymous so that the service they receive is not skewed.
-&lt;br /&gt;
-Unfortunately for us (and for you), we can’t afford every menu item. But on the plus side, we’re a couple of nobody Zillennials, so we fly by under the radar unrecognizable to baristas worldwide.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;but-onto-the-good-stuff&quot;&gt;&lt;em&gt;But onto the good stuff…&lt;/em&gt;&lt;/h5&gt;
-
-&lt;p&gt;We’ll be measuring and collecting a variety of data points about each coffee shop – some objective, some not – and sharing them with you. Here’s a look at some of our quantitative data (that’s nerd speak for numbers).&lt;/p&gt;
-
-&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:85%&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Wifi Speed (mbps)&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Noise Level (dB)&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Tables&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Seats&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;% Crowded&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Bathrooms&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;410&lt;/td&gt;
-      &lt;td&gt;83.5&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;30%&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We’ll accompany that data with illustrative descriptions like:
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;The millennial pink bathroom has all the amenities a girl could dream of. Nobody judged us for going in and out every 20 minutes.&lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-Next, we’ll get more into the coffee, sharing both quantitative (you know what that means now) with qualitative (read: words/categories) data points:&lt;/p&gt;
-
-&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Coffee Taste&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;$ Small Latte&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Dairy-Free Milks&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Non Coffee Options&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Seasonal Drinks&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$3.50&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;$4.50&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;Few&lt;/td&gt;
-      &lt;td&gt;Yes&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;These too will have pretentious descriptions like:
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;Juliet sipped on an espresso tonic with flavor notes of stone fruit and bullshit. Osmar opted for a matcha latte and questioned whether the milk was dairy or his preferred alternative until the last drop hit his colon.&lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h5 id=&quot;then-the-food&quot;&gt;&lt;em&gt;Then the food…&lt;/em&gt;&lt;/h5&gt;
-
-&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Food Options&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Food Quality&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Many&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h5 id=&quot;and-the-work-metrics&quot;&gt;&lt;em&gt;And the “work metrics”…&lt;/em&gt;&lt;/h5&gt;
-
-&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:80%&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Outlets&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Work Environment&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Suitable for Meetings&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Many&lt;/td&gt;
-      &lt;td&gt;Chill&lt;/td&gt;
-      &lt;td&gt;Maybe&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;You get the point.
-&lt;br /&gt;
-We aim to review a new coffee shop every week and let you know what we think. Key word there is “aim”. We’re not perfect, but we’ll let you know which coffee shops are.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 25 Feb 2023 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000/Welcome/</link>
-        <guid isPermaLink="true">http://localhost:4000/Welcome/</guid>
-        
-        <category>methodology</category>
-        
-        
-        <category>Minneapolis</category>
-        
-        <category>About</category>
         
       </item>
     

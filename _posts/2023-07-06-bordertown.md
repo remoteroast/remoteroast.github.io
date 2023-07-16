@@ -7,7 +7,7 @@ tags: [review, 3.5 stars]
 image: assets/images/cafxfetto.jpeg #! REPLACE !!!!!
 description: "Bordertown Coffee"
 featured: False # if T, show in featured
-hidden: False # if T, hide from all post
+hidden: TRUE # if T, hide from all post
 rating: 3
 meeting: "Yes"
 maps: "https://goo.gl/maps/qH9GCZXFG7kmUdkc6" #! REPLACE !!!!!

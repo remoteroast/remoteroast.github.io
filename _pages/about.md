@@ -26,7 +26,7 @@ comments: false
 
 <div class="image-txt-container">
  <img class="author-thumb-large" src="assets/images/juliet.jpeg" alt="Juliet"> 
- <a>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that is working on their debut EP. </a>
+ <a>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP. </a>
 </div>
 
 

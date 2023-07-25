@@ -6,8 +6,8 @@ categories: [Minneapolis, Dinkytown] #City must be first
 tags: [review, 3.5 stars]
 image: assets/images/bordertown.jpeg #! REPLACE !!!!!
 description: "Bordertown Coffee"
-featured: False # if T, show in featured
-hidden: True # if T, hide from all post
+featured: True # if T, show in featured
+hidden: False # if T, hide from all post
 rating: 3
 meeting: "Yes"
 maps: "https://goo.gl/maps/uVGpeJMN8SzmyxJX8" #! REPLACE !!!!!
@@ -85,7 +85,7 @@ drip: "3"
 
 <p>Important context: I have an obsession with lemonade. From Cane's to homemade and even (yes, shame on me) Chick-Fil-A. I have a strong preference for that perfect 1:1 sweet-to-sour ratio. And, although this lemonade was on the sweeter side and did not achieve that golden ratio, it was still pretty amazing and unique to the <i>many</i> lemonades I've had in the past. It's also cute, so I will definitely be ordering the berry lavender lemonade again.</p>
 
-<img src="/assets/images/bord_match_lem.jpeg" alt="berry lavender lemonade" width="100%">
+<img src="/assets/images/bord_lemonade.jpeg" alt="berry lavender lemonade" width="100%">
 <br>
 <br>
 
@@ -95,9 +95,9 @@ drip: "3"
 <br>
 <br>
 
-<h5>Mellow-Chill Working Border</h5>
+<h5>Remote Work Environment: on the Chill-Mellow Border</h5>
 
-<p>Bordertown's chill environment allowed us to be productive and get a ton of work done. Their seating area is separated from the ordering counter and the entrance, so there are minimal distractions from people coming in and out. They had enough outlets and it's simultaneously not loud nor eerily quiet that it makes it a good place to take a virtual meeting.</p>
+<p>(Yes, that headline is a stretch shh). Bordertown's chill environment allowed us to be productive and get a ton of work done. Their seating area is separated from the ordering counter and the entrance, so there are minimal distractions from people coming in and out. They had enough outlets and it's simultaneously not loud nor eerily quiet that it makes it a good place to take a virtual meeting.</p>
 
 <p>The one bad thing about Bordertown is the parking. Although there are quite a bit of parking spots, they are ridiculously expensive. I am talking $2 per hour and $4 when there is an event taking palce at Huntington Bank Stadium. Since most lattes can end up costing nearly $8, you'd be paying double what it's worth with 4 hours of parking (or 2 if you get unlucky).</p>
 

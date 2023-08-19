@@ -6,8 +6,8 @@ categories: ["2023"]
 tags: [roundup]
 image: assets/images/spring summer 2023.png
 description: "Spring/Summer Roundup"
-featured: false # if T, show in featured
-hidden: false # if T, hide from all post
+featured: True # if T, show in featured
+hidden: False # if T, hide from all post
 rating:
 ---
 

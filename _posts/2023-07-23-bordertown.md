@@ -6,7 +6,7 @@ categories: [Minneapolis, Dinkytown] #City must be first
 tags: [review, 3.5 stars]
 image: assets/images/bordertown.jpeg #! REPLACE !!!!!
 description: "Bordertown Coffee"
-featured: True # if T, show in featured
+featured: False # if T, show in featured
 hidden: False # if T, hide from all post
 rating: 3
 meeting: "Yes"

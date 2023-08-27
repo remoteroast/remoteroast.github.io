@@ -1,0 +1,22 @@
+---
+title: "Author"
+layout: default
+permalink: "/author.html"
+---
+
+<div class="row listrecent">
+{% for author in site.authors %}
+<div class="section-title col-md-12 mt-4">
+  <h2 id="{{ author[0] | replace: " ","-" }}">Author <span class="text-capitalize">{{ author[0] }}</span></h2>
+</div>
+{% assign pages_list = author[1] %}
+{% for post in site.posts %}
+{% if post.author != null %}
+{% if post.author == pages_list.name %}
+{% include featuredbox.html %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+</div>
+

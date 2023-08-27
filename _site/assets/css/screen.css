@@ -13,12 +13,12 @@ License: https://www.wowthemes.net/freebies-license/
 }
 
 a {
-    color: #00ab6b;
+    color: #55828B;
     transition: all 0.2s;
 }
 
 a:hover {
-    color: #038252;
+    color: #B8CCC0;
     text-decoration: none;
 }
 
@@ -49,6 +49,14 @@ pre {
     background: rgba(255, 255, 255, .97);
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
     transition: top 0.2s ease-in-out;
+}
+
+.fab{
+    color: #55828B;
+}
+
+.fab:hover{
+    color: #B8CCC0;
 }
 
 .main-content {
@@ -289,7 +297,7 @@ span.post-read-more a:hover {
 .mediumnavigation .form-inline .btn:hover,
 .mediumnavigation .form-inline .btn:active {
     background: transparent;
-    color: green;
+    color: #55828B;
 }
 
 .mediumnavigation .navbar-brand {
@@ -351,7 +359,7 @@ span.post-read-more a:hover {
 }
 
 blockquote {
-    border-left: 4px solid #666666;
+    border-left: 4px solid #B8CCC0;
     padding: 0 20px;
     font-style: italic;
     color: rgba(0, 0, 0, 0.5);
@@ -539,8 +547,8 @@ ul.tags li a:hover {
 }
 
 .btn.follow {
-    border-color: #02B875;
-    color: #1C9963;
+    border-color: #55828B;
+    color: white;
     padding: 3px 10px;
     text-align: center;
     border-radius: 999em;
@@ -548,9 +556,25 @@ ul.tags li a:hover {
     display: inline-block;
 }
 
+.btn-success {
+    border-color: #55828B;
+    background-color: #55828B;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    border-radius: 999em;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.btn-success:hover {
+    border-color: #59B396;
+    background-color: #59B396;
+}
+
 .btn.subscribe {
-    background-color: #1C9963;
-    border-color: #1C9963;
+    background-color: #D55672;
+    border-color: #D55672;
     color: rgba(255, 255, 255, 1);
     fill: rgba(255, 255, 255, 1);
     border-radius: 30px;

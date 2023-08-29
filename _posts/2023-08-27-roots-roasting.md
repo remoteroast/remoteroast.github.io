@@ -56,7 +56,7 @@ drip: "2.75"
 
 <p>Roots staff of academic year 2019-2020, if you're reading this, thank you and we're sorry.</p>
 <p>But, Roots wasn't only our bathroom away from home. It was also a place where we could do homework off campus, get caffeinated, and practice adulting with classic no-frills espresso drinks.</p>
-<p>Roots feels classy but hip. It's minimalist aesthetic provides a distraction free work environment where you can do exactly what you're there for and nothing else -- grab a good coffee, sit at a table, and work. </p>
+<p>Roots feels classy but hip. Its minimalist aesthetic provides a distraction free work environment where you can do exactly what you're there for and nothing else -- grab a good coffee, sit at a table, and work. </p>
 <p>There are fewer outlets than there are seats, but there are a couple at each table. Enough to keep you charged up on your own, but maybe not enough for a group of friends with poor planning and four dead computers. We're giving it a maybe for meetings because it's pretty echoey. As Osmar and I witnessed first hand, conversations at other tables can cause sassy arguments between older boomers and young people laughing loudly.</p>
 
 

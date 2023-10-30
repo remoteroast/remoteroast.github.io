@@ -5,9 +5,139 @@
     <description>Rating Twin Cities coffee shops for remote work.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Sep 2023 13:48:06 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Sep 2023 13:48:06 -0500</lastBuildDate>
+    <pubDate>Mon, 30 Oct 2023 12:59:37 -0500</pubDate>
+    <lastBuildDate>Mon, 30 Oct 2023 12:59:37 -0500</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Summer Round Up</title>
+        <description>&lt;h2&gt;It&apos;s cold. We&apos;re sad. Let&apos;s reflect on Summer.&lt;/h2&gt;
+
+&lt;p&gt;Did you think we&apos;d be consistent in posting every week? That&apos;s on us for lying but also on you for believing us.&lt;/p&gt;
+
+&lt;div style=&quot;width:60%;height:0;padding-bottom:60%;position:relative;&quot;&gt;&lt;iframe src=&quot;https://giphy.com/embed/2eTVRPLl4WgOrxY0kr&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;position:absolute&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/theoffice-episode-12-the-office-tv-2eTVRPLl4WgOrxY0kr&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;The Shots&lt;/h3&gt;
+&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:70%&quot;&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Coffee Shop&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;City&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;# Stars&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Wifi speed&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Suitable for meetings?&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;/wesley-andrews&quot;&gt;&lt;span class=&quot;text-capitalize&quot;&gt;Wesley Andrews&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://maps.app.goo.gl/DssEBSnnDfem9EZWA&quot; target=&quot;_blank&quot;&gt;Minneapolis&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div class=&quot;rating-holder&quot;&gt;
+                &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;3&quot;&gt;
+                &lt;button&gt;1&lt;/button&gt;
+                &lt;button&gt;2&lt;/button&gt;
+                &lt;button&gt;3&lt;/button&gt;
+                &lt;button&gt;4&lt;/button&gt;
+                &lt;button&gt;5&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;21&lt;/td&gt;
+          &lt;td&gt;Maybe&lt;/td&gt;
+          &lt;td&gt;$4&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;/roots-roasting&quot;&gt;&lt;span class=&quot;text-capitalize&quot;&gt;Roots Roasting&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/XdkC9J2pY9uN7cqUA&quot; target=&quot;_blank&quot;&gt;St Paul&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div class=&quot;rating-holder&quot;&gt;
+                &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;4&quot;&gt;
+                &lt;button&gt;1&lt;/button&gt;
+                &lt;button&gt;2&lt;/button&gt;
+                &lt;button&gt;3&lt;/button&gt;
+                &lt;button&gt;4&lt;/button&gt;
+                &lt;button&gt;5&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;120&lt;/td&gt;
+          &lt;td&gt;Maybe&lt;/td&gt;
+          &lt;td&gt;$2.75&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;a href=&quot;/up-coffee&quot;&gt;&lt;span class=&quot;text-capitalize&quot;&gt;Up Cafe &amp;amp; Up Coffee Roasters&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/F38aSLGgCzRaSsot5&quot; target=&quot;_blank&quot;&gt;Minneapolis&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;div class=&quot;rating-holder&quot;&gt;
+                &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;4&quot;&gt;
+                &lt;button&gt;1&lt;/button&gt;
+                &lt;button&gt;2&lt;/button&gt;
+                &lt;button&gt;3&lt;/button&gt;
+                &lt;button&gt;4&lt;/button&gt;
+                &lt;button&gt;5&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td&gt;360&lt;/td&gt;
+          &lt;td&gt;Yes&lt;/td&gt;
+          &lt;td&gt;$2.30&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Spilling the Beans&lt;/h3&gt;
+
+&lt;h4&gt;Up Cafe &amp;amp; Up Coffee Roasters&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;/up-coffee&quot;&gt;Up Cafe&lt;/a&gt;  was the next stop on our coffee journey this summer and we loved it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Up Cafe has a ton of seating - especially with their outdoor tables in the summer. You&apos;ll never be hunting for a spot.&lt;/li&gt;
+  &lt;li&gt;The wifi works pretty well outside. Maybe not for a meeting, but for other work, you have something to look forward to when it&apos;s warm again.&lt;/li&gt;
+  &lt;li&gt;They lose some points for not having quite enough outlets.&lt;/li&gt;
+  &lt;li&gt;Lots of options for non-coffee drinkers including energy drinks for those who still want a little boost.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Roots Roasting&lt;/h4&gt;
+&lt;p&gt;Next, we took a trip to our college neighborhood for some classic expresso drinks at &lt;a href=&quot;/roots-roasting&quot;&gt;Roots Roasting&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;While small, roots usually has an open seat.&lt;/li&gt;
+  &lt;li&gt;Roots has a comfortably minimalist environment making it great for concentration.&lt;/li&gt;
+  &lt;li&gt;There are enough outlets for one per table, but probably not one per person.&lt;/li&gt;
+  &lt;li&gt;Roots has great pastries from Marc Heu, but no meal options.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Wesley Andrews&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;/wesley-andrews&quot;&gt;Wesley Andrews&lt;/a&gt; was on our final stop this summer. Highly requested after visiting with a friend, we made sure to do a review.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wesley Andrews is weird but in a great way. With seasonal drinks like the Cuban Coffee Soda, you&apos;re sure to find something you&apos;ve never tried before.&lt;/li&gt;
+  &lt;li&gt;Prices are a little steep here. Not without good reason, the coffee is great and a lot of thought is put into it. But if you&apos;re looking to save some money, you probably won&apos;t make this a regular spot.&lt;/li&gt;
+  &lt;li&gt;The wifi can be slow. It&apos;s enough to do basic work and low stakes meetings, but I wouldn&apos;t count on it for the big things.&lt;/li&gt;
+  &lt;li&gt;No lunch items here, but there are gluten free pastries. Tried and loved by a gluten free friend.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;That&apos;s what we&apos;ve got, folks! Stick around for more round ups, and keep an eye on our &lt;a href=&quot;https://www.instagram.com/remoteroast/&quot;&gt;Instagram&lt;/a&gt; for new reviews as we release them!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Oct 2023 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/summer-roundup/</link>
+        <guid isPermaLink="true">http://localhost:4000/summer-roundup/</guid>
+        
+        <category>roundup</category>
+        
+        
+        <category>2023</category>
+        
+      </item>
     
       <item>
         <title>Wesley Andrews</title>
@@ -1318,188 +1448,6 @@ lots of matcha and other teas for me in lieu of coffee. But no longer! I walked 
         <category>Minneapolis</category>
         
         <category>Whittier</category>
-        
-      </item>
-    
-      <item>
-        <title>Spring Round Up 1</title>
-        <description>&lt;h2&gt;A little recap of the first half of spring!&lt;/h2&gt;
-
-&lt;p&gt;We started rating coffee shops at the start of Spring this year and we&apos;ve been having a great time doing it! But we know your time is precious and you may not have time to read them all, so we&apos;ve rounded them up for you in a nice little package. We&apos;ll give you the quick view (The Shots) if you&apos;ve only got a minute, but keep reading for some insights (Spilling the Beans) on where we went and how we felt about it. Yes, the headers are bad coffee puns.&lt;/p&gt;
-
-&lt;h3&gt;The Shots&lt;/h3&gt;
-&lt;div class=&quot;table-responsive&quot; style=&quot;font-size:70%&quot;&gt;
-  &lt;table class=&quot;table&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope=&quot;col&quot;&gt;Coffee Shop&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;City&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;# Stars&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Wifi speed&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;Suitable for meetings?&lt;/th&gt;
-      &lt;th scope=&quot;col&quot;&gt;$ Small Drip Coffee&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/quixotic&quot;&gt;Quixotic Coffee&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/hUHF1vepUCafYfnd7&quot; target=&quot;_blank&quot;&gt;St Paul&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class=&quot;rating-holder&quot;&gt;
-            &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;5&quot;&gt;
-            &lt;button&gt;1&lt;/button&gt;
-            &lt;button&gt;2&lt;/button&gt;
-            &lt;button&gt;3&lt;/button&gt;
-            &lt;button&gt;4&lt;/button&gt;
-            &lt;button&gt;5&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;120&lt;/td&gt;
-      &lt;td&gt;Yes&lt;/td&gt;
-      &lt;td&gt;$2.75&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/skcoffee&quot;&gt;SK Coffee - Whittier&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/2VnxBXBxqiLCMiUe6&quot; target=&quot;_blank&quot;&gt;Minneapolis&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;
-       &lt;div class=&quot;rating-holder&quot;&gt;
-            &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;4&quot;&gt;
-            &lt;button&gt;1&lt;/button&gt;
-            &lt;button&gt;2&lt;/button&gt;
-            &lt;button&gt;3&lt;/button&gt;
-            &lt;button&gt;4&lt;/button&gt;
-            &lt;button&gt;5&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;410&lt;/td&gt;
-      &lt;td&gt;Maybe&lt;/td&gt;
-      &lt;td&gt;$3.50&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/corner-coffee-uptown&quot;&gt;Corner Coffee Uptown&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/kbAe9j9VgzNmC6aw7&quot; target=&quot;_blank&quot;&gt;Minneapolis&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;
-       &lt;div class=&quot;rating-holder&quot;&gt;
-            &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;4.5&quot;&gt;
-            &lt;button&gt;1&lt;/button&gt;
-            &lt;button&gt;2&lt;/button&gt;
-            &lt;button&gt;3&lt;/button&gt;
-            &lt;button&gt;4&lt;/button&gt;
-            &lt;button&gt;5&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;110&lt;/td&gt;
-      &lt;td&gt;Yes&lt;/td&gt;
-      &lt;td&gt;$2.75&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/dogwood-saint-paul&quot;&gt;Dogwood Coffee - St Paul&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/kbAe9j9VgzNmC6aw7&quot; target=&quot;_blank&quot;&gt;St Paul&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class=&quot;rating-holder&quot;&gt;
-            &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;3.5&quot;&gt;
-            &lt;button&gt;1&lt;/button&gt;
-            &lt;button&gt;2&lt;/button&gt;
-            &lt;button&gt;3&lt;/button&gt;
-            &lt;button&gt;4&lt;/button&gt;
-            &lt;button&gt;5&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;78&lt;/td&gt;
-      &lt;td&gt;Yes&lt;/td&gt;
-      &lt;td&gt;$3.25&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;/ninas&quot;&gt;Nina&apos;s Coffee Cafe&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://goo.gl/maps/Veo7SdX2p3hf5uPC8&quot; target=&quot;_blank&quot;&gt;St Paul&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class=&quot;rating-holder&quot;&gt;
-            &lt;div class=&quot;c-rating c-rating--regular&quot; data-rating-value=&quot;3.5&quot;&gt;
-            &lt;button&gt;1&lt;/button&gt;
-            &lt;button&gt;2&lt;/button&gt;
-            &lt;button&gt;3&lt;/button&gt;
-            &lt;button&gt;4&lt;/button&gt;
-            &lt;button&gt;5&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;46&lt;/td&gt;
-      &lt;td&gt;No&lt;/td&gt;
-      &lt;td&gt;$3.00&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Spilling the Beans&lt;/h3&gt;
-
-&lt;h4&gt;Quixotic Coffee&lt;/h4&gt;
-&lt;p&gt;We started our journey back in March with &lt;a href=&quot;/quixotic&quot;&gt;Quixotic Coffee&lt;/a&gt;. Quixotic was the coffee shop where Juliet first started working regularly after having frequented it in college. 
-  It&apos;s comfortable, great for meetings, and they have a lot of tasty food options. Here&apos;s what we like most:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Lots of booths! You can have your own personal space while still experiencing the vibrant coffee shop environment.&lt;/li&gt;
-  &lt;li&gt;Osmar&apos;s favorite blueberry muffin can be found here (if he hasn&apos;t eaten them all).&lt;/li&gt;
-  &lt;li&gt;Quixotic now has great smoothie and yogurt bowls.&lt;/li&gt;
-  &lt;li&gt;It&apos;s easy to find parking.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;SK Coffee - Whittier&lt;/h4&gt;
-&lt;p&gt;When &lt;a href=&quot;/skcoffee&quot;&gt;SK Coffee - Whittier&lt;/a&gt; opened up just a few blocks away from our house, we knew we&apos;d have to check it out.
-Someone had to do the community the service of quality checking the new coffee spot and we selflessly volunteered to try their drinks and food. Here&apos;s what we thought about it:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;We&apos;re big fans of the matcha lattes at SK.&lt;/li&gt;
-  &lt;li&gt;The food is top notch! They have a great lentil curry pastry that Juliet would like to eat daily.&lt;/li&gt;
-  &lt;li&gt;Taking meetings at SK can be hit or miss. The music is usually at a decent level but sometimes is less suitable as the background to your Zoom call.&lt;/li&gt;
-  &lt;li&gt;SK only has 21 seats so it&apos;s often close to full. Get there early to make sure you can sit! It&apos;s worth it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Corner Coffee - Uptown&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;/corner-coffee-uptown&quot;&gt;Corner Coffee&lt;/a&gt; was one of the first places that we regularly worked at after moving to Uptown.
-There&apos;s always a place to sit, the environment is laid back but still vibrant, and the baristas will get to know you if you show up often. Some key points:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Corner Coffee always has reliable wifi and lots of outlets making it great for meetings.&lt;/li&gt;
-  &lt;li&gt;The breakfast and lunch sandwiches are great and are made to order.&lt;/li&gt;
-  &lt;li&gt;Get it while you can! The seasonal drinks are always a hit. We LOVE the Lavender Lemon Brew.&lt;/li&gt;
-  &lt;li&gt;If you need non-coffee options, Corner Coffee has got you covered with a variety of teas and other drinks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Dogwood Coffee - St Paul&lt;/h4&gt;
-&lt;p&gt;While &lt;a href=&quot;/dogwood-saint-paul&quot;&gt;Dogwood Coffee - St Paul&lt;/a&gt; was not one of our favorite remote work spots, it still earned itself a 3.5 star rating.
-Although we like their coffee, the food options are lacking and the environment is somewhat uninspiring. I&apos;m running out of ways to introduce lists:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dogwood has great coffee. If you like to brew at home, it&apos;s worth picking up a bag of beans.&lt;/li&gt;
-  &lt;li&gt;While the food they have is good, there are very few options and their sandwiches sell out quickly leaving not many options for a meal.&lt;/li&gt;
-  &lt;li&gt;If you&apos;re looking for a non-distracting environment, Dogwood is a great choice!&lt;/li&gt;
-  &lt;li&gt;There is pretty solid wifi and there has always been ample seating available when we have gone to Dogwood.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Nina&apos;s Coffee Cafe&lt;/h4&gt;
-&lt;p&gt;We love &lt;a href=&quot;/ninas&quot;&gt;Nina&apos;s Coffee Cafe&lt;/a&gt;. But maybe not for remote work. It&apos;s a fun spot with great drinks, however, it may be too distracting and there aren&apos;t many outlets. 
-You can decide for yourself based on our quick notes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The ambiance at Nina&apos;s is great! While it may not be the best for work, it&apos;s a great social spot.&lt;/li&gt;
-  &lt;li&gt;The food is pretty good but we&apos;ve had better pastries elsewhere. Not bad, just not the best.&lt;/li&gt;
-  &lt;li&gt;Lots of dairy free milks at Nina&apos;s but beware - the drinks with caramel made Osmar&apos;s tummy hurt.&lt;/li&gt;
-  &lt;li&gt;Because it&apos;s such a fun spot with great drinks, it&apos;s often fairly crowded which makes it a bit ofa riskier option.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;That&apos;s what we&apos;ve got, folks! Stick around for more reviews and round ups, and check out our new &lt;a href=&quot;/tldr&quot;&gt;TL;DR&lt;/a&gt; page if you hate our writing and just want the facts.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 02 May 2023 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/spring-roundup-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/spring-roundup-1/</guid>
-        
-        <category>roundup</category>
-        
-        
-        <category>2023</category>
         
       </item>
     

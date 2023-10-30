@@ -6,7 +6,7 @@ categories: [St Paul, Mac-Groveland] #City must be first
 tags: [review, 4 stars]
 image: assets/images/roots.png #! REPLACE !!!!!
 description: "Roots Roasting"
-featured: True # if T, show in featured
+featured: False # if T, show in featured
 hidden: False # if T, hide from all post
 rating: 4
 meeting: "Maybe"

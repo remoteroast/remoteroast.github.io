@@ -1,204 +1,207 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
+{% assign author = site.authors[page.author] %}
+{% assign is_roundup = false %}
+{% if page.tags contains 'roundup' %}{% assign is_roundup = true %}{% endif %}
 
-<!-- Begin Article
-================================================== -->
-<div class="container">
-    <div class="row">
-
-        <!-- Post Share -->
-        <div class="col-md-2 pl-0">
-            {% include share.html %}
-        </div>
-
-        <!-- Post -->
-        {% assign author = site.authors[page.author] %}
-
-        <div class="col-md-9 flex-first flex-md-unordered">
-            <div class="mainheading">
-
-                <!-- Author Box -->
-                {% if page.author %}
-                <div class="row post-top-meta">
-                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
-                        {% if author.avatar %}
-                        <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
-                        {% else %}
-                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a>
-                    </br>
-                        <!-- <a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a> -->
-                        <span class="author-description">{{ author.description }}</span>
-                    </div>
-                </div>
-                {% endif %}
-
-                <!-- Post Title -->
-                <h1 class="posttitle">{{ page.title }}</h1>
-
-            </div>
-
-            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
-            {% if site.adsense == "enabled" %}
-                {% include adsense-under-header.html %}
-            {% endif %}
-            <!-- End Adsense -->
-
-            <!-- Post Featured Image -->
-            {% if page.image %}
-
-            {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" width="60%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-            {% else %}
-            <img class="featured-image img-fluid" width="60%" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
-            {% endif %}
-
-            {% endif %}
-            <!-- End Featured Image -->
-
-            <!-- Post Content -->
-            <div class="article-post">
-                <!-- Toc if any -->
-                {% if page.toc %}
-                    {% if page.beforetoc %}
-                        <p><em>{{page.beforetoc}}</em></p>
-                    {% endif %}
-                    <div class="toc mt-4 mb-4 lead">
-                        <h3 class="font-weight-bold">Summary</h3>
-                        {% include toc.html html=content %}
-                    </div>
-                {% endif %}
-                <!-- End Toc -->
-                {{content}}
-            </div>
-
-             <!-- Rating -->
-             {% if page.rating %}
-             <div class="rating mb-4 d-flex align-items-center">
-                 <strong class="mr-1">Rating:</strong> {% include star_rating.html %}
-             </div>
-             {% endif %}
-             
-            <hr>
-            <h3>Tell us where to go next!</h3>
-            <a href="mailto:remoteroasters@gmail.com">Send us an email</a> and tell us your favorite coffee shop.
-            <br>
-            <hr>
-
-
-                
-            <h5>Buy our next coffee!</h5>
-            
-            <p>Thank you for your support! Help us continue to rate coffee shops!</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <a target="_blank" href="https://account.venmo.com/u/juliet-kelson" class="btn btn-success">Buy Juliet a coffee</a> 
-                </div>
-                <div class="col-md-4">
-                    <a target="_blank" href="https://account.venmo.com/u/osmar-delrio" class="btn btn-success">Buy Osmar a coffee</a>
-                </div>
-            </div>
-            <br>
-            <br>
-
-           
-
-            <!-- Post Date -->
-            <p>
-            <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                {% endif %}
-                </small>
-            </p>
-
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
-                    {% assign sortedCategories = page.categories | sort %}
-                    {% for category in sortedCategories %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
-
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    {% assign sortedTags = page.tags | sort %}
-                    {% for tag in sortedTags %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Tags -->
-
-            <!-- Prev/Next -->
-            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-            {% if page.previous.url %}
-            <a class="prev d-block col-md-6" href="https://remoteroast.github.io/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="next d-block col-md-6 text-lg-right" href="https://remoteroast.github.io/{{page.next.url}}">{{page.next.title}} &raquo; </a>
-            {% endif %}
-            <div class="clearfix"></div>
-            </div>
-            <!-- End Categories -->
-
-        </div>
-        <!-- End Post -->
-
+<!-- Post Hero -->
+{% if page.image %}
+<div class="post-hero">
+  <img class="post-hero__img"
+       src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | prepend: '/' | relative_url }}{% endif %}"
+       alt="{{ page.title }}">
+  <div class="post-hero__overlay"></div>
+  <div class="post-hero__body">
+    <div class="post-hero__tag">
+      {% if is_roundup %}
+        {% include tilted-tag.html text="ROUND UP" idx=0 %}
+      {% else %}
+        {% include tilted-tag.html text="REVIEW" idx=0 %}
+      {% endif %}
     </div>
+    <h1 class="post-hero__title">{{ page.title }}</h1>
+    {% if page.rating %}
+      <div class="post-hero__stars">
+        {% include stars.html rating=page.rating %}
+      </div>
+    {% endif %}
+  </div>
 </div>
-<!-- End Article
-================================================== -->
-
-
-
-<!-- Begin Comments
-================================================== -->
-{% if page.comments != false %}
-    <div class="container">
-        <div id="comments" class="row justify-content-center mb-5">
-            <div class="col-md-8">
-                {% include disqus.html %}
-            </div>
-        </div>
+{% else %}
+<div class="post-hero post-hero--no-image">
+  <div class="post-hero__body">
+    <div class="post-hero__tag">
+      {% if is_roundup %}
+        {% include tilted-tag.html text="ROUND UP" idx=0 %}
+      {% else %}
+        {% include tilted-tag.html text="REVIEW" idx=0 %}
+      {% endif %}
     </div>
+    <h1 class="post-hero__title">{{ page.title }}</h1>
+    {% if page.rating %}
+      <div class="post-hero__stars">
+        {% include stars.html rating=page.rating %}
+      </div>
+    {% endif %}
+  </div>
+</div>
 {% endif %}
-<!--End Comments
-================================================== -->
 
-<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
-https://search.google.com/structured-data/testing-tool/u/0/
-================================================== -->
+<div class="container">
+  <!-- Meta strip -->
+  <div class="post-meta-strip">
+    {% if author %}
+      {% if author.avatar %}
+        <img class="post-meta-strip__avatar"
+             src="{{ author.avatar | prepend: '/' | relative_url }}"
+             alt="{{ author.display_name }}">
+      {% endif %}
+      <span class="post-meta-strip__author">{{ author.display_name }}</span>
+    {% endif %}
+    <span class="post-meta-strip__date">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </span>
+    {% if page.categories %}
+      <div class="post-meta-strip__cats">
+        {% for cat in page.categories %}
+          <a class="post-meta-strip__cat"
+             href="{{ '/categories' | relative_url }}#{{ cat | replace: ' ', '-' }}">{{ cat }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Pull quote (if set) -->
+  {% if page.pull_quote %}
+    <blockquote class="pull-quote" style="border-left: 4px solid #D4AA20; padding-left: 24px; margin: 32px 0;">
+      "{{ page.pull_quote }}"
+    </blockquote>
+  {% endif %}
+
+  <!-- Body + Sidebar (reviews only) -->
+  {% unless is_roundup %}
+  <div class="post-body-wrap">
+    <div class="post-body">
+      <div class="post-body__content">
+        {{ content }}
+      </div>
+
+      <!-- Pro Tip detection — posts use <p><i>Pro tip</i></p> -->
+    </div>
+
+    <!-- Sidebar scorecard -->
+    <aside class="post-sidebar">
+      {% if page.scores %}
+        <div class="scorecard" style="margin-bottom: 24px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:16px;letter-spacing:0.05em;">Score Card</div>
+          {% include radar-chart.html scores=page.scores id=page.slug %}
+          <div style="margin-top:16px;">
+            {% if page.scores.coffee %}<div class="scorecard__row"><span class="scorecard__label">Coffee</span><span class="scorecard__value">{{ page.scores.coffee }}/5</span></div>{% endif %}
+            {% if page.scores.wifi %}<div class="scorecard__row"><span class="scorecard__label">Wifi</span><span class="scorecard__value">{{ page.scores.wifi }}/5</span></div>{% endif %}
+            {% if page.scores.seating %}<div class="scorecard__row"><span class="scorecard__label">Seating</span><span class="scorecard__value">{{ page.scores.seating }}/5</span></div>{% endif %}
+            {% if page.scores.vibe %}<div class="scorecard__row"><span class="scorecard__label">Vibe</span><span class="scorecard__value">{{ page.scores.vibe }}/5</span></div>{% endif %}
+            {% if page.scores.outlet %}<div class="scorecard__row"><span class="scorecard__label">Outlets</span><span class="scorecard__value">{{ page.scores.outlet }}/5</span></div>{% endif %}
+            {% if page.scores.quiet %}<div class="scorecard__row"><span class="scorecard__label">Quiet</span><span class="scorecard__value">{{ page.scores.quiet }}/5</span></div>{% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Key stats -->
+      <div class="scorecard">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:16px;letter-spacing:0.05em;">At a Glance</div>
+        {% if page.rating %}
+          <div class="scorecard__row">
+            <span class="scorecard__label">Rating</span>
+            <span class="scorecard__value">{% include stars.html rating=page.rating %}</span>
+          </div>
+        {% endif %}
+        {% if page.wifi %}
+          <div class="scorecard__row">
+            <span class="scorecard__label">Wifi</span>
+            <span class="scorecard__value">{{ page.wifi }} mbps</span>
+          </div>
+        {% endif %}
+        {% if page.meeting %}
+          <div class="scorecard__row">
+            <span class="scorecard__label">Meetings</span>
+            <span class="scorecard__value">{{ page.meeting }}</span>
+          </div>
+        {% endif %}
+        {% if page.drip %}
+          <div class="scorecard__row">
+            <span class="scorecard__label">Drip Coffee</span>
+            <span class="scorecard__value">${{ page.drip }}</span>
+          </div>
+        {% endif %}
+        {% if page.maps %}
+          <div class="scorecard__row" style="margin-top: 12px;">
+            <a href="{{ page.maps }}" target="_blank" rel="noopener" class="btn btn--secondary" style="width:100%;text-align:center;font-size:11px;">
+              View on Map →
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+  {% else %}
+  <!-- Roundup: full-width content -->
+  <div class="post-body">
+    <div class="post-body__content">
+      {{ content }}
+    </div>
+  </div>
+  {% endunless %}
+
+  <!-- CTA block -->
+  <div class="cta-block">
+    <div class="cta-block__title">Tell us where to go next!</div>
+    <p class="cta-block__sub">Found a hidden gem? Know a spot we're sleeping on? Send us an email.</p>
+    <div class="cta-block__actions">
+      <a href="mailto:remoteroasters@gmail.com" class="btn btn--secondary">Send a tip →</a>
+      <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
+      <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
+    </div>
+  </div>
+
+  <!-- Tags -->
+  {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <a href="{{ '/tags' | relative_url }}#{{ tag | replace: ' ', '-' }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Prev / Next -->
+  <nav class="post-nav" aria-label="Post navigation">
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url | relative_url }}" class="post-nav__prev">← {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url | relative_url }}" class="post-nav__next">{{ page.next.title }} →</a>
+    {% endif %}
+  </nav>
+</div>
+
+<!-- Structured data -->
 {% if page.rating %}
+{% assign author_obj = site.authors[page.author] %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
   "@type": "Review",
   "itemReviewed": {
     "@type": "Thing",
-    "name": "{{ page.title }}"
+    "name": "{{ page.title | escape }}"
   },
   "author": {
     "@type": "Person",
-    "name": "{{ author.display_name }}"
+    "name": "{{ author_obj.display_name | escape }}"
   },
-  "datePublished": "{{ page.date | date:"%Y-%m-%d" }}",
+  "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
   "reviewRating": {
     "@type": "Rating",
     "ratingValue": "{{ page.rating }}",
@@ -207,3 +210,21 @@ https://search.google.com/structured-data/testing-tool/u/0/
 }
 </script>
 {% endif %}
+
+<!-- Pro Tip IntersectionObserver + GA4 event -->
+<script>
+(function() {
+  var tip = document.querySelector('.pro-tip');
+  if (tip && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          if (typeof rrTrack === 'function') rrTrack('pro_tip_view', { post: '{{ page.title | escape }}' });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    obs.observe(tip);
+  }
+})();
+</script>

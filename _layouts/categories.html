@@ -4,20 +4,23 @@ layout: default
 permalink: "/categories.html"
 ---
 
-<div class="row listrecent">
-{% for category in site.categories %}
-<div class="section-title col-md-12 mt-4">
-    <h2 id="{{ category[0] | replace: " ","-" }}">Category <span class="text-capitalize">{{ category[0] }}</span></h2>
-</div>
-{% assign pages_list = category[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-{% include featuredbox.html %}
-{% endif %}
-{% endif %}
-{% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
-{% endfor %}
+<div class="container">
+  <div class="categories-page" style="padding: 48px 0;">
+    <h1 style="margin-bottom: 32px;">{{ page.title }}</h1>
+    {% for category in site.categories %}
+      <div class="categories-page__section">
+        <h2 class="categories-page__heading" id="{{ category[0] | replace: ' ', '-' }}">
+          {{ category[0] }}
+          <span style="font-size:0.5em;opacity:0.5;margin-left:12px;">{{ category[1].size }}</span>
+        </h2>
+        <div class="verdicts__grid">
+          {% for post in category[1] %}
+            {% if post.title %}
+              {% include shop-card.html post=post idx=forloop.index %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

@@ -3,19 +3,14 @@ layout: default
 title: Archive
 ---
 
-<!-- Begin List Posts
-================================================== -->
-<section class="recent-posts">
-<div class="section-title">
-    <h2>Archive of posts with <span>{{ page.type }} '{{ page.title }}'</span></h2>
+<div class="container">
+  <div style="padding: 48px 0;">
+    <p class="meta" style="margin-bottom: 8px;">{{ page.type | capitalize }}</p>
+    <h1 style="margin-bottom: 32px;">{{ page.title }}</h1>
+    <div class="verdicts__grid">
+      {% for post in page.posts %}
+        {% include shop-card.html post=post idx=forloop.index %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
-<div class="row listrecent">
-
-{% for post in page.posts %}
-
-    {% include postbox.html %}
-
-{% endfor %}
-
-</div>
-</section>

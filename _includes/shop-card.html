@@ -1,0 +1,37 @@
+{% assign post = include.post %}
+{% assign author = site.authors[post.author] %}
+<a href="{{ post.url | relative_url }}"
+   class="shop-card"
+   data-shop="{{ post.title | escape }}"
+   data-rank="{{ include.idx | default: forloop.index }}"
+   onclick="if(typeof rrTrack==='function') rrTrack('shop_card_click', {shop: this.dataset.shop, rank: parseInt(this.dataset.rank)})">
+  <div class="shop-card__image-wrap">
+    {% if post.image %}
+      <img class="shop-card__image"
+           src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | prepend: '/' | relative_url }}{% endif %}"
+           alt="{{ post.title }}"
+           loading="lazy">
+    {% else %}
+      <div class="shop-card__image" style="background: #E8E1D4; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:#0D0D0D;opacity:0.2;">RR</span>
+      </div>
+    {% endif %}
+    <div class="shop-card__stamp">
+      {% if post.rating %}
+        {% include tilted-tag.html text=post.rating idx=forloop.index %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="shop-card__body">
+    <h2 class="shop-card__title">{{ post.title }}</h2>
+    <div class="shop-card__meta">
+      {% if post.rating %}
+        {% include stars.html rating=post.rating %}
+      {% endif %}
+      {% if post.categories[0] %}
+        <span class="shop-card__city">{{ post.categories[0] }}</span>
+      {% endif %}
+    </div>
+    <p class="shop-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+  </div>
+</a>

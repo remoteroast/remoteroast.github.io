@@ -1,0 +1,30 @@
+{% if site.google_analytics and jekyll.environment == "production" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}', {
+    anonymize_ip: true,
+    cookie_flags: 'SameSite=None;Secure'
+  });
+
+  // Helper for custom events
+  window.rrTrack = function(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  };
+</script>
+<script>
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="http"]');
+    if (!a) return;
+    var url = new URL(a.href);
+    if (url.hostname === window.location.hostname) return;
+    rrTrack('outbound_link_click', {
+      url: a.href,
+      domain: url.hostname,
+      from_path: window.location.pathname
+    });
+  });
+</script>
+{% endif %}

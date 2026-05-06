@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="home-hero">
+  <div class="container">
+    <div class="home-hero__wordmark">Remote Roast</div>
+    <div class="home-hero__tag-wrap">
+      {% include tilted-tag.html text="DON'T @ US" idx=0 %}
+    </div>
+    <p class="home-hero__sub">Judging your café so you don't have to · Twin Cities, MN</p>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Wifi Tested</span><span class="marquee__sep">★</span>
+    <span>Noise Measured</span><span class="marquee__sep">★</span>
+    <span>Outlets Counted</span><span class="marquee__sep">★</span>
+    <span>Vibes Assessed</span><span class="marquee__sep">★</span>
+    <span>Lattes Sipped</span><span class="marquee__sep">★</span>
+    <span>Data Delivered</span><span class="marquee__sep">★</span>
+    <span>No Sponsorships</span><span class="marquee__sep">★</span>
+    <span>Wifi Tested</span><span class="marquee__sep">★</span>
+    <span>Noise Measured</span><span class="marquee__sep">★</span>
+    <span>Outlets Counted</span><span class="marquee__sep">★</span>
+    <span>Vibes Assessed</span><span class="marquee__sep">★</span>
+    <span>Lattes Sipped</span><span class="marquee__sep">★</span>
+    <span>Data Delivered</span><span class="marquee__sep">★</span>
+    <span>No Sponsorships</span><span class="marquee__sep">★</span>
+  </div>
+</div>
+
+<!-- The Verdicts -->
+<section class="verdicts">
+  <div class="container">
+    <div class="verdicts__header">
+      <h2 class="verdicts__title">The Verdicts</h2>
+      {% include tilted-tag.html text="RATED + REVIEWED" idx=1 %}
+    </div>
+    <div class="verdicts__grid">
+      {% assign review_posts = site.posts | where_exp: "p", "p.tags contains 'review'" %}
+      {% if paginator.posts %}
+        {% assign display_posts = paginator.posts %}
+      {% else %}
+        {% assign display_posts = review_posts | limit: 9 %}
+      {% endif %}
+      {% for post in display_posts %}
+        {% if post.tags contains 'review' %}
+          {% include shop-card.html post=post idx=forloop.index %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Roundups -->
+{% assign roundup_posts = site.posts | where_exp: "p", "p.tags contains 'roundup'" %}
+{% if roundup_posts.size > 0 %}
+<section class="verdicts" style="border-top: 2px solid #0D0D0D; margin-top: 0;">
+  <div class="container">
+    <div class="verdicts__header">
+      <h2 class="verdicts__title">Round Ups</h2>
+      {% include tilted-tag.html text="MULTI-SHOP" idx=2 %}
+    </div>
+    <div class="verdicts__grid">
+      {% for post in roundup_posts %}
+        {% include shop-card.html post=post idx=forloop.index %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="container">
+  <nav class="pagination" aria-label="Posts pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">← Prev</a>
+    {% endif %}
+    {% for i in (1..paginator.total_pages) %}
+      {% if i == paginator.page %}
+        <span class="current">{{ i }}</span>
+      {% elsif i == 1 %}
+        <a href="{{ '/' | relative_url }}">{{ i }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | replace: ':num', i | relative_url }}">{{ i }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next →</a>
+    {% endif %}
+  </nav>
+</div>
+{% endif %}
+
+<!-- The People Responsible -->
+<section class="team-section">
+  <div class="container">
+    <h2 class="team-section__title">The People Responsible For This</h2>
+    <div class="team-section__grid">
+      {% for author_hash in site.authors %}
+        {% assign key = author_hash[0] %}
+        {% assign author = author_hash[1] %}
+        <div class="author-card">
+          {% if author.avatar %}
+            <img class="author-card__avatar"
+                 src="{{ author.avatar | prepend: '/' | relative_url }}"
+                 alt="{{ author.display_name }}">
+          {% endif %}
+          <div>
+            <div class="author-card__name">{{ author.display_name }}</div>
+            <p class="author-card__bio">{{ author.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

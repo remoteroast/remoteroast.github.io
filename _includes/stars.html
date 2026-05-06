@@ -1,0 +1,10 @@
+{% assign rating = include.rating | default: 0 %}
+<span class="stars" aria-label="{{ rating }} out of 5 stars">
+  {% for i in (1..5) %}
+    {% if i <= rating %}
+      <span class="star star--filled">★</span>
+    {% else %}
+      <span class="star star--empty">★</span>
+    {% endif %}
+  {% endfor %}
+</span>

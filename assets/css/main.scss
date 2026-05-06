@@ -1,19 +1,12 @@
 ---
-# Add a comment to make this file sass-y.
-# Change this file for any custom CSS.
 ---
+@import "tokens";
+@import "typography";
+@import "blobs";
+@import "components";
+@import "layouts";
 
-/* We need to add display:inline in order to align the '>>' of the 'read more' link */
-.post-excerpt p {
-	display:inline;
-}
-@media (max-width: 767px) {
-	.hidden-mobile {
-	  display: none;
-	}
-  }
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"syntax",
-    "starsnonscss"
-;
+// Leaflet popup overrides (TL;DR page)
+.leaflet-popup-content { font-family: 'Newsreader', serif; font-size: 14px; }
+.leaflet-popup-content-wrapper { border-radius: 0 !important; border: 2px solid #0D0D0D !important; box-shadow: 4px 4px 0 #0D0D0D !important; }
+.leaflet-popup-tip-container { display: none; }

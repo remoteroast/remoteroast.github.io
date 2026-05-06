@@ -1,0 +1,22 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <div class="site-footer__brand">Remote Roast</div>
+      <p class="site-footer__tagline">Judging your café so you don't have to.</p>
+      <ul class="site-footer__links">
+        <li><a href="{{ '/' | relative_url }}">Reviews</a></li>
+        <li><a href="{{ '/tldr' | relative_url }}">TL;DR</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer__tagline">Rating Twin Cities coffee shops for remote work. Data-forward, no corporate hedging.</p>
+      <p class="site-footer__privacy">We use Google Analytics to understand which reviews are useful. No personal info is collected.</p>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© {{ site.time | date: "%Y" }} Remote Roast</span>
+    <span>Minneapolis, MN</span>
+  </div>
+</footer>

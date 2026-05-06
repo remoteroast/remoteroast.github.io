@@ -872,13 +872,11 @@
 }
 
 .pro-tip {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
   background: #0D0D0D;
   padding: 20px 24px;
   margin: 8px 0 32px;
   &__label {
+    display: inline-block;
     background: $accent;
     color: $ink;
     font-family: 'DM Mono', monospace;
@@ -887,8 +885,7 @@
     text-transform: uppercase;
     padding: 4px 10px;
     font-weight: bold;
-    white-space: nowrap;
-    flex-shrink: 0;
+    margin-bottom: 12px;
   }
   p {
     font-family: 'Newsreader', serif;
@@ -896,7 +893,7 @@
     font-size: $f-sm;
     color: rgba(245,243,238,0.85);
     line-height: 1.5;
-    margin: 0;
+    margin: 0 !important;
   }
 }
 

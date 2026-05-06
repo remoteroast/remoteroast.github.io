@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" href="/assets/images/logo.png">
-
-<title>Roots Roasting | Remote Roast</title>
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roots Roasting | Remote Roast</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Roots Roasting | Remote Roast</title>
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Roots Roasting" />
@@ -16,223 +12,210 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Roots Roasting" />
 <meta property="og:description" content="Roots Roasting" />
-<link rel="canonical" href="http://localhost:4000/roots-roasting/" />
-<meta property="og:url" content="http://localhost:4000/roots-roasting/" />
 <meta property="og:site_name" content="Remote Roast" />
-<meta property="og:image" content="http://localhost:4000/assets/images/roots.png" />
+<meta property="og:image" content="/assets/images/roots.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-08-27T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/images/roots.png" />
+<meta property="twitter:image" content="/assets/images/roots.png" />
 <meta property="twitter:title" content="Roots Roasting" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"juliet"},"dateModified":"2023-08-27T00:00:00-05:00","datePublished":"2023-08-27T00:00:00-05:00","description":"Roots Roasting","headline":"Roots Roasting","image":"http://localhost:4000/assets/images/roots.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/roots-roasting/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"juliet"},"url":"http://localhost:4000/roots-roasting/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"juliet"},"dateModified":"2023-08-27T00:00:00-05:00","datePublished":"2023-08-27T00:00:00-05:00","description":"Roots Roasting","headline":"Roots Roasting","image":"/assets/images/roots.png","mainEntityOfPage":{"@type":"WebPage","@id":"/roots-roasting/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/logo.png"},"name":"juliet"},"url":"/roots-roasting/"}</script>
 <!-- End Jekyll SEO tag -->
 
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-<link href="/assets/css/screen.css" rel="stylesheet">
-
-<link href="/assets/css/main.css" rel="stylesheet">
-
-<script src="/assets/js/jquery.min.js"></script>
-
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WD48S7B');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CG5EGLZ8B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CG5EGLZ8B', { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });
+    window.rrTrack = function(name, params) {
+      gtag('event', name, params || {});
+      dataLayer.push({ event: name, rrParams: params || {} });
+    };
+  </script>
 </head>
-
-
-
-
 <body class="layout-post">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD48S7B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD48S7B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <svg id="parallax-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+  style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;"></svg>
 
-
-<!-- Begin Menu Navigation
-================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="/">
-    <img src="/assets/images/logo.png" alt="Remote Roast">
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto">
-
-                
-                <li class="nav-item">
-                
-                <a class="nav-link" href="/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/tldr">TL;DR</a>
-                </li>
-
-
-                <script src="/assets/js/lunr.js"></script>
-
-
-<style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
-</style>
-
-
-<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
-</form>
-
-<div id="lunrsearchresults">
-    <ul></ul>
-</div>
-
-<script src="/assets/js/lunrsearchengine.js"></script>
-
-            </ul>
-
-        <!-- End Menu -->
-
-    </div>
-
-    </div>
+  <nav class="site-nav" aria-label="Main navigation">
+  <a class="site-nav__brand" href="/">
+    <span class="site-nav__brand-name">Remote Roast</span>
+    <span class="site-nav__brand-tag">Judging your café so you don't have to</span>
+  </a>
+  <button class="site-nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="site-nav__links" id="nav-links" role="list">
+    <li>
+      <a href="/">Reviews</a>
+    </li>
+    <li>
+      <a href="/tldr">TL;DR</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+  </ul>
 </nav>
-<!-- End Navigation
-================================================== -->
+<script>
+  (function() {
+    var btn = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function() {
+        var open = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+</script>
 
-<div class="site-content">
+  <main class="site-content">
+    
 
-<div class="container">
 
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">Remote Roast</h1>
-    <p class="lead">
-        Rating Twin Cities coffee shops for remote work.
-    </p>
+
+<!-- Breadcrumb -->
+<div class="post-breadcrumb">
+  <a href="/" class="post-breadcrumb__back">← All Reviews</a>
+  
+  <span class="post-breadcrumb__sep">·</span>
+  <span class="post-breadcrumb__hood">St Paul</span>
+  
 </div>
 
-<!-- Content
-================================================== -->
-<div class="main-content">
-    <!-- Begin Article
-================================================== -->
-<div class="container">
-    <div class="row">
+<!-- Hero -->
 
-        <!-- Post Share -->
-        <div class="col-md-2 pl-0">
-            <div class="share sticky-top sticky-top-offset">
-    <p>
-        Share
-    </p>
-    <ul>
-        <li class="ml-1 mr-1">
-            <a target="_blank" href="https://twitter.com/intent/tweet?text=Roots Roasting&url=http://localhost:4000/roots-roasting/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </li>
-
-        <li class="ml-1 mr-1">
-            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/roots-roasting/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </li>
-
-        <li class="ml-1 mr-1">
-            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/roots-roasting/" onclick="window.open(this.href, 'width=550,height=435');return false;">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </li>
-
-    </ul>
+<div class="post-hero">
+  <img class="post-hero__img"
+       src="/assets/images/roots.png"
+       alt="Roots Roasting">
+  <div class="post-hero__overlay"></div>
+  
+  <div class="post-hero__hood">
+    St Paul · Mac-Groveland
+  </div>
+  
+  <div class="post-hero__body">
+    <h1 class="post-hero__title">Roots Roasting</h1>
     
-    <div class="sep">
+    <div class="post-hero__stars-row">
+      
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8"/></svg>
+    
+  
+</span>
+
+      
+      <span class="post-hero__subtitle">"Roots Roasting"</span>
+      
     </div>
-    <ul>
-        <li>
-        <a class="small smoothscroll" href="#disqus_thread"></a>
-        </li>
-    </ul>
     
+  </div>
 </div>
 
-        </div>
 
-        <!-- Post -->
-        
+<!-- Meta strip -->
+<div class="post-meta-strip">
+  
+  <div class="post-meta-strip__author-wrap">
+    
+    <img class="post-meta-strip__avatar"
+         src="/assets/images/juliet.jpeg"
+         alt="Juliet">
+    
+    <div>
+      <div class="post-meta-strip__author">by Juliet</div>
+      <div class="post-meta-strip__date">August 27, 2023</div>
+    </div>
+  </div>
+  <div class="post-meta-strip__divider"></div>
+  
+  <div class="post-meta-strip__type">
+    Individual Review
+  </div>
+  
+  <div class="post-meta-strip__rating">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8"/></svg>
+    
+  
+</span>
 
-        <div class="col-md-9 flex-first flex-md-unordered">
-            <div class="mainheading">
+    <span class="post-meta-strip__rating-text">4/5</span>
+  </div>
+  
+</div>
 
-                <!-- Author Box -->
-                
-                <div class="row post-top-meta">
-                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
-                        
-                        <img class="author-thumb" src="/assets/images/juliet.jpeg" alt="Juliet">
-                        
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <a target="_blank" class="link-dark" href="">Juliet</a>
-                    </br>
-                        <!-- <a target="_blank" href="" class="btn follow">Follow</a> -->
-                        <span class="author-description">After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while.</span>
-                    </div>
-                </div>
-                
+<!-- Body -->
+<div class="post-body-wrap">
+  <!-- Left: content -->
+  <div class="post-body">
+    
 
-                <!-- Post Title -->
-                <h1 class="posttitle">Roots Roasting</h1>
-
-            </div>
-
-            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
-            
-            <!-- End Adsense -->
-
-            <!-- Post Featured Image -->
-            
-
-            
-            <img class="featured-image img-fluid" width="60%" src="/assets/images/roots.png" alt="Roots Roasting">
-            
-
-            
-            <!-- End Featured Image -->
-
-            <!-- Post Content -->
-            <div class="article-post">
-                <!-- Toc if any -->
-                
-                <!-- End Toc -->
-                <h5>Pop-tarts sold separately</h5>
+    <div class="post-body__content" id="post-content">
+      <h5>Pop-tarts sold separately</h5>
 
 <p>We'll start today's review with a recipe. Start by gathering four college students and putting them in a house with <b>one (1) bathroom</b>. Students should possess the following traits:</p>
 <ul>
@@ -354,250 +337,352 @@
 <p> <i>Pro tip</i></p>
 <p><img src="/assets/images/roots_pro_tip.jpeg" alt="roots bathroom sign" height="300px" /></p>
 
-            </div>
-
-             <!-- Rating -->
-             
-             <div class="rating mb-4 d-flex align-items-center">
-                 <strong class="mr-1">Rating:</strong> <div class="rating-holder">
-<div class="c-rating c-rating--regular" data-rating-value="4">
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-</div>
-</div>
-             </div>
-             
-             
-            <hr>
-            <h3>Tell us where to go next!</h3>
-            <a href="mailto:remoteroasters@gmail.com">Send us an email</a> and tell us your favorite coffee shop.
-            <br>
-            <hr>
-
-
-                
-            <h5>Buy our next coffee!</h5>
-            
-            <p>Thank you for your support! Help us continue to rate coffee shops!</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <a target="_blank" href="https://account.venmo.com/u/juliet-kelson" class="btn btn-success">Buy Juliet a coffee</a> 
-                </div>
-                <div class="col-md-4">
-                    <a target="_blank" href="https://account.venmo.com/u/osmar-delrio" class="btn btn-success">Buy Osmar a coffee</a>
-                </div>
-            </div>
-            <br>
-            <br>
-
-           
-
-            <!-- Post Date -->
-            <p>
-            <small>
-                <span class="post-date"><time class="post-date" datetime="2023-08-27">27 Aug 2023</time></span>           
-                
-                </small>
-            </p>
-
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
-                    
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#Mac-Groveland">Mac-Groveland</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/categories#St-Paul">St Paul</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- End Categories -->
-
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    
-                    
-                    <li>
-                        <a class="smoothscroll" href="/tags#4-stars">#4 stars</a>
-                    </li>
-                    
-                    <li>
-                        <a class="smoothscroll" href="/tags#review">#review</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- End Tags -->
-
-            <!-- Prev/Next -->
-            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-            
-            <a class="prev d-block col-md-6" href="https://remoteroast.github.io//up-coffee/"> &laquo; Up Cafe & Up Coffee Roasters</a>
-            
-            
-            <a class="next d-block col-md-6 text-lg-right" href="https://remoteroast.github.io//wesley-andrews/">Wesley Andrews &raquo; </a>
-            
-            <div class="clearfix"></div>
-            </div>
-            <!-- End Categories -->
-
-        </div>
-        <!-- End Post -->
-
     </div>
-</div>
-<!-- End Article
-================================================== -->
+  </div>
 
-
-
-<!-- Begin Comments
-================================================== -->
-
-    <div class="container">
-        <div id="comments" class="row justify-content-center mb-5">
-            <div class="col-md-8">
-                <section class="disqus">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'remote-roast'; 
-        var disqus_developer = 0;
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-            </div>
+  <!-- Right: sidebar (reviews only) -->
+  
+  <aside class="post-sidebar">
+    
+    <div class="scorecard">
+      <div class="scorecard__label">The Breakdown</div>
+      
+      
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Coffee</span>
+            <span class="score-bar__value">5/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="5"></div>
+          </div>
         </div>
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Wifi</span>
+            <span class="score-bar__value">5/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="5"></div>
+          </div>
+        </div>
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Seating</span>
+            <span class="score-bar__value">3/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="3"></div>
+          </div>
+        </div>
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Vibe</span>
+            <span class="score-bar__value">4/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="4"></div>
+          </div>
+        </div>
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Outlets</span>
+            <span class="score-bar__value">3/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="3"></div>
+          </div>
+        </div>
+      
+        
+        
+        
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">Quiet</span>
+            <span class="score-bar__value">4/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="4"></div>
+          </div>
+        </div>
+      
+    </div>
+    
+
+    
+    <div class="scorecard__overall">
+      <div class="scorecard__overall-label">Overall</div>
+      <div>
+        <span class="scorecard__overall-number">4</span>
+        <span class="scorecard__overall-denom">/5</span>
+      </div>
+      
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8"/></svg>
+    
+  
+</span>
+
+      
+      <div class="scorecard__overall-subtitle">"Roots Roasting"</div>
+      
+    </div>
+    
+
+    <!-- Key stats -->
+    <div class="scorecard" style="margin-top:0;">
+      
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Wifi</span>
+        <span class="scorecard__row-value">120 mbps</span>
+      </div>
+      
+      
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Meetings</span>
+        <span class="scorecard__row-value">Maybe</span>
+      </div>
+      
+      
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Drip Coffee</span>
+        <span class="scorecard__row-value">$2.75</span>
+      </div>
+      
     </div>
 
-<!--End Comments
-================================================== -->
+    
+    <div class="post-sidebar-map">
+      <div class="post-sidebar-map__label">Find It</div>
+      <div id="review-map" class="post-sidebar-map__el"></div>
+      
+      <div class="post-sidebar-map__address">St Paul · Mac-Groveland</div>
+      
+    </div>
+    
 
-<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
-https://search.google.com/structured-data/testing-tool/u/0/
-================================================== -->
+    
+    <div class="post-author-card">
+      
+      <img class="post-author-card__avatar"
+           src="/assets/images/juliet.jpeg"
+           alt="Juliet">
+      
+      <div>
+        <div class="post-author-card__name">Juliet</div>
+        
+        <p class="post-author-card__bio">After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while.</p>
+        
+      </div>
+    </div>
+    
+  </aside>
+  
+</div>
+
+<!-- Roundup: full-width -->
+
+
+<!-- CTA -->
+<div class="container">
+  <div class="cta-block">
+    <div class="cta-block__title">Tell us where to go next!</div>
+    <p class="cta-block__sub">Found a hidden gem? Know a spot we're sleeping on? Send us an email.</p>
+    <div class="cta-block__actions">
+      <a href="mailto:remoteroasters@gmail.com" class="btn btn--secondary">Send a tip →</a>
+      <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
+      <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
+    </div>
+  </div>
+
+  
+  <div class="post-tags">
+    
+      <a href="/tags#review">#review</a>
+    
+      <a href="/tags#4-stars">#4 stars</a>
+    
+  </div>
+  
+</div>
+
+<!-- Post nav -->
+<nav class="post-nav" aria-label="Post navigation">
+  
+  <a href="/up-coffee/" class="post-nav__prev">
+    <div class="post-nav__label">← Previous</div>
+    <div class="post-nav__title">Up Cafe & Up Coffee Roasters</div>
+  </a>
+  
+  
+  <a href="/wesley-andrews/" class="post-nav__next">
+    <div class="post-nav__label">Next →</div>
+    <div class="post-nav__title">Wesley Andrews</div>
+  </a>
+  
+</nav>
+
+<!-- Structured data -->
+
 
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
   "@type": "Review",
-  "itemReviewed": {
-    "@type": "Thing",
-    "name": "Roots Roasting"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Juliet"
-  },
+  "itemReviewed": { "@type": "Thing", "name": "Roots Roasting" },
+  "author": { "@type": "Person", "name": "Juliet" },
   "datePublished": "2023-08-27",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4",
-    "bestRating": "5"
-  }
+  "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" }
 }
 </script>
 
-</div>
+
+<script>
+(function () {
+  // Animate score bars
+  var fills = document.querySelectorAll('.js-bar-fill');
+  if (fills.length) {
+    setTimeout(function () {
+      fills.forEach(function (f) {
+        var val = parseFloat(f.dataset.val) || 0;
+        f.style.width = ((val / 5) * 100) + '%';
+      });
+    }, 400);
+  }
+
+  // Wrap pro tip paragraphs
+  var content = document.getElementById('post-content');
+  if (content) {
+    var paras = Array.prototype.slice.call(content.querySelectorAll('p'));
+    paras.forEach(function (p) {
+      var text = p.textContent || '';
+      if (!/pro\s*tip/i.test(text)) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'pro-tip';
+      var label = document.createElement('span');
+      label.className = 'pro-tip__label';
+      label.textContent = 'Pro Tip';
+      var inner = document.createElement('p');
+      var html = p.innerHTML;
+      // Strip leading <br> tags (Kramdown sometimes inserts them before inline markdown)
+      html = html.replace(/^(\s*<br\s*\/?>\s*)+/gi, '');
+      // Handle <i>Pro tip</i>: text
+      html = html.replace(/<i>\s*Pro\s*tip\s*<\/i>\s*:?\s*/gi, '');
+      // Handle <em>Pro tip: text</em> → strip prefix inside em
+      html = html.replace(/<em>\s*Pro\s*tip\s*:?\s*/gi, '<em>');
+      // Handle bare "Pro tip:" text node at start
+      html = html.replace(/^\s*Pro\s*tip\s*:?\s*/gi, '');
+      // Clean up empty em tags
+      html = html.replace(/<em>\s*<\/em>/gi, '');
+      // Strip leading colon/whitespace
+      html = html.replace(/^\s*:\s*/, '').trim();
+      inner.innerHTML = html;
+      wrap.appendChild(label);
+      wrap.appendChild(inner);
+      p.parentNode.replaceChild(wrap, p);
+    });
+  }
+
+  // Mini map on review posts
+  
+  (function () {
+    function tryMap() {
+      var el = document.getElementById('review-map');
+      if (!el || !window.L) return false;
+      var m = L.map(el, { zoomControl: false, scrollWheelZoom: false, dragging: false })
+        .setView([44.9340523, -93.1659627], 15);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '', maxZoom: 19, subdomains: 'abcd'
+      }).addTo(m);
+      var svg = '<svg width="24" height="30" viewBox="0 0 24 30" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 18 12 18s12-9 12-18C24 5.4 18.6 0 12 0z" fill="#D4AA20" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="#0D0D0D"/></svg>';
+      var mapsUrl = "https://goo.gl/maps/XdkC9J2pY9uN7cqUA";
+      var popupHtml =
+        '<div style="font-family:\'DM Mono\',monospace;min-width:160px;padding:4px 2px;">' +
+        '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:#0D0D0D;line-height:1;margin-bottom:4px;">Roots Roasting</div>' +
+        '<div style="font-size:10px;color:#5C5A57;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;">St Paul · Mac-Groveland</div>' +
+        '<a href="' + mapsUrl + '" target="_blank" rel="noopener" style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#D4AA20;border-bottom:1px solid #D4AA20;text-decoration:none;">Directions →</a>' +
+        '</div>';
+      L.marker([44.9340523, -93.1659627], {
+        icon: L.divIcon({ html: svg, iconSize: [24, 30], iconAnchor: [12, 30], className: '' })
+      }).bindPopup(popupHtml, { closeButton: false }).addTo(m);
+      return true;
+    }
+    if (!tryMap()) {
+      var attempts = 0;
+      var iv = setInterval(function () {
+        if (tryMap() || ++attempts > 20) clearInterval(iv);
+      }, 200);
+    }
+  })();
+  
+
+  // GA4 pro tip view
+  var tip = document.querySelector('.pro-tip');
+  if (tip && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          if (typeof rrTrack === 'function') rrTrack('pro_tip_view', { post: 'Roots Roasting' });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    obs.observe(tip);
+  }
+})();
+</script>
 
 
-    
-</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
-<!-- Categories Jumbotron
-================================================== -->
-<div class="jumbotron fortags">
-	<div class="d-md-flex h-100">
-		<div class="col-md-4 transpdark align-self-center text-center h-100">
-            <div class="d-md-flex align-items-center justify-content-center h-100">
-                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
-            </div>
-		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">
-            
-            
-                
-                    <a class="mt-1 mb-1" href="/categories#Minneapolis">Minneapolis (10)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#About">About (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#St-Paul">St Paul (5)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Highland-Park">Highland Park (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Whittier">Whittier (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Uptown">Uptown (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Saint-Anthony-Park">Saint Anthony Park (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Summit-University">Summit-University (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#2023">2023 (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Dinkytown">Dinkytown (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Mid-City-Industrial">Mid-City Industrial (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Mac-Groveland">Mac-Groveland (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#St-Anthony-Main">St Anthony Main (1)</a>
-                
-            
-            
-		</div>
-	</div>
-</div>
 
-<!-- Begin Footer
-================================================== -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © 2024 Remote Roast 
-            </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
-            </div>
-        </div>
-    </div>
+  </main>
+  <footer class="site-footer">
+  <span class="site-footer__brand">Remote Roast</span>
+  <span class="site-footer__copy">© 2026 · Twin Cities</span>
 </footer>
-<!-- End Footer
-================================================== -->
 
-</div> <!-- /.site-content -->
-
-<!-- Scripts
-================================================== -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-<script src="/assets/js/mediumish.js"></script>
-
-
-
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
-
-
-<script id="dsq-count-scr" src="//remote-roast.disqus.com/count.js"></script>
-
-
+  <script src="/assets/js/blobs.js" defer></script>
 </body>
 </html>

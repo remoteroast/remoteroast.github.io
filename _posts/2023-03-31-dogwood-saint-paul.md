@@ -13,6 +13,16 @@ meeting: "Yes"
 maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
 wifi: "78"
 drip: "3.25"
+lat: 44.9700
+lng: -93.1837
+bestfor: "Best Quiet Spot"
+scores:
+  coffee: 4
+  wifi: 3
+  seating: 3
+  vibe: 3
+  outlet: 3
+  quiet: 4
 ---
 
 <h4>Woof woof</h4>

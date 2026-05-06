@@ -1,0 +1,50 @@
+// _sass/_tokens.scss
+
+// Color
+$bg:        #F2EDE6;   // warm paper white — primary background
+$bg-alt:    #E8E1D4;   // slightly darker paper for cards/sections
+$ink:       #0D0D0D;   // primary text
+$ink-soft:  #1E1C1A;   // body copy
+$ink-mid:   #5C5A57;   // secondary/meta text (use sparingly)
+$accent:    #D4AA20;   // gold — tags, accents, primary CTAs
+$accent-2:  #B58F0E;   // gold hover
+$border:    rgba(13, 13, 13, 0.12);
+
+// Blob palette (parallax background shapes)
+$blob-red:    #C8311C;
+$blob-green:  #2F6B3D;
+$blob-navy:   #1F3A6F;
+$blob-purple: #5C2D7A;
+$blob-orange: #E27A2A;
+
+// Type scale (px, mobile-first)
+$f-xs:   12px;
+$f-sm:   14px;
+$f-md:   16px;
+$f-lg:   20px;
+$f-xl:   28px;
+$f-2xl:  44px;
+$f-3xl:  72px;
+$f-display: 120px;   // hero "REMOTE ROAST"
+
+// Spacing scale (8pt grid)
+$s-1:  4px;
+$s-2:  8px;
+$s-3:  12px;
+$s-4:  16px;
+$s-5:  24px;
+$s-6:  32px;
+$s-7:  48px;
+$s-8:  64px;
+$s-9:  96px;
+$s-10: 128px;
+
+// Layout
+$container-max: 1280px;
+$gutter: 24px;
+
+// Z
+$z-blob: 0;
+$z-content: 10;
+$z-nav: 100;
+$z-modal: 1000;

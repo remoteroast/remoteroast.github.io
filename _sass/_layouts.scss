@@ -1,0 +1,1539 @@
+// _sass/_layouts.scss
+
+// ─── Base ─────────────────────────────────────────────────────────────────────
+.site-content { position: relative; z-index: 10; padding-top: 72px; min-height: 100vh; }
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $s-6;
+
+  @media (max-width: 640px) { padding: 0 $s-4; }
+}
+
+// ─── Homepage Hero ────────────────────────────────────────────────────────────
+.home-hero {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  min-height: 82vh;
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+
+  &__left {
+    padding: 64px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(13,13,13,0.12);
+  }
+
+  &__label {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 84px);
+    line-height: 0.95;
+    color: $ink;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__rating {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: $ink-mid;
+  }
+
+  &__excerpt {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-lg;
+    color: $ink-soft;
+    line-height: 1.5;
+    max-width: 380px;
+    margin-bottom: $s-7;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $accent;
+    flex-shrink: 0;
+  }
+
+  &__author {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: $ink;
+  }
+
+  &__date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: $ink-mid;
+    margin-top: 2px;
+  }
+
+  &__cta {
+    align-self: flex-start;
+    margin-top: $s-2;
+  }
+
+  &__right {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    background: $bg-alt;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.95);
+  }
+
+  &__hood {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    font-weight: bold;
+  }
+
+  &__rank {
+    position: absolute;
+    bottom: -48px;
+    right: -8px;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 300px;
+    line-height: 1;
+    color: rgba(154,152,149,0.35);
+    pointer-events: none;
+    letter-spacing: -8px;
+    user-select: none;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    &__left {
+      padding: $s-7 $s-5;
+      border-right: none;
+      border-bottom: 1px solid rgba(13,13,13,0.12);
+    }
+
+    &__right { min-height: 280px; }
+  }
+}
+
+.verdicts {
+  padding: 48px 0 80px;
+
+  &--roundups {
+    border-top: 1px solid rgba(13,13,13,0.12);
+    margin-top: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 48px 52px 0;
+    margin-bottom: $s-6;
+
+    @media (max-width: 640px) {
+      padding: $s-7 $s-4 0;
+    }
+  }
+
+  &__title-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__title {
+    display: table;
+    background: $ink;
+    color: $bg;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 4px 16px;
+    white-space: nowrap;
+  }
+
+  &__title-tag {
+    position: absolute;
+    bottom: -10px;
+    right: -12px;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: bold;
+    transform: rotate(-4deg);
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  &__geo {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $ink-mid;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 24px 52px 0;
+
+    @media (max-width: 640px) { padding: $s-4 $s-4 0; }
+  }
+
+  .pagination {
+    padding-left: 52px;
+    padding-right: 52px;
+
+    @media (max-width: 640px) {
+      padding-left: $s-4;
+      padding-right: $s-4;
+    }
+  }
+}
+
+.team-section {
+  padding: 64px 52px;
+  border-top: 1px solid rgba(13,13,13,0.12);
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+
+  &__label {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 12px;
+    margin-bottom: 36px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: $s-6;
+    }
+  }
+}
+
+.author-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(13,13,13,0.15);
+    object-fit: cover;
+  }
+
+  &__name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    color: $ink;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: $s-2;
+  }
+
+  &__bio {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-sm;
+    color: $ink-soft;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// ─── TL;DR page ───────────────────────────────────────────────────────────────
+.tldr-hero {
+  padding: 64px 52px 48px;
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  &__label {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(72px, 10vw, 110px);
+    line-height: 0.88;
+    letter-spacing: 0.02em;
+    color: $ink;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &__sub {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-lg;
+    color: $ink-soft;
+    max-width: 520px;
+    line-height: 1.5;
+  }
+  &__stats {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+  }
+  &__stat { text-align: center; }
+  &__stat-n {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: $accent;
+    line-height: 1;
+  }
+  &__stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $ink-mid;
+    margin-top: 2px;
+  }
+  @media (max-width: 768px) {
+    padding: $s-7 $s-5 $s-6;
+    flex-direction: column;
+    align-items: flex-start;
+    &__stats { align-self: flex-start; }
+  }
+}
+
+.tldr-main {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  height: 520px;
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.tldr-map-panel {
+  position: relative;
+  border-right: 1px solid rgba(13,13,13,0.12);
+  overflow: hidden;
+  @media (max-width: 768px) {
+    height: 360px;
+    border-right: none;
+    border-bottom: 1px solid rgba(13,13,13,0.12);
+  }
+  &__hint {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+    background: rgba(13,13,13,0.88);
+    color: $accent;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
+  }
+}
+
+#tldr-map {
+  width: 100%;
+  height: 100%;
+  background: $bg-alt;
+}
+
+.tldr-leaderboard {
+  overflow-y: auto;
+  background: #EDEAE3;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    max-height: 400px;
+  }
+  &__header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid rgba(13,13,13,0.12);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    color: $ink;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    background: #EDEAE3;
+    z-index: 2;
+  }
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 0;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+  border-left: 3px solid transparent;
+  &:hover { background: rgba(212,170,32,0.05); }
+  &.is-active {
+    background: rgba(212,170,32,0.08);
+    border-left-color: $accent;
+  }
+  &__rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: rgba(13,13,13,0.2);
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  &.is-active &__rank { color: $accent; }
+  &__info { padding-left: 12px; }
+  &__name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+    color: $ink;
+    line-height: 1.1;
+    text-decoration: none;
+    display: block;
+    &:hover { color: $accent-2; }
+  }
+  &__sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $ink-mid;
+    transition: color 0.2s;
+    margin-top: 2px;
+  }
+  &.is-active &__sub { color: $accent; }
+  &__stars { font-size: 12px; }
+}
+
+.tldr-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+  min-height: 280px;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+  &__image-col {
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+  }
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9);
+  }
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.6) 55%, transparent 100%);
+  }
+  &__hood {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    align-self: flex-start;
+  }
+  &__name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(24px, 3vw, 36px);
+    color: #F5F5F5;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__bestfor {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 12px;
+  }
+  &__blurb {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-sm;
+    color: rgba(245,243,238,0.88);
+    line-height: 1.5;
+    max-width: 360px;
+    margin-bottom: 20px;
+  }
+  &__cta {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+  &__bars-col {
+    padding: 32px;
+    border-right: 1px solid rgba(13,13,13,0.12);
+    border-left: 1px solid rgba(13,13,13,0.12);
+  }
+  &__radar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  &__section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 20px;
+  }
+}
+
+.score-bar {
+  margin-bottom: 14px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  &__label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: $ink-soft;
+  }
+  &__value {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: $accent;
+    font-weight: bold;
+  }
+  &__track {
+    height: 5px;
+    background: rgba(13,13,13,0.1);
+  }
+  &__fill {
+    height: 100%;
+    background: $accent;
+    transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}
+
+// ─── Post / Review ────────────────────────────────────────────────────────────
+.post-breadcrumb {
+  padding: 14px 52px;
+  border-bottom: 1px solid rgba(13,13,13,0.08);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  z-index: $z-content;
+  &__back {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $accent;
+    text-decoration: none;
+  }
+  &__sep {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(13,13,13,0.3);
+  }
+  &__hood {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: $ink-mid;
+  }
+  @media (max-width: 640px) { padding: $s-3 $s-4; }
+}
+
+.post-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  overflow: hidden;
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  }
+  &__hood {
+    position: absolute;
+    top: 28px;
+    left: 52px;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    font-weight: bold;
+    z-index: 2;
+    @media (max-width: 640px) { left: $s-4; top: $s-4; }
+  }
+  &__body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 48px 52px;
+    max-width: 900px;
+    z-index: 2;
+    @media (max-width: 640px) { padding: $s-6 $s-4; }
+  }
+  &__tag { margin-bottom: $s-4; }
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.92;
+    color: #F9F9F7;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0;
+  }
+  &__subtitle {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: rgba(245,243,238,0.75);
+    line-height: 1.4;
+  }
+  &__stars-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.post-hero--no-image {
+  height: auto;
+  min-height: auto;
+  background: $bg-alt;
+  padding-top: $s-7;
+  .post-hero__overlay { display: none; }
+  .post-hero__title { color: $ink; }
+  .post-hero__subtitle { color: $ink-soft; }
+  .post-hero__body { position: static; padding: $s-7 52px $s-6; }
+  @media (max-width: 640px) {
+    .post-hero__body { padding: $s-6 $s-4; }
+  }
+}
+
+.post-meta-strip {
+  background: #0D0D0D;
+  padding: 14px 52px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: $z-content;
+  @media (max-width: 640px) { padding: $s-3 $s-4; gap: $s-3; }
+  &__author-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $accent;
+    flex-shrink: 0;
+  }
+  &__author {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #F5F3EE;
+  }
+  &__date {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: rgba(245,243,238,0.5);
+    margin-top: 1px;
+  }
+  &__divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(245,243,238,0.15);
+    @media (max-width: 640px) { display: none; }
+  }
+  &__type {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.5);
+  }
+  &__rating {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__rating-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: $accent;
+    font-weight: bold;
+  }
+}
+
+.post-body-wrap {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 52px;
+  align-items: start;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    padding: 0 $s-4;
+    .post-sidebar { order: -1; }
+  }
+}
+
+.post-body {
+  padding-right: 48px;
+  padding-top: 52px;
+  padding-bottom: 80px;
+  border-right: 1px solid rgba(13,13,13,0.1);
+  min-width: 0;
+  @media (max-width: 900px) {
+    padding-right: 0;
+    border-right: none;
+    padding-top: $s-6;
+    padding-bottom: $s-7;
+  }
+  &__content {
+    font-family: 'Newsreader', serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: $ink-soft;
+    h5, h6 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: $f-xl;
+      margin: $s-6 0 $s-3;
+    }
+    img {
+      max-width: 100%;
+      border: 2px solid $ink;
+      display: block;
+      margin: $s-5 0;
+    }
+    p { margin-bottom: 24px; }
+    strong { color: $ink; }
+  }
+}
+
+.pull-quote {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.4;
+  color: $ink-soft;
+  padding: 32px 0;
+  border-top: 2px solid $ink;
+  border-bottom: 2px solid $ink;
+  margin: 40px 0;
+  &::before {
+    content: '\201C';
+    font-size: 64px;
+    line-height: 0.6;
+    color: $accent;
+    display: block;
+    margin-bottom: 8px;
+    font-style: normal;
+  }
+}
+
+.pro-tip {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #0D0D0D;
+  padding: 20px 24px;
+  margin: 8px 0 32px;
+  &__label {
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  p {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-sm;
+    color: rgba(245,243,238,0.85);
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.post-sidebar {
+  padding-left: 40px;
+  padding-top: 52px;
+  @media (max-width: 900px) {
+    padding-left: 0;
+    padding-top: $s-5;
+  }
+}
+
+.scorecard {
+  margin-bottom: 40px;
+  &__label {
+    display: inline-block;
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  &__overall {
+    background: #0D0D0D;
+    padding: 24px;
+    margin-bottom: 32px;
+    &-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(245,243,238,0.5);
+      margin-bottom: 12px;
+    }
+    &-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      color: $accent;
+      line-height: 1;
+    }
+    &-denom {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: rgba(245,243,238,0.3);
+    }
+    &-subtitle {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: $f-sm;
+      color: rgba(245,243,238,0.6);
+      margin-top: 12px;
+      line-height: 1.4;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $s-2 0;
+    border-bottom: 1px solid $border;
+    font-family: 'DM Mono', monospace;
+    font-size: $f-sm;
+    &:last-child { border-bottom: none; }
+  }
+  &__row-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $ink-mid;
+    font-size: $f-xs;
+  }
+  &__row-value {
+    color: $ink;
+    font-weight: 500;
+  }
+}
+
+.post-sidebar-map {
+  margin-bottom: 32px;
+  &__label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $ink-mid;
+    margin-bottom: 12px;
+  }
+  &__el {
+    height: 180px;
+    width: 100%;
+  }
+  &__address {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: $ink-mid;
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.post-author-card {
+  border-top: 1px solid rgba(13,13,13,0.1);
+  padding-top: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  &__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(13,13,13,0.15);
+    flex-shrink: 0;
+  }
+  &__name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: $ink;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  &__bio {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-xs;
+    color: $ink-mid;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.post-footer {
+  padding: $s-7 0;
+  border-top: 2px solid $ink;
+  margin-top: $s-7;
+}
+
+.cta-block {
+  background: $bg-alt;
+  border: 2px solid $ink;
+  box-shadow: 4px 4px 0 $ink;
+  padding: $s-6;
+  margin: $s-7 0;
+  text-align: center;
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    text-transform: uppercase;
+    color: $ink;
+    margin-bottom: $s-3;
+    line-height: 1;
+  }
+  &__sub {
+    font-family: 'Newsreader', serif;
+    color: $ink-soft;
+    margin-bottom: $s-5;
+  }
+  &__actions {
+    display: flex;
+    gap: $s-4;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid $ink;
+  a {
+    padding: 32px 52px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.15s;
+    &:hover { background: $bg-alt; }
+    @media (max-width: 640px) { padding: $s-5 $s-4; }
+  }
+  &__label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $ink-mid;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: $ink;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  &__prev { border-right: 1px solid rgba(13,13,13,0.1); }
+  &__next { text-align: right; }
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $s-2;
+  margin: $s-5 0;
+  a {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $ink-mid;
+    border: 1px solid $border;
+    padding: 4px 10px;
+    &:hover { border-color: $ink; color: $ink; }
+  }
+}
+
+// ─── 404 ─────────────────────────────────────────────────────────────────────
+.page-404 {
+  padding: $s-10 $s-6;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(120px, 20vw, 240px);
+    line-height: 0.8;
+    color: $ink;
+    margin-bottom: $s-5;
+  }
+
+  &__tag { margin-bottom: $s-5; }
+
+  &__message {
+    font-family: 'Newsreader', serif;
+    font-size: $f-xl;
+    font-style: italic;
+    color: $ink-soft;
+    max-width: 480px;
+    margin: 0 auto $s-7;
+    line-height: 1.3;
+  }
+}
+
+// ─── Generic Page (about, categories, tags) ───────────────────────────────────
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $s-7 $s-6;
+
+  h1 {
+    margin-bottom: $s-4;
+  }
+}
+
+.categories-page, .tags-page {
+  padding: $s-7 0;
+
+  &__section {
+    margin-bottom: $s-7;
+  }
+
+  &__heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    text-transform: uppercase;
+    color: $ink;
+    border-bottom: 2px solid $ink;
+    padding-bottom: $s-3;
+    margin-bottom: $s-4;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $s-2;
+  }
+
+  &__link {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-sm;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $ink;
+
+    &:hover { color: $accent-2; }
+
+    &__count {
+      color: $ink-mid;
+      margin-left: $s-2;
+    }
+  }
+}
+
+// ─── TL;DR Best For ───────────────────────────────────────────────────────────
+.tldr-bestfor {
+  padding: 52px 52px 60px;
+  border-bottom: 1px solid $border;
+
+  &__label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 28px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: $border;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: #EDEAE3;
+    padding: 24px 22px;
+  }
+
+  &__card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 10px;
+  }
+
+  &__card-winner {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: $ink;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  &__card-reason {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: $ink-mid;
+    line-height: 1.5;
+  }
+}
+
+// ─── Roundup Layout ───────────────────────────────────────────────────────────
+.roundup-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 52vh;
+  border-bottom: 2px solid $ink;
+
+  &__left {
+    background: $ink;
+    padding: 48px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(249,249,247,0.08);
+  }
+
+  &__tag-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__tag {
+    background: $accent;
+    color: $ink;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 12px;
+    transform: rotate(-1.5deg);
+    display: inline-block;
+  }
+
+  &__date {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.4);
+  }
+
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.9;
+    color: #F5F3EE;
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(245,243,238,0.65);
+    line-height: 1.45;
+    max-width: 440px;
+    margin: 0;
+  }
+
+  &__authors {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  &__avatars {
+    display: flex;
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $accent;
+
+    &--offset { margin-left: -8px; }
+  }
+
+  &__author-names {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(245,243,238,0.7);
+    text-transform: uppercase;
+  }
+
+  &__right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    background: $accent;
+    color: $ink;
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  &__badge-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  &__badge-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    &__left { padding: 40px 24px; }
+    &__right { height: 280px; }
+  }
+}
+
+.roundup-body {
+  padding: 52px 52px 0;
+  max-width: 860px;
+
+  &__content {
+    // Section headers like "The Shots" / "Spilling the Beans"
+    h2, h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.05em;
+      margin: 60px 0 16px;
+    }
+    h2 { font-size: 40px; }
+    h3 {
+      display: inline-block;
+      background: $ink;
+      color: #F5F3EE;
+      font-size: 32px;
+      padding: 2px 16px;
+      letter-spacing: 0.06em;
+      margin-top: 64px;
+    }
+
+    // Per-shop headers
+    h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: $ink;
+      letter-spacing: 0.04em;
+      margin: 52px 0 12px;
+      padding-top: 24px;
+      border-top: 2px solid $ink;
+      position: relative;
+      overflow: hidden;
+    }
+
+    p {
+      font-family: 'Newsreader', serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: $ink-soft;
+      margin: 0 0 $s-4;
+    }
+
+    // Bullet points with gold arrow
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 $s-5;
+      display: flex;
+      flex-direction: column;
+      gap: $s-3;
+      li {
+        display: flex;
+        gap: $s-3;
+        align-items: flex-start;
+        font-family: 'Newsreader', serif;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.55;
+        color: $ink-soft;
+        &::before {
+          content: '→';
+          color: $accent;
+          font-family: 'DM Mono', monospace;
+          font-style: normal;
+          font-size: 12px;
+          flex-shrink: 0;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    ol {
+      margin: 0 0 $s-5 $s-6;
+      li {
+        font-family: 'Newsreader', serif;
+        font-size: 17px;
+        line-height: 1.6;
+        color: $ink-soft;
+        margin-bottom: $s-2;
+      }
+    }
+
+    a { color: $accent-2; text-decoration: underline; }
+
+    // Tables: style the comparison table
+    .table-responsive { margin: 24px 0 40px; }
+    table.table {
+      th {
+        font-size: 9px;
+        letter-spacing: 0.2em;
+      }
+    }
+
+    // Hide old iframes and giphy embeds gracefully
+    iframe { max-width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    padding: 32px 24px 0;
+  }
+}
+
+// Ghost number on shop h4 headings
+.roundup-shop-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  line-height: 1;
+  color: rgba(13,13,13,0.05);
+  position: absolute;
+  top: -10px;
+  right: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $s-3;
+  padding: $s-5 0;
+
+  a {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $ink;
+    border: 2px solid $ink;
+    padding: 6px 12px;
+    transition: background 0.1s;
+
+    &:hover {
+      background: $ink;
+      color: $bg;
+    }
+  }
+}

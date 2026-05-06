@@ -1,0 +1,132 @@
+---
+layout: default
+---
+{% assign juliet_author = site.authors["juliet"] %}
+{% assign osmar_author = site.authors["osmar"] %}
+
+<!-- Breadcrumb -->
+<div class="post-breadcrumb">
+  <a href="{{ '/' | relative_url }}" class="post-breadcrumb__back">← All Reviews</a>
+  <span class="post-breadcrumb__sep">·</span>
+  <span class="post-breadcrumb__hood">Round Up</span>
+</div>
+
+<!-- Hero: dark left / image right -->
+<section class="roundup-hero">
+  <div class="roundup-hero__left">
+    <div>
+      <div class="roundup-hero__tag-row">
+        <div class="roundup-hero__tag">Round Up</div>
+        <span class="roundup-hero__date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      </div>
+      <h1 class="roundup-hero__title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="roundup-hero__subtitle">"{{ page.description }}"</p>
+      {% endif %}
+    </div>
+    <div class="roundup-hero__authors">
+      <div class="roundup-hero__avatars">
+        {% if juliet_author and juliet_author.avatar %}
+        <img class="roundup-hero__avatar"
+             src="{{ juliet_author.avatar | prepend: '/' | relative_url }}"
+             alt="{{ juliet_author.display_name }}">
+        {% endif %}
+        {% if osmar_author and osmar_author.avatar %}
+        <img class="roundup-hero__avatar roundup-hero__avatar--offset"
+             src="{{ osmar_author.avatar | prepend: '/' | relative_url }}"
+             alt="{{ osmar_author.display_name }}">
+        {% endif %}
+      </div>
+      <span class="roundup-hero__author-names">Juliet + Osmar</span>
+    </div>
+  </div>
+  <div class="roundup-hero__right">
+    {% if page.image %}
+    <img class="roundup-hero__img"
+         src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | prepend: '/' | relative_url }}{% endif %}"
+         alt="{{ page.title }}">
+    {% endif %}
+    {% if page.shop_count %}
+    <div class="roundup-hero__badge">
+      <div class="roundup-hero__badge-num">{{ page.shop_count }}</div>
+      <div class="roundup-hero__badge-label">Shops</div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Body -->
+<div class="roundup-body">
+  <div class="roundup-body__content" id="roundup-content">
+    {{ content }}
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="container">
+  <div class="cta-block">
+    <div class="cta-block__title">Tell us where to go next!</div>
+    <p class="cta-block__sub">Found a hidden gem? Know a spot we're sleeping on? Send us an email.</p>
+    <div class="cta-block__actions">
+      <a href="mailto:remoteroasters@gmail.com" class="btn btn--secondary">Send a tip →</a>
+      <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
+      <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn"
+         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
+    </div>
+  </div>
+</div>
+
+<!-- Post nav -->
+<nav class="post-nav" aria-label="Post navigation">
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url | relative_url }}" class="post-nav__prev">
+    <div class="post-nav__label">← Previous</div>
+    <div class="post-nav__title">{{ page.previous.title }}</div>
+  </a>
+  {% else %}
+  <div></div>
+  {% endif %}
+  {% if page.next.url %}
+  <a href="{{ page.next.url | relative_url }}" class="post-nav__next">
+    <div class="post-nav__label">Next →</div>
+    <div class="post-nav__title">{{ page.next.title }}</div>
+  </a>
+  {% else %}
+  <div></div>
+  {% endif %}
+</nav>
+
+<script>
+(function () {
+  // Replace old .c-rating button groups with SVG stars
+  document.querySelectorAll('.c-rating').forEach(function (el) {
+    var val = parseInt(el.getAttribute('data-rating-value') || el.dataset.ratingValue || 0, 10);
+    var html = '<span class="stars" aria-label="' + val + ' out of 5">';
+    for (var i = 1; i <= 5; i++) {
+      var filled = i <= val;
+      html += '<svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true">' +
+        '<polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" ' +
+        'fill="' + (filled ? '#D4AA20' : 'transparent') + '" ' +
+        'stroke="' + (filled ? '#D4AA20' : 'rgba(13,13,13,0.25)') + '" stroke-width="0.8"/>' +
+        '</svg>';
+    }
+    html += '</span>';
+    var wrap = el.closest('.rating-holder') || el;
+    wrap.outerHTML = html;
+  });
+
+  // Number the h4 shop sections with ghost digits
+  var content = document.getElementById('roundup-content');
+  if (!content) return;
+  var shopCount = 0;
+  content.querySelectorAll('h4').forEach(function (h4) {
+    shopCount++;
+    h4.style.position = 'relative';
+    var ghost = document.createElement('span');
+    ghost.className = 'roundup-shop-number';
+    ghost.textContent = String(shopCount).padStart(2, '0');
+    h4.appendChild(ghost);
+  });
+})();
+</script>

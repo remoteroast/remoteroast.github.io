@@ -1,0 +1,517 @@
+// _sass/_components.scss
+
+// ─── Tilted Tag ───────────────────────────────────────────────────────────────
+.tilted-tag {
+  display: inline-block;
+  background: $accent;
+  color: $ink;
+  font-family: 'DM Mono', monospace;
+  font-size: $f-xs;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 2px solid $ink;
+  box-shadow: 3px 3px 0 $ink;
+  line-height: 1.4;
+}
+
+// ─── Stars ────────────────────────────────────────────────────────────────────
+.stars {
+  display: inline-flex;
+  gap: 3px;
+  font-size: 18px;
+  line-height: 1;
+}
+.star--filled { color: $accent; }
+.star--empty  { color: $ink; opacity: 0.18; }
+
+// ─── Buttons ──────────────────────────────────────────────────────────────────
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-family: 'DM Mono', monospace;
+  font-size: $f-sm;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2px solid $ink;
+  background: $accent;
+  color: $ink;
+  box-shadow: 3px 3px 0 $ink;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 $ink;
+    background: $accent-2;
+    color: $ink;
+  }
+}
+
+.btn--secondary {
+  background: transparent;
+  &:hover { background: $bg-alt; }
+}
+
+// ─── Marquee ──────────────────────────────────────────────────────────────────
+.marquee {
+  overflow: hidden;
+  background: rgba(13,13,13,0.03);
+  border-top: 1px solid rgba(13,13,13,0.08);
+  border-bottom: 1px solid rgba(13,13,13,0.08);
+  padding: 10px 0;
+  white-space: nowrap;
+
+  &__track {
+    display: inline-flex;
+    animation: marquee 36s linear infinite;
+
+    &:hover { animation-play-state: paused; }
+  }
+
+  &__segment {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #7A7875;
+    padding-right: 48px;
+    text-transform: uppercase;
+  }
+
+  &__sep {
+    color: $accent;
+    margin: 0 12px;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+// ─── Shop Card ────────────────────────────────────────────────────────────────
+.shop-card {
+  display: block;
+  background: #EDEAE3;
+  text-decoration: none;
+  color: $ink;
+  transition: background 0.2s, outline-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+
+  &:hover {
+    background: #E5E1D8;
+    outline-color: $accent;
+    color: $ink;
+  }
+
+  &__image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  &:hover &__image {
+    transform: scale(1.04);
+  }
+
+  &__image-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+  }
+
+  &__body {
+    padding: 16px 18px 20px;
+  }
+
+  &__title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: $ink;
+    margin: 0 0 $s-2;
+    letter-spacing: 0.02em;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $s-2;
+  }
+
+  &__city {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $ink-mid;
+    transition: color 0.2s;
+  }
+
+  &:hover &__city { color: $accent-2; }
+
+  &__date {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    color: $ink-mid;
+  }
+
+  &__stars {
+    margin-bottom: $s-2;
+  }
+
+  &__excerpt {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: $f-sm;
+    color: $ink-soft;
+    line-height: 1.45;
+    margin: 0 0 $s-3;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: $s-2;
+  }
+
+  &__author-img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(13,13,13,0.15);
+  }
+
+  &__author-name {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    color: $ink-mid;
+  }
+}
+
+// ─── Data Tables ──────────────────────────────────────────────────────────────
+.table-responsive {
+  overflow-x: auto;
+  margin: $s-5 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'DM Mono', monospace;
+  font-size: $f-sm;
+
+  th {
+    text-align: left;
+    padding: 8px 12px;
+    background: $ink;
+    color: $bg;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: $f-xs;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid $border;
+    color: $ink-soft;
+    vertical-align: top;
+  }
+
+  tr:hover td { background: $bg-alt; }
+}
+
+
+// ─── Radar Chart ──────────────────────────────────────────────────────────────
+.radar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $s-3;
+}
+
+.radar-labels {
+  font-family: 'DM Mono', monospace;
+  font-size: $f-xs;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+// ─── Scorecard sidebar ────────────────────────────────────────────────────────
+.scorecard {
+  background: $bg-alt;
+  border: 2px solid $ink;
+  box-shadow: 4px 4px 0 $ink;
+  padding: $s-5;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $s-2 0;
+    border-bottom: 1px solid $border;
+    font-family: 'DM Mono', monospace;
+    font-size: $f-sm;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  &__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $ink-mid;
+    font-size: $f-xs;
+  }
+
+  &__value {
+    color: $ink;
+    font-weight: 500;
+  }
+}
+
+// ─── Leaderboard ─────────────────────────────────────────────────────────────
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  align-items: center;
+  gap: $s-4;
+  padding: $s-4 $s-5;
+  border-bottom: 1px solid $border;
+  cursor: pointer;
+  transition: background 0.1s;
+
+  &:hover { background: $bg-alt; }
+
+  &.is-active {
+    background: $bg-alt;
+    border-left: 3px solid $accent;
+  }
+
+  &__rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: $f-xl;
+    color: $ink;
+    line-height: 1;
+  }
+
+  &__name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: $f-lg;
+    color: $ink;
+    line-height: 1.1;
+    text-decoration: none;
+
+    &:hover { color: $accent-2; }
+  }
+
+  &__sub {
+    font-family: 'DM Mono', monospace;
+    font-size: $f-xs;
+    color: $ink-mid;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__stars {
+    font-size: 14px;
+  }
+}
+
+// ─── Nav ─────────────────────────────────────────────────────────────────────
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  background: rgba(249,249,247,0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(13,13,13,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 52px;
+
+  &__brand {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $ink;
+    line-height: 1;
+  }
+
+  &__brand-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-top: 2px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      font-family: 'DM Mono', monospace;
+      font-size: $f-xs;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $ink-soft;
+      transition: color 0.15s;
+
+      &:hover { color: $accent-2; }
+      &.active { color: $accent-2; }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $s-2;
+    flex-direction: column;
+    gap: 5px;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: $ink;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    padding: 12px $s-5;
+
+    &__links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(249,249,247,0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(13,13,13,0.12);
+      flex-direction: column;
+      gap: 0;
+      padding: $s-3 0;
+
+      &.is-open { display: flex; }
+
+      a {
+        padding: $s-3 $s-6;
+        width: 100%;
+      }
+    }
+
+    &__hamburger { display: flex; }
+  }
+}
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+.site-footer {
+  padding: 28px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: $z-content;
+  background: $bg;
+
+  &__brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $ink-mid;
+  }
+
+  &__copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $ink-mid;
+  }
+
+  @media (max-width: 640px) {
+    padding: $s-5;
+    flex-direction: column;
+    gap: $s-2;
+    text-align: center;
+  }
+}
+
+// ─── Accessibility ────────────────────────────────────────────────────────────
+*:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+// ─── Pagination ───────────────────────────────────────────────────────────────
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $s-3;
+  padding: $s-7 0;
+  font-family: 'DM Mono', monospace;
+  font-size: $f-sm;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  a, span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    padding: 6px 10px;
+    border: 2px solid $ink;
+    text-decoration: none;
+    color: $ink;
+    transition: background 0.1s;
+
+    &:hover { background: $bg-alt; }
+  }
+
+  .current {
+    background: $ink;
+    color: $bg;
+  }
+}

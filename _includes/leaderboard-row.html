@@ -1,0 +1,19 @@
+{% assign post = include.post %}
+{% assign rank = include.rank %}
+<div class="leaderboard-row"
+     data-shop="{{ post.title | escape }}"
+     data-lat="{{ post.lat }}"
+     data-lng="{{ post.lng }}"
+     data-url="{{ post.url | relative_url }}"
+     tabindex="0"
+     role="button"
+     aria-label="View {{ post.title }} on map">
+  <span class="leaderboard-row__rank">{% if rank < 10 %}0{% endif %}{{ rank }}</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="{{ post.url | relative_url }}" onclick="event.stopPropagation()">{{ post.title }}</a>
+    <div class="leaderboard-row__sub">{{ post.categories[0] }}</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    {% include stars.html rating=post.rating %}
+  </div>
+</div>

@@ -4,7 +4,13 @@ title: 404
 permalink: /404.html
 ---
 
-<div class="text-center">
-<h1 class="display-1 mt-5 mb-4"><span class="badge badge-danger">404</span> Page does not exist!</h1>
-<p>Please use the search bar at the top or visit our <a href="{{site.baseurl}}/">homepage</a>!</p>
+<div class="container">
+  <div class="page-404">
+    <div class="page-404__number">404</div>
+    <div class="page-404__tag">
+      {% include tilted-tag.html text="WRONG TURN" idx=2 %}
+    </div>
+    <p class="page-404__message">This page doesn't exist. Honestly, neither do our excuses for the posting gap. Both are gone.</p>
+    <a href="{{ '/' | relative_url }}" class="btn">Back to Reviews →</a>
+  </div>
 </div>

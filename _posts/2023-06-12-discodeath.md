@@ -13,6 +13,16 @@ meeting: "Maybe"
 maps: "https://goo.gl/maps/iirgCA9jYEwJY1UJ7" #! REPLACE !!!!!
 wifi: "200"
 drip: "5"
+lat: 44.9554416
+lng: -93.288875
+bestfor: "Best Vibe"
+scores:
+  coffee: 4
+  wifi: 4
+  seating: 3
+  vibe: 5
+  outlet: 3
+  quiet: 3
 ---
 
 <h4>Dying for caffeine</h4>

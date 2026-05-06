@@ -1,0 +1,101 @@
+{% assign scores = include.scores %}
+{% if scores %}
+{% assign chart_id = include.id | default: "radar" | replace: " ", "-" %}
+<div class="radar-wrap">
+  <svg id="svg-{{ chart_id }}" width="220" height="220" viewBox="0 0 220 220" aria-label="Radar chart showing scores" role="img">
+    <!-- Rendered by inline script below -->
+  </svg>
+  <script>
+  (function() {
+    var scores = [
+      {{ scores.coffee  | default: 0 }},
+      {{ scores.wifi    | default: 0 }},
+      {{ scores.seating | default: 0 }},
+      {{ scores.vibe    | default: 0 }},
+      {{ scores.outlet  | default: 0 }},
+      {{ scores.quiet   | default: 0 }}
+    ];
+    var labels = ['COFFEE','WIFI','SEATING','VIBE','OUTLET','QUIET'];
+    var svg = document.getElementById('svg-{{ chart_id }}');
+    if (!svg) return;
+
+    var cx = 110, cy = 110, rMax = 78, ns = 'http://www.w3.org/2000/svg';
+
+    // Grid rings
+    for (var ring = 1; ring <= 5; ring++) {
+      var rr = (ring / 5) * rMax;
+      var pts = '';
+      for (var j = 0; j < 6; j++) {
+        var a = (j * 60 - 90) * Math.PI / 180;
+        pts += (cx + Math.cos(a) * rr).toFixed(1) + ',' + (cy + Math.sin(a) * rr).toFixed(1) + ' ';
+      }
+      var poly = document.createElementNS(ns, 'polygon');
+      poly.setAttribute('points', pts.trim());
+      poly.setAttribute('fill', 'none');
+      poly.setAttribute('stroke', '#0D0D0D');
+      poly.setAttribute('stroke-opacity', ring === 5 ? '0.25' : '0.1');
+      poly.setAttribute('stroke-width', '1');
+      svg.appendChild(poly);
+    }
+
+    // Axis lines + labels
+    for (var i = 0; i < 6; i++) {
+      var ang = (i * 60 - 90) * Math.PI / 180;
+      var line = document.createElementNS(ns, 'line');
+      line.setAttribute('x1', cx);
+      line.setAttribute('y1', cy);
+      line.setAttribute('x2', (cx + Math.cos(ang) * rMax).toFixed(1));
+      line.setAttribute('y2', (cy + Math.sin(ang) * rMax).toFixed(1));
+      line.setAttribute('stroke', '#0D0D0D');
+      line.setAttribute('stroke-opacity', '0.15');
+      line.setAttribute('stroke-width', '1');
+      svg.appendChild(line);
+
+      // Label positions (slightly outside max radius)
+      var lr = rMax + 14;
+      var tx = cx + Math.cos(ang) * lr;
+      var ty = cy + Math.sin(ang) * lr;
+      var text = document.createElementNS(ns, 'text');
+      text.setAttribute('x', tx.toFixed(1));
+      text.setAttribute('y', ty.toFixed(1));
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('dominant-baseline', 'middle');
+      text.setAttribute('font-family', "'DM Mono',monospace");
+      text.setAttribute('font-size', '8');
+      text.setAttribute('fill', '#5C5A57');
+      text.setAttribute('letter-spacing', '0.5');
+      text.textContent = labels[i];
+      svg.appendChild(text);
+    }
+
+    // Data polygon
+    var dataPts = scores.map(function(s, i) {
+      var a = (i * 60 - 90) * Math.PI / 180;
+      var r = (Math.max(0, Math.min(5, s)) / 5) * rMax;
+      return (cx + Math.cos(a) * r).toFixed(1) + ',' + (cy + Math.sin(a) * r).toFixed(1);
+    }).join(' ');
+    var dataPoly = document.createElementNS(ns, 'polygon');
+    dataPoly.setAttribute('points', dataPts);
+    dataPoly.setAttribute('fill', '#D4AA20');
+    dataPoly.setAttribute('fill-opacity', '0.4');
+    dataPoly.setAttribute('stroke', '#0D0D0D');
+    dataPoly.setAttribute('stroke-width', '2');
+    svg.appendChild(dataPoly);
+
+    // Data point dots
+    scores.forEach(function(s, i) {
+      var a = (i * 60 - 90) * Math.PI / 180;
+      var r = (Math.max(0, Math.min(5, s)) / 5) * rMax;
+      var dot = document.createElementNS(ns, 'circle');
+      dot.setAttribute('cx', (cx + Math.cos(a) * r).toFixed(1));
+      dot.setAttribute('cy', (cy + Math.sin(a) * r).toFixed(1));
+      dot.setAttribute('r', '3');
+      dot.setAttribute('fill', '#D4AA20');
+      dot.setAttribute('stroke', '#0D0D0D');
+      dot.setAttribute('stroke-width', '1.5');
+      svg.appendChild(dot);
+    });
+  })();
+  </script>
+</div>
+{% endif %}

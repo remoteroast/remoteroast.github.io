@@ -4,20 +4,31 @@ layout: default
 permalink: "/tags.html"
 ---
 
-<div class="row listrecent">
-{% for tag in site.tags %}
-<div class="section-title col-md-12 mt-4">
-<h2 id="{{ tag[0] | replace: " ","-" }}">Tag <span class="text-capitalize">{{ tag[0] }}</span></h2>
-</div>
-{% assign pages_list = tag[1] %}
-{% for post in pages_list %}
-{% if post.title != null %}
-{% if group == null or group == post.group %}
-{% include postbox.html %}
-{% endif %}
-{% endif %}
-{% endfor %}
-{% assign pages_list = nil %}
-{% assign group = nil %}
-{% endfor %}
+<div class="container">
+  <div style="padding: 48px 0;">
+    <h1 style="margin-bottom: 16px;">{{ page.title }}</h1>
+    <!-- Tag cloud -->
+    <div class="tag-cloud" style="margin-bottom: 48px;">
+      {% for tag in site.tags %}
+        <a href="#{{ tag[0] | replace: ' ', '-' }}">
+          {{ tag[0] }} <span style="opacity:0.5;font-size:0.85em;">({{ tag[1].size }})</span>
+        </a>
+      {% endfor %}
+    </div>
+    <!-- Posts per tag -->
+    {% for tag in site.tags %}
+      <div style="margin-bottom: 48px;">
+        <h2 class="categories-page__heading" id="{{ tag[0] | replace: ' ', '-' }}">
+          #{{ tag[0] }}
+        </h2>
+        <div class="verdicts__grid">
+          {% for post in tag[1] %}
+            {% if post.title %}
+              {% include shop-card.html post=post idx=forloop.index %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>

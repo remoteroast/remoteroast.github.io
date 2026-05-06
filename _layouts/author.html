@@ -4,19 +4,32 @@ layout: default
 permalink: "/author.html"
 ---
 
-<div class="row listrecent">
-{% for author in site.authors %}
-<div class="section-title col-md-12 mt-4">
-  <h2 id="{{ author[0] | replace: " ","-" }}">Author <span class="text-capitalize">{{ author[0] }}</span></h2>
+<div class="container">
+  <div style="padding: 48px 0;">
+    <h1 style="margin-bottom: 32px;">Authors</h1>
+    {% for author_hash in site.authors %}
+      {% assign key = author_hash[0] %}
+      {% assign author = author_hash[1] %}
+      <div id="{{ key | replace: ' ', '-' }}" style="margin-bottom: 48px;">
+        <div class="author-card" style="margin-bottom: 24px; max-width: 560px;">
+          {% if author.avatar %}
+            <img class="author-card__avatar"
+                 src="{{ author.avatar | prepend: '/' | relative_url }}"
+                 alt="{{ author.display_name }}">
+          {% endif %}
+          <div>
+            <div class="author-card__name">{{ author.display_name }}</div>
+            <p class="author-card__bio">{{ author.description }}</p>
+          </div>
+        </div>
+        <div class="verdicts__grid">
+          {% for post in site.posts %}
+            {% if post.author == author.name %}
+              {% include shop-card.html post=post idx=forloop.index %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
-{% assign pages_list = author[1] %}
-{% for post in site.posts %}
-{% if post.author != null %}
-{% if post.author == pages_list.name %}
-{% include featuredbox.html %}
-{% endif %}
-{% endif %}
-{% endfor %}
-{% endfor %}
-</div>
-

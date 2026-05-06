@@ -1,0 +1,7 @@
+{% assign idx = include.idx | default: 0 | plus: 0 %}
+{% assign angles = "-2.5,1.5,-1,2,-1.8,0.8,-2.2,1.2" | split: "," %}
+{% assign angle_idx = idx | modulo: 8 %}
+{% assign angle = angles[angle_idx] %}
+<span class="tilted-tag" style="transform: rotate({{ angle }}deg)">
+  {{ include.text }}
+</span>

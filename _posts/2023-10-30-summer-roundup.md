@@ -1,11 +1,12 @@
 ---
-layout: post
+layout: roundup
 title: "Summer Round Up"
 author: juliet + osmar
 categories: ["2023"]
 tags: [roundup]
 image: assets/images/summer_roundup.png
-description: "Summer Roundup"
+description: "It's cold. We're sad. Let's reflect on Summer."
+shop_count: 3
 featured: True # if T, show in featured
 hidden: False # if T, hide from all post
 rating:

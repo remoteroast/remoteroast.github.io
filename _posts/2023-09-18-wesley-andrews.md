@@ -13,6 +13,16 @@ meeting: "Maybe"
 maps: "https://maps.app.goo.gl/DssEBSnnDfem9EZWA" #! REPLACE !!!!!
 wifi: "21"
 drip: "4"
+lat: 44.9553763
+lng: -93.2760413
+bestfor: "Most Interesting Menu"
+scores:
+  coffee: 5
+  wifi: 1
+  seating: 4
+  vibe: 5
+  outlet: 3
+  quiet: 3
 ---
 
 <h5>Pineapple with your espresso anyone?</h5>

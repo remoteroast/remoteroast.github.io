@@ -13,6 +13,16 @@ meeting: "Yes"
 maps: "https://maps.app.goo.gl/6ABabjJQt9fxonCY6" #! REPLACE !!!!!
 wifi: "150"
 drip: "3.49"
+lat: 44.986123
+lng: -93.258371
+bestfor: "Best Aesthetic"
+scores:
+  coffee: 4
+  wifi: 4
+  seating: 4
+  vibe: 5
+  outlet: 3
+  quiet: 3
 ---
 
 <h5>F is for freaking huge</h5>

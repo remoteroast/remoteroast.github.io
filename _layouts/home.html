@@ -1,0 +1,224 @@
+---
+layout: default
+---
+
+{% assign review_posts = site.posts | where_exp: "p", "p.tags contains 'review'" %}
+{% assign featured = review_posts.first %}
+
+<!-- Hero — 2-column featured post -->
+{% if featured %}
+<section class="home-hero">
+  <div class="home-hero__left">
+    <div>
+      <div class="home-hero__label">
+        {% if featured.rating == 5 %}№ 01 · WE GAVE IT 5 STARS. YOU'RE WELCOME.{% else %}№ 01 · FEATURED REVIEW{% endif %}
+      </div>
+      <h1 class="home-hero__title">{{ featured.title }}</h1>
+      {% if featured.rating %}
+      <div class="home-hero__stars">
+        {% include stars.html rating=featured.rating %}
+        <span class="home-hero__rating">{{ featured.rating }} / 5</span>
+      </div>
+      {% endif %}
+      {% if featured.excerpt %}
+      <p class="home-hero__excerpt">{{ featured.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <div class="home-hero__meta">
+        {% assign feat_author = site.authors[featured.author] %}
+        {% if feat_author and feat_author.avatar %}
+        <img class="home-hero__avatar"
+             src="{{ feat_author.avatar | prepend: '/' | relative_url }}"
+             alt="{{ feat_author.display_name }}">
+        {% endif %}
+        <div>
+          {% if feat_author %}<div class="home-hero__author">{{ feat_author.display_name }}</div>{% endif %}
+          <div class="home-hero__date">{{ featured.date | date: "%b %-d, %Y" }}</div>
+        </div>
+      </div>
+      <a href="{{ featured.url | relative_url }}" class="btn home-hero__cta">Read the Review →</a>
+    </div>
+  </div>
+  <div class="home-hero__right">
+    {% if featured.image %}
+    <img class="home-hero__image"
+         src="{% if featured.image contains '://' %}{{ featured.image }}{% else %}{{ featured.image | prepend: '/' | relative_url }}{% endif %}"
+         alt="{{ featured.title }}">
+    {% endif %}
+    {% if featured.categories.first %}
+    <div class="home-hero__hood">{{ featured.categories.first }}</div>
+    {% endif %}
+    <div class="home-hero__rank" aria-hidden="true">01</div>
+  </div>
+</section>
+{% endif %}
+
+<!-- The Verdicts -->
+<section class="verdicts">
+  <div class="verdicts__header">
+    <div class="verdicts__title-wrap">
+      <span class="verdicts__title">The Verdicts</span>
+      <div class="verdicts__title-tag" aria-hidden="true">don't @ us</div>
+    </div>
+    <span class="verdicts__geo">Minneapolis &amp; St. Paul</span>
+  </div>
+  <div class="verdicts__grid" id="verdicts-grid">
+    {% for post in review_posts %}
+      {% include shop-card.html post=post idx=forloop.index %}
+    {% endfor %}
+  </div>
+  <nav class="pagination" id="verdicts-pagination" aria-label="Verdicts pagination"></nav>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span class="marquee__segment">NO YOUR FAVE DIDN'T MAKE THE LIST <span class="marquee__sep">·</span> WE TRIED THE OAT MILK <span class="marquee__sep">·</span> VERDICT: IT'S FINE <span class="marquee__sep">·</span> YES WE HAVE A SPREADSHEET <span class="marquee__sep">·</span> WE SAT THERE FOR 4 HOURS SO YOU DON'T HAVE TO <span class="marquee__sep">·</span> THE PLAYLIST WAS GIVING <span class="marquee__sep">·</span> THOSE CHAIRS THOUGH <span class="marquee__sep">·</span> MINNEAPOLIS DESERVES BETTER OUTLETS <span class="marquee__sep">·</span> NOT ALL COLD BREW IS CREATED EQUAL <span class="marquee__sep">·</span></span>
+    <span class="marquee__segment">NO YOUR FAVE DIDN'T MAKE THE LIST <span class="marquee__sep">·</span> WE TRIED THE OAT MILK <span class="marquee__sep">·</span> VERDICT: IT'S FINE <span class="marquee__sep">·</span> YES WE HAVE A SPREADSHEET <span class="marquee__sep">·</span> WE SAT THERE FOR 4 HOURS SO YOU DON'T HAVE TO <span class="marquee__sep">·</span> THE PLAYLIST WAS GIVING <span class="marquee__sep">·</span> THOSE CHAIRS THOUGH <span class="marquee__sep">·</span> MINNEAPOLIS DESERVES BETTER OUTLETS <span class="marquee__sep">·</span> NOT ALL COLD BREW IS CREATED EQUAL <span class="marquee__sep">·</span></span>
+  </div>
+</div>
+
+<!-- Round Ups -->
+{% assign roundup_posts = site.posts | where_exp: "p", "p.tags contains 'roundup'" %}
+{% if roundup_posts.size > 0 %}
+<section class="verdicts verdicts--roundups">
+  <div class="verdicts__header">
+    <div class="verdicts__title-wrap">
+      <span class="verdicts__title">Round Ups</span>
+      <div class="verdicts__title-tag" aria-hidden="true">multi-shop</div>
+    </div>
+  </div>
+  <div class="verdicts__grid" id="roundups-grid">
+    {% for post in roundup_posts %}
+      {% include shop-card.html post=post idx=forloop.index %}
+    {% endfor %}
+  </div>
+  <nav class="pagination" id="roundups-pagination" aria-label="Round Ups pagination"></nav>
+</section>
+{% endif %}
+
+<!-- The People Responsible -->
+<section class="team-section">
+  <div class="container">
+    <div class="team-section__label">The People Responsible For This</div>
+    <div class="team-section__grid">
+      {% for author_hash in site.authors %}
+        {% assign key = author_hash[0] %}
+        {% assign author = author_hash[1] %}
+        {% if key == "juliet + osmar" %}{% continue %}{% endif %}
+        <div class="author-card">
+          {% if author.avatar %}
+            <img class="author-card__avatar"
+                 src="{{ author.avatar | prepend: '/' | relative_url }}"
+                 alt="{{ author.display_name }}">
+          {% endif %}
+          <div>
+            <div class="author-card__name">{{ author.display_name }}</div>
+            <p class="author-card__bio">{{ author.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  // Returns number of columns currently rendered in the grid
+  function getColCount(grid) {
+    var cols = window.getComputedStyle(grid).getPropertyValue('grid-template-columns');
+    // computed value is space-separated widths e.g. "322px 322px 322px"
+    return cols.trim().split(/\s+/).length;
+  }
+
+  function paginate(gridId, navId) {
+    var grid = document.getElementById(gridId);
+    var nav  = document.getElementById(navId);
+    if (!grid || !nav) return;
+
+    var cards = Array.prototype.slice.call(grid.children);
+    var currentPage = 1;
+    var pageSize = 1; // will be set by measure()
+
+    function measure() {
+      // Make all cards visible to measure column count
+      cards.forEach(function (c) { c.style.display = ''; });
+      var cols = getColCount(grid);
+      // Show 2 complete rows, minimum 2 columns worth
+      pageSize = Math.max(cols * 2, cols);
+    }
+
+    function show(page) {
+      currentPage = page;
+      cards.forEach(function (card, i) {
+        var inPage = i >= (page - 1) * pageSize && i < page * pageSize;
+        card.style.display = inPage ? '' : 'none';
+      });
+      buildNav();
+      if (page > 1) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function rebuild() {
+      var prevPage = currentPage;
+      measure();
+      if (cards.length <= pageSize) {
+        // No pagination needed — show all
+        cards.forEach(function (c) { c.style.display = ''; });
+        nav.innerHTML = '';
+        return;
+      }
+      // Clamp page to valid range after resize
+      var maxPage = Math.ceil(cards.length / pageSize);
+      show(Math.min(prevPage, maxPage));
+    }
+
+    function buildNav() {
+      var totalPages = Math.ceil(cards.length / pageSize);
+      nav.innerHTML = '';
+      if (totalPages <= 1) return;
+
+      if (currentPage > 1) {
+        var prev = document.createElement('a');
+        prev.href = '#';
+        prev.textContent = '← Prev';
+        prev.addEventListener('click', function (e) { e.preventDefault(); show(currentPage - 1); });
+        nav.appendChild(prev);
+      }
+      for (var i = 1; i <= totalPages; i++) {
+        if (i === currentPage) {
+          var cur = document.createElement('span');
+          cur.className = 'current';
+          cur.textContent = i;
+          nav.appendChild(cur);
+        } else {
+          var pg = document.createElement('a');
+          pg.href = '#';
+          pg.textContent = i;
+          (function (p) {
+            pg.addEventListener('click', function (e) { e.preventDefault(); show(p); });
+          })(i);
+          nav.appendChild(pg);
+        }
+      }
+      if (currentPage < totalPages) {
+        var next = document.createElement('a');
+        next.href = '#';
+        next.textContent = 'Next →';
+        next.addEventListener('click', function (e) { e.preventDefault(); show(currentPage + 1); });
+        nav.appendChild(next);
+      }
+    }
+
+    rebuild();
+
+    // Re-paginate when viewport resizes (column count may change)
+    if (window.ResizeObserver) {
+      new ResizeObserver(function () { rebuild(); }).observe(grid);
+    }
+  }
+
+  paginate('verdicts-grid', 'verdicts-pagination');
+  paginate('roundups-grid', 'roundups-pagination');
+})();
+</script>

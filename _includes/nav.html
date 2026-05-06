@@ -1,0 +1,34 @@
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="site-nav__brand" href="{{ '/' | relative_url }}">
+    <span class="site-nav__brand-name">Remote Roast</span>
+    <span class="site-nav__brand-tag">Judging your café so you don't have to</span>
+  </a>
+  <button class="site-nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="site-nav__links" id="nav-links" role="list">
+    <li>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>Reviews</a>
+    </li>
+    <li>
+      <a href="{{ '/tldr' | relative_url }}"{% if page.url contains 'tldr' %} class="active" aria-current="page"{% endif %}>TL;DR</a>
+    </li>
+    <li>
+      <a href="{{ '/about' | relative_url }}"{% if page.url contains 'about' %} class="active" aria-current="page"{% endif %}>About</a>
+    </li>
+  </ul>
+</nav>
+<script>
+  (function() {
+    var btn = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function() {
+        var open = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+</script>

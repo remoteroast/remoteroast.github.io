@@ -13,6 +13,16 @@ meeting: "Maybe"
 maps: "https://goo.gl/maps/XdkC9J2pY9uN7cqUA" #! REPLACE !!!!!
 wifi: "120"
 drip: "2.75"
+lat: 44.9340523
+lng: -93.1659627
+bestfor: "Best Concentration Vibes"
+scores:
+  coffee: 5
+  wifi: 5
+  seating: 3
+  vibe: 4
+  outlet: 3
+  quiet: 4
 ---
 
 <h5>Pop-tarts sold separately</h5>

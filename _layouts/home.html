@@ -3,7 +3,8 @@ layout: default
 ---
 
 {% assign review_posts = site.posts | where_exp: "p", "p.tags contains 'review'" %}
-{% assign featured = review_posts.first %}
+{% assign featured = review_posts | where: "hero", true | first %}
+{% unless featured %}{% assign featured = review_posts.first %}{% endunless %}
 
 <!-- Hero — 2-column featured post -->
 {% if featured %}

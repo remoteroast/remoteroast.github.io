@@ -6,8 +6,6 @@ categories: [Minneapolis, Whittier] #City must be first
 tags: [review, 3 stars]
 image: assets/images/wa.jpeg #! REPLACE !!!!!
 description: "Wesley Andrews"
-featured: FALSE # if T, show in featured
-hidden: False # if T, hide from all post
 rating: 3
 meeting: "Maybe"
 maps: "https://maps.app.goo.gl/DssEBSnnDfem9EZWA" #! REPLACE !!!!!

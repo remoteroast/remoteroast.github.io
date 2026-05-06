@@ -23,6 +23,15 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Validate exactly one hero post
+        run: |
+          count=$(grep -rl "^hero: true" _posts/ | wc -l | tr -d ' ')
+          if [ "$count" -ne 1 ]; then
+            echo "ERROR: Expected exactly 1 post with hero: true, found $count"
+            exit 1
+          fi
+          echo "Hero check passed ($count post with hero: true)"
+
       - name: Check HTML (internal links + images)
         run: |
           bundle exec htmlproofer _site \

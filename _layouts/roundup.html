@@ -46,21 +46,144 @@ layout: default
          src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | prepend: '/' | relative_url }}{% endif %}"
          alt="{{ page.title }}">
     {% endif %}
-    {% if page.shop_count %}
+    {% if page.shops %}
     <div class="roundup-hero__badge">
-      <div class="roundup-hero__badge-num">{{ page.shop_count }}</div>
+      <div class="roundup-hero__badge-num">{{ page.shops | size }}</div>
       <div class="roundup-hero__badge-label">Shops</div>
     </div>
     {% endif %}
   </div>
 </section>
 
-<!-- Body -->
+{% if page.shops %}
+<!-- YAML-driven layout matching design handoff -->
+
+<!-- Intro -->
+{% if page.intro %}
+<div class="roundup-intro">
+  <p>{{ page.intro }}</p>
+</div>
+{% endif %}
+
+<!-- The Shots (comparison table) -->
+<div class="roundup-shots">
+  <div class="roundup-shots__label">The Shots</div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Coffee Shop</th>
+          <th>City</th>
+          <th>Stars</th>
+          <th>Wifi (mbps)</th>
+          <th>Meetings?</th>
+          <th>$ Small Drip</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for shop in page.shops %}
+        <tr>
+          <td><a href="{{ shop.slug | prepend: '/' | relative_url }}">{{ shop.name }}</a></td>
+          <td>{{ shop.city }}</td>
+          <td>{% include stars.html rating=shop.stars %}</td>
+          <td>{{ shop.wifi }}</td>
+          <td>{{ shop.meetings }}</td>
+          <td>{{ shop.drip }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Spilling the Beans -->
+<div class="roundup-beans">
+  <div class="roundup-beans__header">Spilling the Beans</div>
+</div>
+
+<div class="roundup-entries" id="roundup-entries">
+  {% for shop in page.shops %}
+  {% assign idx = forloop.index %}
+  <div class="roundup-entry" data-scores="{{ shop.scores | jsonify | escape }}">
+    <span class="roundup-entry__num">{{ idx | prepend: '0' | slice: -2, 2 }}</span>
+
+    <!-- Image -->
+    <div class="roundup-entry__img-col">
+      {% if shop.image %}
+      <img class="roundup-entry__img"
+           src="{{ shop.image | prepend: '/assets/images/' | relative_url }}"
+           alt="{{ shop.name }}">
+      {% endif %}
+      {% if shop.highlight %}
+      {% assign tilt_angles = "-2.5,1.5,-1,2,-1.8,0.8,-2.2,1.2" | split: "," %}
+      {% assign tilt_idx = forloop.index0 | modulo: 8 %}
+      {% assign tilt = tilt_angles[tilt_idx] %}
+      <div class="roundup-entry__highlight" style="transform:rotate({{ tilt }}deg)">{{ shop.highlight }}</div>
+      {% endif %}
+    </div>
+
+    <!-- Text + bullets -->
+    <div class="roundup-entry__text-col">
+      <div class="roundup-entry__hood">{{ shop.hood }} · {{ shop.city }}</div>
+      <div class="roundup-entry__name">{{ shop.name }}</div>
+      <div class="roundup-entry__stars">{% include stars.html rating=shop.stars %}</div>
+      {% if shop.bullets %}
+      <ul class="roundup-entry__bullets">
+        {% for bullet in shop.bullets limit: 3 %}
+        <li class="roundup-entry__bullet">{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <a href="{{ shop.slug | prepend: '/' | relative_url }}" class="roundup-entry__link">Read Full Review →</a>
+    </div>
+
+    <!-- Radar + stats -->
+    <div class="roundup-entry__radar-col">
+      <div class="roundup-entry__radar-label">Profile</div>
+      <div class="roundup-entry__radar js-radar"></div>
+      <div class="roundup-entry__stats">
+        {% if shop.wifi %}<div class="roundup-entry__stat"><span>Wifi</span><span>{{ shop.wifi }} mbps</span></div>{% endif %}
+        {% if shop.drip %}<div class="roundup-entry__stat"><span>Drip</span><span>{{ shop.drip }}</span></div>{% endif %}
+        {% if shop.meetings %}<div class="roundup-entry__stat"><span>Meetings</span><span>{{ shop.meetings }}</span></div>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Outro -->
+{% if page.outro %}
+<div class="roundup-outro">
+  <p>{{ page.outro }}</p>
+  <div class="roundup-outro__authors">
+    <div class="roundup-outro__avatars">
+      {% if juliet_author and juliet_author.avatar %}
+      <img src="{{ juliet_author.avatar | prepend: '/' | relative_url }}" alt="{{ juliet_author.display_name }}">
+      {% endif %}
+      {% if osmar_author and osmar_author.avatar %}
+      <img src="{{ osmar_author.avatar | prepend: '/' | relative_url }}" alt="{{ osmar_author.display_name }}">
+      {% endif %}
+    </div>
+    <div>
+      <div class="roundup-outro__names">Juliet + Osmar</div>
+      {% assign josmar = site.authors["juliet + osmar"] %}
+      {% if josmar and josmar.description %}
+      <p class="roundup-outro__bio">{{ josmar.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% else %}
+<!-- Fallback: render content body (Welcome page, etc.) -->
 <div class="roundup-body">
   <div class="roundup-body__content" id="roundup-content">
     {{ content }}
   </div>
 </div>
+
+{% endif %}
 
 <!-- CTA -->
 <div class="container">
@@ -99,10 +222,10 @@ layout: default
 
 <script>
 (function () {
-  // Replace old .c-rating button groups with SVG stars
+  // Replace old .c-rating button groups with SVG stars (fallback content)
   document.querySelectorAll('.c-rating').forEach(function (el) {
-    var val = parseInt(el.getAttribute('data-rating-value') || el.dataset.ratingValue || 0, 10);
-    var html = '<span class="stars" aria-label="' + val + ' out of 5">';
+    var val = parseInt(el.getAttribute('data-rating-value') || 0, 10);
+    var html = '<span class="stars">';
     for (var i = 1; i <= 5; i++) {
       var filled = i <= val;
       html += '<svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true">' +
@@ -116,17 +239,38 @@ layout: default
     wrap.outerHTML = html;
   });
 
-  // Number the h4 shop sections with ghost digits
-  var content = document.getElementById('roundup-content');
-  if (!content) return;
-  var shopCount = 0;
-  content.querySelectorAll('h4').forEach(function (h4) {
-    shopCount++;
-    h4.style.position = 'relative';
-    var ghost = document.createElement('span');
-    ghost.className = 'roundup-shop-number';
-    ghost.textContent = String(shopCount).padStart(2, '0');
-    h4.appendChild(ghost);
+  // Radar charts for YAML-driven entries
+  document.querySelectorAll('.roundup-entry').forEach(function (entry) {
+    var radarEl = entry.querySelector('.js-radar');
+    var raw = entry.getAttribute('data-scores');
+    if (!radarEl || !raw) return;
+    try {
+      var scores = JSON.parse(raw.replace(/&quot;/g, '"').replace(/&#39;/g, "'"));
+      radarEl.innerHTML = buildRadar(scores);
+    } catch(e) {}
   });
+
+  function buildRadar(scores) {
+    var labels = ['COFFEE','WIFI','SEATING','VIBE','OUTLET','QUIET'];
+    var vals = [scores.coffee||0,scores.wifi||0,scores.seating||0,scores.vibe||0,scores.outlet||0,scores.quiet||0];
+    var cx=90,cy=90,rMax=58;
+    var out=['<svg width="180" height="180" viewBox="0 0 180 180" style="display:block;margin:0 auto" aria-hidden="true">'];
+    for(var ring=1;ring<=5;ring++){
+      var rr=(ring/5)*rMax,pts=[];
+      for(var j=0;j<6;j++){var a=(j*60-90)*Math.PI/180;pts.push((cx+Math.cos(a)*rr).toFixed(1)+','+(cy+Math.sin(a)*rr).toFixed(1));}
+      out.push('<polygon points="'+pts.join(' ')+'" fill="none" stroke="rgba(13,13,13,'+(ring===5?'0.2':'0.08')+')" stroke-width="1"/>');
+    }
+    for(var i=0;i<6;i++){
+      var ang=(i*60-90)*Math.PI/180;
+      out.push('<line x1="'+cx+'" y1="'+cy+'" x2="'+(cx+Math.cos(ang)*rMax).toFixed(1)+'" y2="'+(cy+Math.sin(ang)*rMax).toFixed(1)+'" stroke="rgba(13,13,13,0.12)" stroke-width="1"/>');
+      var lx=(cx+Math.cos(ang)*(rMax+14)).toFixed(1),ly=(cy+Math.sin(ang)*(rMax+14)).toFixed(1);
+      out.push('<text x="'+lx+'" y="'+ly+'" text-anchor="middle" dominant-baseline="middle" font-family="\'DM Mono\',monospace" font-size="7" fill="#5C5A57">'+labels[i]+'</text>');
+    }
+    var dp=vals.map(function(s,i){var a=(i*60-90)*Math.PI/180,r=(Math.min(5,Math.max(0,s))/5)*rMax;return(cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1);}).join(' ');
+    out.push('<polygon points="'+dp+'" fill="#D4AA20" fill-opacity="0.2" stroke="#D4AA20" stroke-width="1.5"/>');
+    vals.forEach(function(s,i){var a=(i*60-90)*Math.PI/180,r=(Math.min(5,Math.max(0,s))/5)*rMax;out.push('<circle cx="'+(cx+Math.cos(a)*r).toFixed(1)+'" cy="'+(cy+Math.sin(a)*r).toFixed(1)+'" r="3" fill="#D4AA20"/>');});
+    out.push('</svg>');
+    return out.join('');
+  }
 })();
 </script>

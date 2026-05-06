@@ -8,13 +8,10 @@
      tabindex="0"
      role="button"
      aria-label="View {{ post.title }} on map">
-  <span class="leaderboard-row__rank">{{ rank }}</span>
-  <div>
+  <span class="leaderboard-row__rank">{% if rank < 10 %}0{% endif %}{{ rank }}</span>
+  <div class="leaderboard-row__info">
     <a class="leaderboard-row__name" href="{{ post.url | relative_url }}" onclick="event.stopPropagation()">{{ post.title }}</a>
-    <div class="leaderboard-row__sub">
-      {{ post.categories[0] }}
-      {% if post.shortcut %} — {{ post.shortcut }}{% endif %}
-    </div>
+    <div class="leaderboard-row__sub">{{ post.categories[0] }}</div>
   </div>
   <div class="leaderboard-row__stars">
     {% include stars.html rating=post.rating %}

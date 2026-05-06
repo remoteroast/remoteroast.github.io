@@ -2,7 +2,6 @@
 name: "Remote Roast"
 title: "Remote Roast"
 description: "Judging your café so you don't have to. Data-forward reviews of Twin Cities coffee shops for remote work."
-google_analytics: "G-XXXXXXXXXX"   # Replace with real GA4 Measurement ID from analytics.google.com
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ""

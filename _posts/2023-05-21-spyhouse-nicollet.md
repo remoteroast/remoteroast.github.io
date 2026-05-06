@@ -13,6 +13,16 @@ meeting: "No"
 maps: "https://goo.gl/maps/BUy9LfKApF46ZUeq7"
 wifi: "21"
 drip: "3.50"
+lat: 44.9574423
+lng: -93.277698
+bestfor: "Best Big Space"
+scores:
+  coffee: 3
+  wifi: 1
+  seating: 3
+  vibe: 3
+  outlet: 3
+  quiet: 3
 ---
 
 <h4>A little history, a little review, and a little opinion...</h4>

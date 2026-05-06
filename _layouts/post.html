@@ -5,155 +5,190 @@ layout: default
 {% assign is_roundup = false %}
 {% if page.tags contains 'roundup' %}{% assign is_roundup = true %}{% endif %}
 
-<!-- Post Hero -->
+<!-- Breadcrumb -->
+<div class="post-breadcrumb">
+  <a href="{{ '/' | relative_url }}" class="post-breadcrumb__back">← All Reviews</a>
+  {% if page.categories[0] %}
+  <span class="post-breadcrumb__sep">·</span>
+  <span class="post-breadcrumb__hood">{{ page.categories[0] }}</span>
+  {% endif %}
+</div>
+
+<!-- Hero -->
 {% if page.image %}
 <div class="post-hero">
   <img class="post-hero__img"
        src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | prepend: '/' | relative_url }}{% endif %}"
        alt="{{ page.title }}">
   <div class="post-hero__overlay"></div>
+  {% if page.categories[0] %}
+  <div class="post-hero__hood">
+    {{ page.categories[0] }}{% if page.categories[1] %} · {{ page.categories[1] }}{% endif %}
+  </div>
+  {% endif %}
   <div class="post-hero__body">
-    <div class="post-hero__tag">
-      {% if is_roundup %}
-        {% include tilted-tag.html text="ROUND UP" idx=0 %}
-      {% else %}
-        {% include tilted-tag.html text="REVIEW" idx=0 %}
-      {% endif %}
-    </div>
     <h1 class="post-hero__title">{{ page.title }}</h1>
     {% if page.rating %}
-      <div class="post-hero__stars">
-        {% include stars.html rating=page.rating %}
-      </div>
+    <div class="post-hero__stars-row">
+      {% include stars.html rating=page.rating %}
+      {% if page.description %}
+      <span class="post-hero__subtitle">"{{ page.description }}"</span>
+      {% endif %}
+    </div>
     {% endif %}
   </div>
 </div>
 {% else %}
 <div class="post-hero post-hero--no-image">
   <div class="post-hero__body">
-    <div class="post-hero__tag">
-      {% if is_roundup %}
-        {% include tilted-tag.html text="ROUND UP" idx=0 %}
-      {% else %}
-        {% include tilted-tag.html text="REVIEW" idx=0 %}
-      {% endif %}
-    </div>
     <h1 class="post-hero__title">{{ page.title }}</h1>
-    {% if page.rating %}
-      <div class="post-hero__stars">
-        {% include stars.html rating=page.rating %}
-      </div>
-    {% endif %}
   </div>
 </div>
 {% endif %}
 
-<div class="container">
-  <!-- Meta strip -->
-  <div class="post-meta-strip">
-    {% if author %}
-      {% if author.avatar %}
-        <img class="post-meta-strip__avatar"
-             src="{{ author.avatar | prepend: '/' | relative_url }}"
-             alt="{{ author.display_name }}">
-      {% endif %}
-      <span class="post-meta-strip__author">{{ author.display_name }}</span>
+<!-- Meta strip -->
+<div class="post-meta-strip">
+  {% if author %}
+  <div class="post-meta-strip__author-wrap">
+    {% if author.avatar %}
+    <img class="post-meta-strip__avatar"
+         src="{{ author.avatar | prepend: '/' | relative_url }}"
+         alt="{{ author.display_name }}">
     {% endif %}
-    <span class="post-meta-strip__date">
-      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-    </span>
-    {% if page.categories %}
-      <div class="post-meta-strip__cats">
-        {% for cat in page.categories %}
-          <a class="post-meta-strip__cat"
-             href="{{ '/categories' | relative_url }}#{{ cat | replace: ' ', '-' }}">{{ cat }}</a>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-
-  <!-- Pull quote (if set) -->
-  {% if page.pull_quote %}
-    <blockquote class="pull-quote" style="border-left: 4px solid #D4AA20; padding-left: 24px; margin: 32px 0;">
-      "{{ page.pull_quote }}"
-    </blockquote>
-  {% endif %}
-
-  <!-- Body + Sidebar (reviews only) -->
-  {% unless is_roundup %}
-  <div class="post-body-wrap">
-    <div class="post-body">
-      <div class="post-body__content">
-        {{ content }}
-      </div>
-
-      <!-- Pro Tip detection — posts use <p><i>Pro tip</i></p> -->
+    <div>
+      <div class="post-meta-strip__author">by {{ author.display_name }}</div>
+      <div class="post-meta-strip__date">{{ page.date | date: "%B %-d, %Y" }}</div>
     </div>
-
-    <!-- Sidebar scorecard -->
-    <aside class="post-sidebar">
-      {% if page.scores %}
-        <div class="scorecard" style="margin-bottom: 24px;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:16px;letter-spacing:0.05em;">Score Card</div>
-          {% include radar-chart.html scores=page.scores id=page.slug %}
-          <div style="margin-top:16px;">
-            {% if page.scores.coffee %}<div class="scorecard__row"><span class="scorecard__label">Coffee</span><span class="scorecard__value">{{ page.scores.coffee }}/5</span></div>{% endif %}
-            {% if page.scores.wifi %}<div class="scorecard__row"><span class="scorecard__label">Wifi</span><span class="scorecard__value">{{ page.scores.wifi }}/5</span></div>{% endif %}
-            {% if page.scores.seating %}<div class="scorecard__row"><span class="scorecard__label">Seating</span><span class="scorecard__value">{{ page.scores.seating }}/5</span></div>{% endif %}
-            {% if page.scores.vibe %}<div class="scorecard__row"><span class="scorecard__label">Vibe</span><span class="scorecard__value">{{ page.scores.vibe }}/5</span></div>{% endif %}
-            {% if page.scores.outlet %}<div class="scorecard__row"><span class="scorecard__label">Outlets</span><span class="scorecard__value">{{ page.scores.outlet }}/5</span></div>{% endif %}
-            {% if page.scores.quiet %}<div class="scorecard__row"><span class="scorecard__label">Quiet</span><span class="scorecard__value">{{ page.scores.quiet }}/5</span></div>{% endif %}
-          </div>
-        </div>
-      {% endif %}
-
-      <!-- Key stats -->
-      <div class="scorecard">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:16px;letter-spacing:0.05em;">At a Glance</div>
-        {% if page.rating %}
-          <div class="scorecard__row">
-            <span class="scorecard__label">Rating</span>
-            <span class="scorecard__value">{% include stars.html rating=page.rating %}</span>
-          </div>
-        {% endif %}
-        {% if page.wifi %}
-          <div class="scorecard__row">
-            <span class="scorecard__label">Wifi</span>
-            <span class="scorecard__value">{{ page.wifi }} mbps</span>
-          </div>
-        {% endif %}
-        {% if page.meeting %}
-          <div class="scorecard__row">
-            <span class="scorecard__label">Meetings</span>
-            <span class="scorecard__value">{{ page.meeting }}</span>
-          </div>
-        {% endif %}
-        {% if page.drip %}
-          <div class="scorecard__row">
-            <span class="scorecard__label">Drip Coffee</span>
-            <span class="scorecard__value">${{ page.drip }}</span>
-          </div>
-        {% endif %}
-        {% if page.maps %}
-          <div class="scorecard__row" style="margin-top: 12px;">
-            <a href="{{ page.maps }}" target="_blank" rel="noopener" class="btn btn--secondary" style="width:100%;text-align:center;font-size:11px;">
-              View on Map →
-            </a>
-          </div>
-        {% endif %}
-      </div>
-    </aside>
   </div>
-  {% else %}
-  <!-- Roundup: full-width content -->
+  <div class="post-meta-strip__divider"></div>
+  {% endif %}
+  <div class="post-meta-strip__type">
+    {% if is_roundup %}Round Up{% else %}Individual Review{% endif %}
+  </div>
+  {% if page.rating %}
+  <div class="post-meta-strip__rating">
+    {% include stars.html rating=page.rating %}
+    <span class="post-meta-strip__rating-text">{{ page.rating }}/5</span>
+  </div>
+  {% endif %}
+</div>
+
+<!-- Body -->
+<div class="post-body-wrap">
+  <!-- Left: content -->
   <div class="post-body">
-    <div class="post-body__content">
+    {% if page.pull_quote %}
+    <div class="pull-quote">{{ page.pull_quote }}</div>
+    {% endif %}
+
+    <div class="post-body__content" id="post-content">
       {{ content }}
     </div>
   </div>
-  {% endunless %}
 
-  <!-- CTA block -->
+  <!-- Right: sidebar (reviews only) -->
+  {% unless is_roundup %}
+  <aside class="post-sidebar">
+    {% if page.scores %}
+    <div class="scorecard">
+      <div class="scorecard__label">The Breakdown</div>
+      {% assign score_keys = "coffee,wifi,seating,vibe,outlet,quiet" | split: "," %}
+      {% assign score_labels = "Coffee,Wifi,Seating,Vibe,Outlets,Quiet" | split: "," %}
+      {% for key in score_keys %}
+        {% assign label_idx = forloop.index0 %}
+        {% assign label = score_labels[label_idx] %}
+        {% assign val = page.scores[key] | default: 0 %}
+        <div class="score-bar">
+          <div class="score-bar__header">
+            <span class="score-bar__label">{{ label }}</span>
+            <span class="score-bar__value">{{ val }}/5</span>
+          </div>
+          <div class="score-bar__track">
+            <div class="score-bar__fill js-bar-fill" data-val="{{ val }}"></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.rating %}
+    <div class="scorecard__overall">
+      <div class="scorecard__overall-label">Overall</div>
+      <div>
+        <span class="scorecard__overall-number">{{ page.rating }}</span>
+        <span class="scorecard__overall-denom">/5</span>
+      </div>
+      {% include stars.html rating=page.rating %}
+      {% if page.description %}
+      <div class="scorecard__overall-subtitle">"{{ page.description }}"</div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Key stats -->
+    <div class="scorecard" style="margin-top:0;">
+      {% if page.wifi %}
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Wifi</span>
+        <span class="scorecard__row-value">{{ page.wifi }} mbps</span>
+      </div>
+      {% endif %}
+      {% if page.meeting %}
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Meetings</span>
+        <span class="scorecard__row-value">{{ page.meeting }}</span>
+      </div>
+      {% endif %}
+      {% if page.drip %}
+      <div class="scorecard__row">
+        <span class="scorecard__row-label">Drip Coffee</span>
+        <span class="scorecard__row-value">${{ page.drip }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if page.lat and page.lng %}
+    <div class="post-sidebar-map">
+      <div class="post-sidebar-map__label">Find It</div>
+      <div id="review-map" class="post-sidebar-map__el"></div>
+      {% if page.categories[0] %}
+      <div class="post-sidebar-map__address">{{ page.categories[0] }}{% if page.categories[1] %} · {{ page.categories[1] }}{% endif %}</div>
+      {% endif %}
+    </div>
+    {% elsif page.maps %}
+    <div style="margin-top:16px;">
+      <a href="{{ page.maps }}" target="_blank" rel="noopener" class="btn btn--secondary" style="width:100%;text-align:center;font-size:11px;box-sizing:border-box;">View on Map →</a>
+    </div>
+    {% endif %}
+
+    {% if author %}
+    <div class="post-author-card">
+      {% if author.avatar %}
+      <img class="post-author-card__avatar"
+           src="{{ author.avatar | prepend: '/' | relative_url }}"
+           alt="{{ author.display_name }}">
+      {% endif %}
+      <div>
+        <div class="post-author-card__name">{{ author.display_name }}</div>
+        {% if author.description %}
+        <p class="post-author-card__bio">{{ author.description }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </aside>
+  {% endunless %}
+</div>
+
+<!-- Roundup: full-width -->
+{% if is_roundup %}
+<div class="container" style="max-width:800px;">
+  <div class="post-body__content">{{ content }}</div>
+</div>
+{% endif %}
+
+<!-- CTA -->
+<div class="container">
   <div class="cta-block">
     <div class="cta-block__title">Tell us where to go next!</div>
     <p class="cta-block__sub">Found a hidden gem? Know a spot we're sleeping on? Send us an email.</p>
@@ -166,25 +201,34 @@ layout: default
     </div>
   </div>
 
-  <!-- Tags -->
   {% if page.tags %}
-    <div class="post-tags">
-      {% for tag in page.tags %}
-        <a href="{{ '/tags' | relative_url }}#{{ tag | replace: ' ', '-' }}">#{{ tag }}</a>
-      {% endfor %}
-    </div>
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <a href="{{ '/tags' | relative_url }}#{{ tag | replace: ' ', '-' }}">#{{ tag }}</a>
+    {% endfor %}
+  </div>
   {% endif %}
-
-  <!-- Prev / Next -->
-  <nav class="post-nav" aria-label="Post navigation">
-    {% if page.previous.url %}
-      <a href="{{ page.previous.url | relative_url }}" class="post-nav__prev">← {{ page.previous.title }}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a href="{{ page.next.url | relative_url }}" class="post-nav__next">{{ page.next.title }} →</a>
-    {% endif %}
-  </nav>
 </div>
+
+<!-- Post nav -->
+<nav class="post-nav" aria-label="Post navigation">
+  {% if page.previous.url %}
+  <a href="{{ page.previous.url | relative_url }}" class="post-nav__prev">
+    <div class="post-nav__label">← Previous</div>
+    <div class="post-nav__title">{{ page.previous.title }}</div>
+  </a>
+  {% else %}
+  <div></div>
+  {% endif %}
+  {% if page.next.url %}
+  <a href="{{ page.next.url | relative_url }}" class="post-nav__next">
+    <div class="post-nav__label">Next →</div>
+    <div class="post-nav__title">{{ page.next.title }}</div>
+  </a>
+  {% else %}
+  <div></div>
+  {% endif %}
+</nav>
 
 <!-- Structured data -->
 {% if page.rating %}
@@ -193,31 +237,98 @@ layout: default
 {
   "@context": "http://schema.org/",
   "@type": "Review",
-  "itemReviewed": {
-    "@type": "Thing",
-    "name": "{{ page.title | escape }}"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "{{ author_obj.display_name | escape }}"
-  },
+  "itemReviewed": { "@type": "Thing", "name": "{{ page.title | escape }}" },
+  "author": { "@type": "Person", "name": "{{ author_obj.display_name | escape }}" },
   "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "{{ page.rating }}",
-    "bestRating": "5"
-  }
+  "reviewRating": { "@type": "Rating", "ratingValue": "{{ page.rating }}", "bestRating": "5" }
 }
 </script>
 {% endif %}
 
-<!-- Pro Tip IntersectionObserver + GA4 event -->
 <script>
-(function() {
+(function () {
+  // Animate score bars
+  var fills = document.querySelectorAll('.js-bar-fill');
+  if (fills.length) {
+    setTimeout(function () {
+      fills.forEach(function (f) {
+        var val = parseFloat(f.dataset.val) || 0;
+        f.style.width = ((val / 5) * 100) + '%';
+      });
+    }, 400);
+  }
+
+  // Wrap pro tip paragraphs
+  var content = document.getElementById('post-content');
+  if (content) {
+    var paras = Array.prototype.slice.call(content.querySelectorAll('p'));
+    paras.forEach(function (p) {
+      var text = p.textContent || '';
+      if (!/pro\s*tip/i.test(text)) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'pro-tip';
+      var label = document.createElement('span');
+      label.className = 'pro-tip__label';
+      label.textContent = 'Pro Tip';
+      var inner = document.createElement('p');
+      var html = p.innerHTML;
+      // Strip leading <br> tags (Kramdown sometimes inserts them before inline markdown)
+      html = html.replace(/^(\s*<br\s*\/?>\s*)+/gi, '');
+      // Handle <i>Pro tip</i>: text
+      html = html.replace(/<i>\s*Pro\s*tip\s*<\/i>\s*:?\s*/gi, '');
+      // Handle <em>Pro tip: text</em> → strip prefix inside em
+      html = html.replace(/<em>\s*Pro\s*tip\s*:?\s*/gi, '<em>');
+      // Handle bare "Pro tip:" text node at start
+      html = html.replace(/^\s*Pro\s*tip\s*:?\s*/gi, '');
+      // Clean up empty em tags
+      html = html.replace(/<em>\s*<\/em>/gi, '');
+      // Strip leading colon/whitespace
+      html = html.replace(/^\s*:\s*/, '').trim();
+      inner.innerHTML = html;
+      wrap.appendChild(label);
+      wrap.appendChild(inner);
+      p.parentNode.replaceChild(wrap, p);
+    });
+  }
+
+  // Mini map on review posts
+  {% if page.lat and page.lng %}
+  (function () {
+    function tryMap() {
+      var el = document.getElementById('review-map');
+      if (!el || !window.L) return false;
+      var m = L.map(el, { zoomControl: false, scrollWheelZoom: false, dragging: false })
+        .setView([{{ page.lat }}, {{ page.lng }}], 15);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '', maxZoom: 19, subdomains: 'abcd'
+      }).addTo(m);
+      var svg = '<svg width="24" height="30" viewBox="0 0 24 30" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 18 12 18s12-9 12-18C24 5.4 18.6 0 12 0z" fill="#D4AA20" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="#0D0D0D"/></svg>';
+      {% if page.maps %}var mapsUrl = {{ page.maps | jsonify }};{% else %}var mapsUrl = 'https://www.google.com/maps/search/?api=1&query={{ page.lat }},{{ page.lng }}';{% endif %}
+      var popupHtml =
+        '<div style="font-family:\'DM Mono\',monospace;min-width:160px;padding:4px 2px;">' +
+        '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:#0D0D0D;line-height:1;margin-bottom:4px;">{{ page.title | escape }}</div>' +
+        '<div style="font-size:10px;color:#5C5A57;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;">{{ page.categories[0] }}{% if page.categories[1] %} · {{ page.categories[1] }}{% endif %}</div>' +
+        '<a href="' + mapsUrl + '" target="_blank" rel="noopener" style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#D4AA20;border-bottom:1px solid #D4AA20;text-decoration:none;">Directions →</a>' +
+        '</div>';
+      L.marker([{{ page.lat }}, {{ page.lng }}], {
+        icon: L.divIcon({ html: svg, iconSize: [24, 30], iconAnchor: [12, 30], className: '' })
+      }).bindPopup(popupHtml, { closeButton: false }).addTo(m);
+      return true;
+    }
+    if (!tryMap()) {
+      var attempts = 0;
+      var iv = setInterval(function () {
+        if (tryMap() || ++attempts > 20) clearInterval(iv);
+      }, 200);
+    }
+  })();
+  {% endif %}
+
+  // GA4 pro tip view
   var tip = document.querySelector('.pro-tip');
   if (tip && 'IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
         if (e.isIntersecting) {
           if (typeof rrTrack === 'function') rrTrack('pro_tip_view', { post: '{{ page.title | escape }}' });
           obs.disconnect();
@@ -228,3 +339,7 @@ layout: default
   }
 })();
 </script>
+
+{% if page.lat and page.lng %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+{% endif %}

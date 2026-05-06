@@ -13,6 +13,16 @@ meeting: "Yes"
 maps: "https://goo.gl/maps/uVGpeJMN8SzmyxJX8" #! REPLACE !!!!!
 wifi: "82"
 drip: "3"
+lat: 44.9790657
+lng: -93.2336512
+bestfor: "Best Seasonal Drinks"
+scores:
+  coffee: 3
+  wifi: 3
+  seating: 3
+  vibe: 3
+  outlet: 3
+  quiet: 3
 ---
 
 <h5>Bordering Dinkytown</h5>

@@ -2,9 +2,9 @@
 <span class="stars" aria-label="{{ rating }} out of 5 stars">
   {% for i in (1..5) %}
     {% if i <= rating %}
-      <span class="star star--filled">★</span>
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5"/></svg>
     {% else %}
-      <span class="star star--empty">★</span>
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8"/></svg>
     {% endif %}
   {% endfor %}
 </span>

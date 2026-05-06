@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: roundup
 title: "Spring/Summer Round Up"
 author: juliet + osmar
 categories: ["2023"]

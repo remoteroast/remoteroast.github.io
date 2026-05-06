@@ -13,6 +13,16 @@ meeting: "Yes"
 maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
 wifi: "110"
 drip: "2.75"
+lat: 44.9521471
+lng: -93.2976927
+bestfor: "Best Seating"
+scores:
+  coffee: 4
+  wifi: 4
+  seating: 5
+  vibe: 4
+  outlet: 4
+  quiet: 4
 ---
 
 <h4>Where it all began...</h4>

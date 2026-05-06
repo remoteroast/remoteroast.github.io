@@ -1,625 +1,1484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" href="/assets/images/logo.png">
-
-<title>TL;DR | Remote Roast</title>
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TL;DR | Remote Roast</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>TL;DR | Remote Roast</title>
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="TL;DR" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Rating Twin Cities coffee shops for remote work." />
-<meta property="og:description" content="Rating Twin Cities coffee shops for remote work." />
-<link rel="canonical" href="http://localhost:4000/tldr" />
-<meta property="og:url" content="http://localhost:4000/tldr" />
+<meta name="description" content="Judging your café so you don’t have to. Data-forward reviews of Twin Cities coffee shops for remote work." />
+<meta property="og:description" content="Judging your café so you don’t have to. Data-forward reviews of Twin Cities coffee shops for remote work." />
 <meta property="og:site_name" content="Remote Roast" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="TL;DR" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Rating Twin Cities coffee shops for remote work.","headline":"TL;DR","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/tldr"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Judging your café so you don’t have to. Data-forward reviews of Twin Cities coffee shops for remote work.","headline":"TL;DR","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/logo.png"}},"url":"/tldr"}</script>
 <!-- End Jekyll SEO tag -->
 
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-<link href="/assets/css/screen.css" rel="stylesheet">
-
-<link href="/assets/css/main.css" rel="stylesheet">
-
-<script src="/assets/js/jquery.min.js"></script>
-
+  <link rel="icon" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WD48S7B');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CG5EGLZ8B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2CG5EGLZ8B', { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });
+    window.rrTrack = function(name, params) {
+      gtag('event', name, params || {});
+      dataLayer.push({ event: name, rrParams: params || {} });
+    };
+  </script>
 </head>
+<body class="layout-default">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD48S7B"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <svg id="parallax-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+  style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;"></svg>
 
-
-
-
-<body class="layout-page">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD48S7B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	</noscript>
-
-
-<!-- Begin Menu Navigation
-================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="/">
-    <img src="/assets/images/logo.png" alt="Remote Roast">
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto">
-
-                
-                <li class="nav-item">
-                
-                <a class="nav-link" href="/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/tldr">TL;DR</a>
-                </li>
-
-
-                <script src="/assets/js/lunr.js"></script>
-
-
-<style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
-</style>
-
-
-<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
-</form>
-
-<div id="lunrsearchresults">
-    <ul></ul>
-</div>
-
-<script src="/assets/js/lunrsearchengine.js"></script>
-
-            </ul>
-
-        <!-- End Menu -->
-
-    </div>
-
-    </div>
+  <nav class="site-nav" aria-label="Main navigation">
+  <a class="site-nav__brand" href="/">
+    <span class="site-nav__brand-name">Remote Roast</span>
+    <span class="site-nav__brand-tag">Judging your café so you don't have to</span>
+  </a>
+  <button class="site-nav__hamburger" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="site-nav__links" id="nav-links" role="list">
+    <li>
+      <a href="/">Reviews</a>
+    </li>
+    <li>
+      <a href="/tldr" class="active" aria-current="page">TL;DR</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+  </ul>
 </nav>
-<!-- End Navigation
-================================================== -->
+<script>
+  (function() {
+    var btn = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (btn && links) {
+      btn.addEventListener('click', function() {
+        var open = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  })();
+</script>
 
-<div class="site-content">
+  <main class="site-content">
+    
+<script>
+window.__shops = [
 
-<div class="container">
+  {
+    title: "FRGMNT - St Anthony Main",
+    url: "/frgmnt-st-anthony-main/",
+    img: "/assets/images/frgmnt.png",
+    rating: 4,
+    wifi: "150",
+    drip: "3.49",
+    meeting: "Yes",
+    lat: 44.986123,
+    lng: -93.258371,
+    scores: {"coffee":4,"wifi":4,"seating":4,"vibe":5,"outlet":3,"quiet":3},
+    bestfor: "Best Aesthetic",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://maps.app.goo.gl/6ABabjJQt9fxonCY6"
+  },
 
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">Remote Roast</h1>
-    <p class="lead">
-        Rating Twin Cities coffee shops for remote work.
-    </p>
+  {
+    title: "Wesley Andrews",
+    url: "/wesley-andrews/",
+    img: "/assets/images/wa.jpeg",
+    rating: 3,
+    wifi: "21",
+    drip: "4",
+    meeting: "Maybe",
+    lat: 44.9553763,
+    lng: -93.2760413,
+    scores: {"coffee":5,"wifi":1,"seating":4,"vibe":5,"outlet":3,"quiet":3},
+    bestfor: "Most Interesting Menu",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://maps.app.goo.gl/DssEBSnnDfem9EZWA"
+  },
+
+  {
+    title: "Roots Roasting",
+    url: "/roots-roasting/",
+    img: "/assets/images/roots.png",
+    rating: 4,
+    wifi: "120",
+    drip: "2.75",
+    meeting: "Maybe",
+    lat: 44.9340523,
+    lng: -93.1659627,
+    scores: {"coffee":5,"wifi":5,"seating":3,"vibe":4,"outlet":3,"quiet":4},
+    bestfor: "Best Concentration Vibes",
+    shortcut: null,
+    city: "St Paul",
+    maps: "https://goo.gl/maps/XdkC9J2pY9uN7cqUA"
+  },
+
+  {
+    title: "Up Cafe & Up Coffee Roasters",
+    url: "/up-coffee/",
+    img: "/assets/images/up-up.jpeg",
+    rating: 4,
+    wifi: "360",
+    drip: "2.30",
+    meeting: "Yes",
+    lat: 44.9926116,
+    lng: -93.2251453,
+    scores: {"coffee":4,"wifi":5,"seating":5,"vibe":4,"outlet":3,"quiet":4},
+    bestfor: "Best Outdoor Seating",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/F38aSLGgCzRaSsot5"
+  },
+
+  {
+    title: "Bordertown Coffee",
+    url: "/bordertown/",
+    img: "/assets/images/bordertown.jpeg",
+    rating: 3,
+    wifi: "82",
+    drip: "3",
+    meeting: "Yes",
+    lat: 44.9790657,
+    lng: -93.2336512,
+    scores: {"coffee":3,"wifi":3,"seating":3,"vibe":3,"outlet":3,"quiet":3},
+    bestfor: "Best Seasonal Drinks",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/uVGpeJMN8SzmyxJX8"
+  },
+
+  {
+    title: "JS Bean Factory",
+    url: "/js-bean/",
+    img: "/assets/images/js-bean.jpeg",
+    rating: 3.5,
+    wifi: "340",
+    drip: "2.10",
+    meeting: "Maybe",
+    lat: 44.9268128,
+    lng: -93.1643105,
+    scores: {"coffee":3,"wifi":5,"seating":3,"vibe":3,"outlet":3,"quiet":3},
+    bestfor: "Best Budget Pick",
+    shortcut: null,
+    city: "St Paul",
+    maps: "https://goo.gl/maps/s6ESsm2FBA68Ejx6A"
+  },
+
+  {
+    title: "Caffetto",
+    url: "/caffetto/",
+    img: "/assets/images/caffetto.jpeg",
+    rating: 3.5,
+    wifi: "18",
+    drip: "2.65",
+    meeting: "No",
+    lat: 44.9610637,
+    lng: -93.2885417,
+    scores: {"coffee":4,"wifi":1,"seating":3,"vibe":3,"outlet":2,"quiet":3},
+    bestfor: "Best Neighborhood Feel",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/qH9GCZXFG7kmUdkc6"
+  },
+
+  {
+    title: "Disco Death Records",
+    url: "/discodeath/",
+    img: "/assets/images/DDmatcha_preSpill.jpeg",
+    rating: 4,
+    wifi: "200",
+    drip: "5",
+    meeting: "Maybe",
+    lat: 44.9554416,
+    lng: -93.288875,
+    scores: {"coffee":4,"wifi":4,"seating":3,"vibe":5,"outlet":3,"quiet":3},
+    bestfor: "Best Vibe",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/iirgCA9jYEwJY1UJ7"
+  },
+
+  {
+    title: "Spyhouse - Nicollet",
+    url: "/spyhouse-nicollet/",
+    img: "/assets/images/spyhouse-nicollet.jpeg",
+    rating: 2.5,
+    wifi: "21",
+    drip: "3.50",
+    meeting: "No",
+    lat: 44.9574423,
+    lng: -93.277698,
+    scores: {"coffee":3,"wifi":1,"seating":3,"vibe":3,"outlet":3,"quiet":3},
+    bestfor: "Best Big Space",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/BUy9LfKApF46ZUeq7"
+  },
+
+  {
+    title: "Nina's Coffee Cafe",
+    url: "/ninas/",
+    img: "/assets/images/ninas.jpeg",
+    rating: 3.5,
+    wifi: "46",
+    drip: "3.00",
+    meeting: "No",
+    lat: 44.9464706,
+    lng: -93.1162903,
+    scores: {"coffee":4,"wifi":2,"seating":3,"vibe":4,"outlet":2,"quiet":2},
+    bestfor: "Best Neighborhood Vibe",
+    shortcut: null,
+    city: "St Paul",
+    maps: "https://goo.gl/maps/Veo7SdX2p3hf5uPC8"
+  },
+
+  {
+    title: "Dogwood Coffee - Saint Paul",
+    url: "/dogwood-saint-paul/",
+    img: "/assets/images/dogwood_sp.png",
+    rating: 3.5,
+    wifi: "78",
+    drip: "3.25",
+    meeting: "Yes",
+    lat: 44.97,
+    lng: -93.1837,
+    scores: {"coffee":4,"wifi":3,"seating":3,"vibe":3,"outlet":3,"quiet":4},
+    bestfor: "Best Quiet Spot",
+    shortcut: null,
+    city: "St Paul",
+    maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
+  },
+
+  {
+    title: "Corner Coffee Uptown",
+    url: "/corner-coffee-uptown/",
+    img: "/assets/images/cc_uptown.png",
+    rating: 4.5,
+    wifi: "110",
+    drip: "2.75",
+    meeting: "Yes",
+    lat: 44.9521471,
+    lng: -93.2976927,
+    scores: {"coffee":4,"wifi":4,"seating":5,"vibe":4,"outlet":4,"quiet":4},
+    bestfor: "Best Seating",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
+  },
+
+  {
+    title: "SK Coffee",
+    url: "/skcoffee/",
+    img: "/assets/images/sk_whittier.jpeg",
+    rating: 4,
+    wifi: "410",
+    drip: "3.5",
+    meeting: "Maybe",
+    lat: 44.958995,
+    lng: -93.287727,
+    scores: {"coffee":4,"wifi":5,"seating":3,"vibe":4,"outlet":3,"quiet":4},
+    bestfor: "Best Wifi",
+    shortcut: null,
+    city: "Minneapolis",
+    maps: "https://goo.gl/maps/2VnxBXBxqiLCMiUe6"
+  },
+
+  {
+    title: "Quixotic Coffee",
+    url: "/quixotic/",
+    img: "/assets/images/quixotic.png",
+    rating: 5,
+    wifi: "120",
+    drip: "2.75",
+    meeting: "Yes",
+    lat: 44.9183261,
+    lng: -93.1876256,
+    scores: {"coffee":5,"wifi":4,"seating":4,"vibe":5,"outlet":4,"quiet":4},
+    bestfor: "Best Overall",
+    shortcut: null,
+    city: "St Paul",
+    maps: "https://goo.gl/maps/hUHF1vepUCafYfnd7"
+  }
+
+];
+</script>
+
+<!-- Hero -->
+<section class="tldr-hero">
+  <div class="tldr-hero__left">
+    <div class="tldr-hero__label">The Shortcut</div>
+    <h1 class="tldr-hero__title">TL;DR</h1>
+    <p class="tldr-hero__sub">All 14 reviews. Ranked. Mapped. So you don't have to read the whole thing — though you should.</p>
+  </div>
+  <div class="tldr-hero__stats">
+    <div class="tldr-hero__stat">
+      <div class="tldr-hero__stat-n">14</div>
+      <div class="tldr-hero__stat-label">Reviews</div>
+    </div>
+    <div class="tldr-hero__stat">
+      <div class="tldr-hero__stat-n">100%</div>
+      <div class="tldr-hero__stat-label">Opinions</div>
+    </div>
+    <div class="tldr-hero__stat">
+      <div class="tldr-hero__stat-n">0</div>
+      <div class="tldr-hero__stat-label">Chill</div>
+    </div>
+  </div>
+</section>
+
+<!-- Map + Leaderboard -->
+<section class="tldr-main">
+  <div class="tldr-map-panel">
+    <div id="tldr-map" aria-label="Map of reviewed coffee shops" role="application"></div>
+    <div class="tldr-map-panel__hint">Click a pin to explore</div>
+  </div>
+  <div class="tldr-leaderboard">
+    <div class="tldr-leaderboard__header">Leaderboard</div>
+    <div class="tldr-leaderboard__body">
+      
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="FRGMNT - St Anthony Main" data-lat="44.986123" data-lng="-93.258371" data-url="/frgmnt-st-anthony-main/" tabindex="0" role="button" aria-label="View FRGMNT - St Anthony Main on map">
+  <span class="leaderboard-row__rank">01</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/frgmnt-st-anthony-main/" onclick="event.stopPropagation()">FRGMNT - St Anthony Main</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
 </div>
 
-<!-- Content
-================================================== -->
-<div class="main-content">
-    <section>
-    <div class="section-title">
-        <h2><span>TL;DR</span></h2>
-    </div>
+      
+        
+        
 
-    <div class="article-post">
-    <h2>All our reviews in a handy little list</h2>
-<p><br />
-<br /></p>
-<div class="table-responsive" style="font-size:85%">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Coffee Shop</th>
-        <th scope="col">City</th>
-        <th scope="col"># Stars</th>
-        <th scope="col">Wifi speed</th>
-        <th scope="col">Suitable for meetings?</th>
-        <th scope="col">$ Small Drip Coffee</th>
-      </tr>
-    </thead>
+<div class="leaderboard-row" data-shop="Wesley Andrews" data-lat="44.9553763" data-lng="-93.2760413" data-url="/wesley-andrews/" tabindex="0" role="button" aria-label="View Wesley Andrews on map">
+  <span class="leaderboard-row__rank">02</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/wesley-andrews/" onclick="event.stopPropagation()">Wesley Andrews</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
     
+<span class="stars" aria-label="3 out of 5 stars">
+  
     
-      <tbody>
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Roots Roasting" data-lat="44.9340523" data-lng="-93.1659627" data-url="/roots-roasting/" tabindex="0" role="button" aria-label="View Roots Roasting on map">
+  <span class="leaderboard-row__rank">03</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/roots-roasting/" onclick="event.stopPropagation()">Roots Roasting</a>
+    <div class="leaderboard-row__sub">St Paul</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Up Cafe &amp; Up Coffee Roasters" data-lat="44.9926116" data-lng="-93.2251453" data-url="/up-coffee/" tabindex="0" role="button" aria-label="View Up Cafe &amp; Up Coffee Roasters on map">
+  <span class="leaderboard-row__rank">04</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/up-coffee/" onclick="event.stopPropagation()">Up Cafe &amp; Up Coffee Roasters</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Bordertown Coffee" data-lat="44.9790657" data-lng="-93.2336512" data-url="/bordertown/" tabindex="0" role="button" aria-label="View Bordertown Coffee on map">
+  <span class="leaderboard-row__rank">05</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/bordertown/" onclick="event.stopPropagation()">Bordertown Coffee</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="3 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="JS Bean Factory" data-lat="44.9268128" data-lng="-93.1643105" data-url="/js-bean/" tabindex="0" role="button" aria-label="View JS Bean Factory on map">
+  <span class="leaderboard-row__rank">06</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/js-bean/" onclick="event.stopPropagation()">JS Bean Factory</a>
+    <div class="leaderboard-row__sub">St Paul</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Caffetto" data-lat="44.9610637" data-lng="-93.2885417" data-url="/caffetto/" tabindex="0" role="button" aria-label="View Caffetto on map">
+  <span class="leaderboard-row__rank">07</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/caffetto/" onclick="event.stopPropagation()">Caffetto</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Disco Death Records" data-lat="44.9554416" data-lng="-93.288875" data-url="/discodeath/" tabindex="0" role="button" aria-label="View Disco Death Records on map">
+  <span class="leaderboard-row__rank">08</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/discodeath/" onclick="event.stopPropagation()">Disco Death Records</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Spyhouse - Nicollet" data-lat="44.9574423" data-lng="-93.277698" data-url="/spyhouse-nicollet/" tabindex="0" role="button" aria-label="View Spyhouse - Nicollet on map">
+  <span class="leaderboard-row__rank">09</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/spyhouse-nicollet/" onclick="event.stopPropagation()">Spyhouse - Nicollet</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="2.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Nina&#39;s Coffee Cafe" data-lat="44.9464706" data-lng="-93.1162903" data-url="/ninas/" tabindex="0" role="button" aria-label="View Nina's Coffee Cafe on map">
+  <span class="leaderboard-row__rank">10</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/ninas/" onclick="event.stopPropagation()">Nina's Coffee Cafe</a>
+    <div class="leaderboard-row__sub">St Paul</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Dogwood Coffee - Saint Paul" data-lat="44.97" data-lng="-93.1837" data-url="/dogwood-saint-paul/" tabindex="0" role="button" aria-label="View Dogwood Coffee - Saint Paul on map">
+  <span class="leaderboard-row__rank">11</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/dogwood-saint-paul/" onclick="event.stopPropagation()">Dogwood Coffee - Saint Paul</a>
+    <div class="leaderboard-row__sub">St Paul</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Corner Coffee Uptown" data-lat="44.9521471" data-lng="-93.2976927" data-url="/corner-coffee-uptown/" tabindex="0" role="button" aria-label="View Corner Coffee Uptown on map">
+  <span class="leaderboard-row__rank">12</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/corner-coffee-uptown/" onclick="event.stopPropagation()">Corner Coffee Uptown</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="SK Coffee" data-lat="44.958995" data-lng="-93.287727" data-url="/skcoffee/" tabindex="0" role="button" aria-label="View SK Coffee on map">
+  <span class="leaderboard-row__rank">13</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/skcoffee/" onclick="event.stopPropagation()">SK Coffee</a>
+    <div class="leaderboard-row__sub">Minneapolis</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+        
+        
+
+<div class="leaderboard-row" data-shop="Quixotic Coffee" data-lat="44.9183261" data-lng="-93.1876256" data-url="/quixotic/" tabindex="0" role="button" aria-label="View Quixotic Coffee on map">
+  <span class="leaderboard-row__rank">14</span>
+  <div class="leaderboard-row__info">
+    <a class="leaderboard-row__name" href="/quixotic/" onclick="event.stopPropagation()">Quixotic Coffee</a>
+    <div class="leaderboard-row__sub">St Paul</div>
+  </div>
+  <div class="leaderboard-row__stars">
+    
+<span class="stars" aria-label="5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+</span>
+
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- Shop detail — hidden until row/pin clicked -->
+<section class="tldr-detail" id="tldr-detail" style="display:none;" aria-live="polite">
+  <div class="tldr-detail__image-col">
+    <img id="det-img" class="tldr-detail__image" src="" alt="" />
+    <div class="tldr-detail__overlay">
+      <div id="det-hood" class="tldr-detail__hood"></div>
+      <h2 id="det-name" class="tldr-detail__name"></h2>
+      <div id="det-bestfor" class="tldr-detail__bestfor" style="display:none;"></div>
+      <a id="det-link" href="#" class="tldr-detail__cta">Read Full Review →</a>
+    </div>
+  </div>
+  <div class="tldr-detail__bars-col">
+    <div class="tldr-detail__section-label">Breakdown</div>
+    <div id="det-bars"></div>
+  </div>
+  <div class="tldr-detail__radar-col">
+    <div class="tldr-detail__section-label">Profile</div>
+    <div id="det-radar"></div>
+    <div id="det-author" style="display:flex;align-items:center;gap:8px;margin-top:12px;"></div>
+  </div>
+</section>
+
+<!-- Best For -->
+<section class="tldr-bestfor">
+  <div class="tldr-bestfor__label">Best For...</div>
+  <div class="tldr-bestfor__grid">
+    <div class="tldr-bestfor__card">
+      <div class="tldr-bestfor__card-label">Best Coffee</div>
+      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
+      <div class="tldr-bestfor__card-reason">Pineapple espresso. Iconic. Weird. Perfect.</div>
+    </div>
+    <div class="tldr-bestfor__card">
+      <div class="tldr-bestfor__card-label">Best Seating</div>
+      <div class="tldr-bestfor__card-winner">FRGMNT</div>
+      <div class="tldr-bestfor__card-reason">Freaking huge. Freaking seated. Never kicked out.</div>
+    </div>
+    <div class="tldr-bestfor__card">
+      <div class="tldr-bestfor__card-label">Best Vibe</div>
+      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
+      <div class="tldr-bestfor__card-reason">The playlist was doing something. We don't ask questions.</div>
+    </div>
+    <div class="tldr-bestfor__card">
+      <div class="tldr-bestfor__card-label">Most Caffeinated Trip</div>
+      <div class="tldr-bestfor__card-winner">Roots Roasting</div>
+      <div class="tldr-bestfor__card-reason">The beans hit different. We didn't sleep for 11 hours. 10/10.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Data table -->
+<div class="container" style="margin-top:48px;">
+  
+
+
+
+<span class="tilted-tag" style="transform: rotate(2deg)">
+  THE NUMBERS
+</span>
+
+  <div class="table-responsive" style="margin-top:16px;">
+    <table class="table">
+      <thead>
         <tr>
-          <td><a href="frgmnt-st-anthony-main"><span class="text-capitalize">FRGMNT - St Anthony Main</span></a></td>
-          <td><a href="https://maps.app.goo.gl/6ABabjJQt9fxonCY6" target="_blank">Minneapolis</a></td>
+          <th>Coffee Shop</th>
+          <th>City</th>
+          <th>Stars</th>
+          <th>Wifi (mbps)</th>
+          <th>Meetings?</th>
+          <th>$ Drip</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><a href="/frgmnt-st-anthony-main/">FRGMNT - St Anthony Main</a></td>
+          <td><a href="https://maps.app.goo.gl/6ABabjJQt9fxonCY6" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>150</td>
           <td>Yes</td>
           <td>$3.49</td>
         </tr>
-      </tbody>
-    
-    
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="wesley-andrews"><span class="text-capitalize">Wesley Andrews</span></a></td>
-          <td><a href="https://maps.app.goo.gl/DssEBSnnDfem9EZWA" target="_blank">Minneapolis</a></td>
+          <td><a href="/wesley-andrews/">Wesley Andrews</a></td>
+          <td><a href="https://maps.app.goo.gl/DssEBSnnDfem9EZWA" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>21</td>
           <td>Maybe</td>
           <td>$4</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="roots-roasting"><span class="text-capitalize">Roots Roasting</span></a></td>
-          <td><a href="https://goo.gl/maps/XdkC9J2pY9uN7cqUA" target="_blank">St Paul</a></td>
+          <td><a href="/roots-roasting/">Roots Roasting</a></td>
+          <td><a href="https://goo.gl/maps/XdkC9J2pY9uN7cqUA" target="_blank" rel="noopener">St Paul</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>120</td>
           <td>Maybe</td>
           <td>$2.75</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="up-coffee"><span class="text-capitalize">Up Cafe &amp; Up Coffee Roasters</span></a></td>
-          <td><a href="https://goo.gl/maps/F38aSLGgCzRaSsot5" target="_blank">Minneapolis</a></td>
+          <td><a href="/up-coffee/">Up Cafe &amp; Up Coffee Roasters</a></td>
+          <td><a href="https://goo.gl/maps/F38aSLGgCzRaSsot5" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>360</td>
           <td>Yes</td>
           <td>$2.30</td>
         </tr>
-      </tbody>
-    
-    
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="bordertown"><span class="text-capitalize">Bordertown Coffee</span></a></td>
-          <td><a href="https://goo.gl/maps/uVGpeJMN8SzmyxJX8" target="_blank">Minneapolis</a></td>
+          <td><a href="/bordertown/">Bordertown Coffee</a></td>
+          <td><a href="https://goo.gl/maps/uVGpeJMN8SzmyxJX8" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>82</td>
           <td>Yes</td>
           <td>$3</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="js-bean"><span class="text-capitalize">JS Bean Factory</span></a></td>
-          <td><a href="https://goo.gl/maps/s6ESsm2FBA68Ejx6A" target="_blank">St Paul</a></td>
+          <td><a href="/js-bean/">JS Bean Factory</a></td>
+          <td><a href="https://goo.gl/maps/s6ESsm2FBA68Ejx6A" target="_blank" rel="noopener">St Paul</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>340</td>
           <td>Maybe</td>
           <td>$2.10</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="caffetto"><span class="text-capitalize">Caffetto</span></a></td>
-          <td><a href="https://goo.gl/maps/qH9GCZXFG7kmUdkc6" target="_blank">Minneapolis</a></td>
+          <td><a href="/caffetto/">Caffetto</a></td>
+          <td><a href="https://goo.gl/maps/qH9GCZXFG7kmUdkc6" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>18</td>
           <td>No</td>
           <td>$2.65</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="discodeath"><span class="text-capitalize">Disco Death Records</span></a></td>
-          <td><a href="https://goo.gl/maps/iirgCA9jYEwJY1UJ7" target="_blank">Minneapolis</a></td>
+          <td><a href="/discodeath/">Disco Death Records</a></td>
+          <td><a href="https://goo.gl/maps/iirgCA9jYEwJY1UJ7" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>200</td>
           <td>Maybe</td>
           <td>$5</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="spyhouse-nicollet"><span class="text-capitalize">Spyhouse - Nicollet</span></a></td>
-          <td><a href="https://goo.gl/maps/BUy9LfKApF46ZUeq7" target="_blank">Minneapolis</a></td>
+          <td><a href="/spyhouse-nicollet/">Spyhouse - Nicollet</a></td>
+          <td><a href="https://goo.gl/maps/BUy9LfKApF46ZUeq7" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="2.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="2.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>21</td>
           <td>No</td>
           <td>$3.50</td>
         </tr>
-      </tbody>
-    
-    
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="ninas"><span class="text-capitalize">Nina's Coffee Cafe</span></a></td>
-          <td><a href="https://goo.gl/maps/Veo7SdX2p3hf5uPC8" target="_blank">St Paul</a></td>
+          <td><a href="/ninas/">Nina's Coffee Cafe</a></td>
+          <td><a href="https://goo.gl/maps/Veo7SdX2p3hf5uPC8" target="_blank" rel="noopener">St Paul</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>46</td>
           <td>No</td>
           <td>$3.00</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="dogwood-saint-paul"><span class="text-capitalize">Dogwood Coffee - Saint Paul</span></a></td>
-          <td><a href="https://goo.gl/maps/kbAe9j9VgzNmC6aw7" target="_blank">St Paul</a></td>
+          <td><a href="/dogwood-saint-paul/">Dogwood Coffee - Saint Paul</a></td>
+          <td><a href="https://goo.gl/maps/kbAe9j9VgzNmC6aw7" target="_blank" rel="noopener">St Paul</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="3.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="3.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>78</td>
           <td>Yes</td>
           <td>$3.25</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="corner-coffee-uptown"><span class="text-capitalize">Corner Coffee Uptown</span></a></td>
-          <td><a href="https://goo.gl/maps/kbAe9j9VgzNmC6aw7" target="_blank">Minneapolis</a></td>
+          <td><a href="/corner-coffee-uptown/">Corner Coffee Uptown</a></td>
+          <td><a href="https://goo.gl/maps/kbAe9j9VgzNmC6aw7" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4.5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4.5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>110</td>
           <td>Yes</td>
           <td>$2.75</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="skcoffee"><span class="text-capitalize">SK Coffee</span></a></td>
-          <td><a href="https://goo.gl/maps/2VnxBXBxqiLCMiUe6" target="_blank">Minneapolis</a></td>
+          <td><a href="/skcoffee/">SK Coffee</a></td>
+          <td><a href="https://goo.gl/maps/2VnxBXBxqiLCMiUe6" target="_blank" rel="noopener">Minneapolis</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="4">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="4 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--empty" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="transparent" stroke="rgba(13,13,13,0.25)" stroke-width="0.8" /></svg>
+    
+  
+</span>
+</td>
           <td>410</td>
           <td>Maybe</td>
           <td>$3.5</td>
         </tr>
-      </tbody>
-    
-    
-    
-      <tbody>
+        
         <tr>
-          <td><a href="quixotic"><span class="text-capitalize">Quixotic Coffee</span></a></td>
-          <td><a href="https://goo.gl/maps/hUHF1vepUCafYfnd7" target="_blank">St Paul</a></td>
+          <td><a href="/quixotic/">Quixotic Coffee</a></td>
+          <td><a href="https://goo.gl/maps/hUHF1vepUCafYfnd7" target="_blank" rel="noopener">St Paul</a></td>
           <td>
-            <div class="rating-holder">
-                <div class="c-rating c-rating--regular" data-rating-value="5">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                </div>
-            </div>
-          </td>
+<span class="stars" aria-label="5 out of 5 stars">
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+    
+      <svg class="star star--filled" width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" fill="#D4AA20" stroke="#D4AA20" stroke-width="0.5" /></svg>
+    
+  
+</span>
+</td>
           <td>120</td>
           <td>Yes</td>
           <td>$2.75</td>
         </tr>
+        
       </tbody>
-    
-    
-    
-    
-  
-  </table>
-</div>
+    </table>
+  </div>
 
-<div class="hidden-mobile">
-<iframe title="" aria-label="Locator maps" id="datawrapper-chart-Im2mQ" src="https://datawrapper.dwcdn.net/Im2mQ/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 75% !important; border: none;" height="537" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-</div>
-
-<div class="col-md-5">
-<br />
-<div class="sticky-top sticky-top-80">
-<h5>Buy our next coffee!</h5>
-
-<p>Thank you for your support! Help us continue to rate coffee shops!</p>
-
-<a target="_blank" href="https://account.venmo.com/u/juliet-kelson" class="btn btn-success">Buy Juliet a coffee</a> <a target="_blank" href="https://account.venmo.com/u/osmar-delrio" class="btn btn-success">Buy Osmar a coffee</a>
-
-</div>
-</div>
-
+  <div class="cta-block" style="margin:48px 0;">
+    <div class="cta-block__title">Buy our next coffee!</div>
+    <p class="cta-block__sub">Help us keep rating. No paywalls, no sponsored content, just data.</p>
+    <div class="cta-block__actions">
+      <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn" onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
+      <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn btn--secondary" onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
     </div>
-
-    
-
-    <div id="comments" class="row mb-5">
-        <div class="col-md-8">
-            <section class="disqus">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'remote-roast'; 
-        var disqus_developer = 0;
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-        </div>
-    </div>
-
-    
-</section>
+  </div>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
-    
-</div>
+<script src="/assets/js/tldr-map.js"></script>
 
-<!-- Categories Jumbotron
-================================================== -->
-<div class="jumbotron fortags">
-	<div class="d-md-flex h-100">
-		<div class="col-md-4 transpdark align-self-center text-center h-100">
-            <div class="d-md-flex align-items-center justify-content-center h-100">
-                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
-            </div>
-		</div>
-		<div class="col-md-8 p-5 align-self-center text-center">
-            
-            
-                
-                    <a class="mt-1 mb-1" href="/categories#Minneapolis">Minneapolis (10)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#About">About (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#St-Paul">St Paul (5)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Highland-Park">Highland Park (2)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Whittier">Whittier (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Uptown">Uptown (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Saint-Anthony-Park">Saint Anthony Park (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Summit-University">Summit-University (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#2023">2023 (3)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Dinkytown">Dinkytown (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Mid-City-Industrial">Mid-City Industrial (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#Mac-Groveland">Mac-Groveland (1)</a>
-                
-                    <a class="mt-1 mb-1" href="/categories#St-Anthony-Main">St Anthony Main (1)</a>
-                
-            
-            
-		</div>
-	</div>
-</div>
 
-<!-- Begin Footer
-================================================== -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © 2024 Remote Roast 
-            </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
-            </div>
-        </div>
-    </div>
+  </main>
+  <footer class="site-footer">
+  <span class="site-footer__brand">Remote Roast</span>
+  <span class="site-footer__copy">© 2026 · Twin Cities</span>
 </footer>
-<!-- End Footer
-================================================== -->
 
-</div> <!-- /.site-content -->
-
-<!-- Scripts
-================================================== -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-<script src="/assets/js/mediumish.js"></script>
-
-
-
-<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
-
-
-
+  <script src="/assets/js/blobs.js" defer></script>
 </body>
 </html>

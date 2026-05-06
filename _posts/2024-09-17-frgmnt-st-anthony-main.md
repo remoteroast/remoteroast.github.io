@@ -122,7 +122,7 @@ scores:
 </div>
 <br>
 
-<img src="/assets/images/frgmnt_scone.png">
+<img src="/assets/images/frgmnt_scone.png" alt="FRGMNT scone">
 
 <div class="table-responsive" style="font-size:80%">
   <table class="table">

@@ -28,7 +28,7 @@ shops:
       quiet: 4
     bullets:
       - "Up Cafe has a ton of seating — especially with their outdoor tables in the summer. You'll never be hunting for a spot."
-      - "The wifi works pretty well outside. Maybe not for a meeting, but for other work, you have something to look forward to when it's warm again."
+      - "The wifi works pretty well outside. Maybe not for a meeting, but for other work, you have something to look forward to when it's warm."
       - "Lots of options for non-coffee drinkers including energy drinks for those who still want a little boost."
   - name: "Roots Roasting"
     hood: "Mac-Groveland"
@@ -49,7 +49,7 @@ shops:
       quiet: 4
     bullets:
       - "While small, Roots usually has an open seat."
-      - "Roots has a comfortably minimalist environment making it great for concentration."
+      - "Roots has a minimalist environment making it great for concentration."
       - "Great pastries from Marc Heu, but no meal options."
   - name: "Wesley Andrews"
     hood: "Whittier"

@@ -29,7 +29,7 @@ shops:
     bullets:
       - "Lots of booths! You can have your own personal space while still experiencing the vibrant coffee shop environment."
       - "Osmar's favorite blueberry muffin can be found here (if he hasn't eaten them all)."
-      - "It's easy to find parking — and there's a secret lot in the alley just north of the shop."
+      - "It's easy to find parking, and there's a secret set of spots in the alley just north of the shop."
   - name: "SK Coffee"
     hood: "Whittier"
     city: "Minneapolis"

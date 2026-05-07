@@ -894,6 +894,11 @@
     color: rgba(245,243,238,0.85);
     line-height: 1.5;
     margin: 0 !important;
+    a {
+      color: $accent;
+      text-decoration: underline;
+      &:hover { color: lighten($accent, 15%); }
+    }
   }
 }
 

@@ -19,7 +19,3 @@ group :jekyll_plugins do
     gem 'rouge'
     gem 'webrick'
 end
-
-group :test do
-    gem 'html-proofer', '4.4.3'
-end

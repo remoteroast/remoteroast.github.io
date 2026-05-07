@@ -74,7 +74,7 @@ window.__shops = [
 <!-- Shop detail — hidden until row/pin clicked -->
 <section class="tldr-detail" id="tldr-detail" style="display:none;" aria-live="polite">
   <div class="tldr-detail__image-col">
-    <img id="det-img" class="tldr-detail__image" src="" alt="">
+    <img id="det-img" class="tldr-detail__image" src="" alt="" data-proofer-ignore>
     <div class="tldr-detail__overlay">
       <div id="det-hood" class="tldr-detail__hood"></div>
       <h2 id="det-name" class="tldr-detail__name"></h2>

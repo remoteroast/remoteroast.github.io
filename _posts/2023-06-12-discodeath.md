@@ -6,8 +6,6 @@ categories: [Minneapolis, Uptown] #City must be first
 tags: [review, 4 stars]
 image: assets/images/DDmatcha_preSpill.jpeg #! REPLACE !!!!!
 description: "Death House Records"
-featured: FALSE # if T, show in featured
-hidden: False # if T, hide from all post
 rating: 4
 meeting: "Maybe"
 maps: "https://goo.gl/maps/iirgCA9jYEwJY1UJ7" #! REPLACE !!!!!

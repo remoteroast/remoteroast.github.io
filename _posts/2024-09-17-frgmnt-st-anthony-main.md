@@ -1,13 +1,12 @@
 ---
 layout: post
+hero: true
 title: "FRGMNT - St Anthony Main"
 author: juliet
 categories: [Minneapolis, St Anthony Main] #City must be first
 tags: [review, 3 stars]
 image: assets/images/frgmnt.png #! REPLACE !!!!!
 description: "FRGMNT"
-featured: True # if T, show in featured
-hidden: False # if T, hide from all post
 rating: 4
 meeting: "Yes"
 maps: "https://maps.app.goo.gl/6ABabjJQt9fxonCY6" #! REPLACE !!!!!
@@ -122,7 +121,7 @@ scores:
 </div>
 <br>
 
-<img src="/assets/images/frgmnt_scone.png">
+<img src="/assets/images/frgmnt_scone.png" alt="FRGMNT scone">
 
 <div class="table-responsive" style="font-size:80%">
   <table class="table">

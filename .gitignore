@@ -1,4 +1,7 @@
 .DS_Store
-assets/images/.DS_Store
+assets/.DS_Store
 assets/images/.DS_Store
 design_handoff_remote_roast/
+_site/
+.jekyll-cache/
+.jekyll-metadata

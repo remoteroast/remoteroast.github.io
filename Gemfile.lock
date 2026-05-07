@@ -119,7 +119,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  html-proofer (~> 4.0)
+  html-proofer (= 4.4.3)
   jekyll-archives
   jekyll-feed
   jekyll-paginate

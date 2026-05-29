@@ -236,6 +236,38 @@ table.table {
   }
 
   tr:hover td { background: $bg-alt; }
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+
+    thead { display: none; }
+
+    tr {
+      display: block;
+      border-bottom: 2px solid $ink;
+      margin-bottom: $s-3;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: $s-3;
+      padding: 8px 12px;
+      border-bottom: 1px solid $border;
+
+      &::before {
+        content: attr(data-label);
+        font-weight: 500;
+        color: $ink;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 10px;
+        flex-shrink: 0;
+        padding-top: 2px;
+      }
+    }
+  }
 }
 
 
@@ -513,5 +545,18 @@ table.table {
   .current {
     background: $ink;
     color: $bg;
+  }
+
+  @media (max-width: 640px) {
+    gap: $s-2;
+    flex-wrap: wrap;
+    padding: $s-5 $s-4;
+    font-size: 11px;
+
+    a, span {
+      min-width: 28px;
+      padding: 4px 8px;
+      letter-spacing: 0.06em;
+    }
   }
 }

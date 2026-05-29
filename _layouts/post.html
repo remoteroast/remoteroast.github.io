@@ -258,6 +258,18 @@ layout: default
     }, 400);
   }
 
+  // Label table cells for mobile stacking
+  document.querySelectorAll('table.table').forEach(function (table) {
+    var headers = Array.prototype.slice.call(table.querySelectorAll('thead th')).map(function (th) {
+      return th.textContent.trim();
+    });
+    table.querySelectorAll('tbody tr').forEach(function (row) {
+      Array.prototype.slice.call(row.querySelectorAll('td')).forEach(function (td, i) {
+        if (headers[i]) td.setAttribute('data-label', headers[i]);
+      });
+    });
+  });
+
   // Wrap pro tip paragraphs
   var content = document.getElementById('post-content');
   if (content) {
@@ -285,6 +297,18 @@ layout: default
       // Strip leading colon/whitespace
       html = html.replace(/^\s*:\s*/, '').trim();
       inner.innerHTML = html;
+      // If this paragraph was just "Pro tip" with no body text,
+      // pull content from the next sibling instead
+      if (!inner.textContent.trim() && p.nextElementSibling) {
+        var next = p.nextElementSibling;
+        if (next.tagName === 'P') {
+          inner.innerHTML = next.innerHTML;
+          next.parentNode.removeChild(next);
+        } else {
+          // Next sibling is an image or other element — move it into the box
+          wrap.appendChild(next);
+        }
+      }
       wrap.appendChild(label);
       wrap.appendChild(inner);
       p.parentNode.replaceChild(wrap, p);

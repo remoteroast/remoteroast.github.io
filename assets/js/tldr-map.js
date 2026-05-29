@@ -170,7 +170,13 @@
   // Leaderboard clicks
   document.querySelectorAll('.leaderboard-row').forEach(function (row, idx) {
     row.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') return;
+      var isMobile = window.innerWidth < 768;
+      // On desktop: let the shop name link navigate normally
+      // On mobile: intercept the link and show detail instead (CTA in detail panel is the nav entry point)
+      if (e.target.tagName === 'A') {
+        if (!isMobile) return;
+        e.preventDefault();
+      }
       var shopTitle = row.dataset.shop;
       var lat = parseFloat(row.dataset.lat);
       var lng = parseFloat(row.dataset.lng);
@@ -179,7 +185,13 @@
       for (var i = 0; i < allShops.length; i++) {
         if (allShops[i].title === shopTitle) { shop = allShops[i]; break; }
       }
-      if (shop) selectShop(shop);
+      if (shop) {
+        selectShop(shop);
+        if (isMobile) {
+          var detail = document.getElementById('tldr-detail');
+          if (detail) setTimeout(function () { detail.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+        }
+      }
       if (lat && lng && map) {
         map.flyTo([lat, lng], 15, { duration: 1.2 });
         if (markers[shopTitle]) {

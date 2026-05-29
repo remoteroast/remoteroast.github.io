@@ -13,7 +13,7 @@ wifi: "110"
 drip: "2.75"
 lat: 44.9521471
 lng: -93.2976927
-bestfor: "Best Seating"
+bestfor: "Best seasonal drinks"
 scores:
   coffee: 4
   wifi: 4

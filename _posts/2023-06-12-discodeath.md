@@ -13,7 +13,7 @@ wifi: "200"
 drip: "5"
 lat: 44.9554416
 lng: -93.288875
-bestfor: "Best Vibe"
+bestfor: "Best Matcha Latte"
 scores:
   coffee: 4
   wifi: 4

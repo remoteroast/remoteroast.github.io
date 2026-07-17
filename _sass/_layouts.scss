@@ -426,11 +426,16 @@
 
 .tldr-leaderboard {
   overflow-y: auto;
+  // Keep wheel/touch scrolling that reaches the list's end from being trapped —
+  // let it chain back to the page.
+  overscroll-behavior-y: auto;
   background: #EDEAE3;
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {
-    max-height: 400px;
+    // Stacked under the map on mobile: flow with the page instead of becoming a
+    // second nested scroll region that hijacks the swipe.
+    overflow-y: visible;
   }
   &__header {
     padding: 16px 20px 12px;

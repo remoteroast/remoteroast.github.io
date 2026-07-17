@@ -43,8 +43,20 @@
       map = L.map('tldr-map', {
         center: [44.965, -93.22],
         zoom: 12,
-        scrollWheelZoom: true
+        scrollWheelZoom: false
       });
+
+      // Don't hijack page scroll: only zoom with the wheel once the map is
+      // clicked/focused, and release it again when the pointer leaves.
+      map.on('focus click', function () { map.scrollWheelZoom.enable(); });
+      map.on('blur mouseout', function () { map.scrollWheelZoom.disable(); });
+
+      // On mobile the stacked map would otherwise eat a vertical swipe as a pan.
+      // Disable one-finger drag so swipes scroll the page; pinch-zoom, the zoom
+      // controls, and pin taps still work.
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        map.dragging.disable();
+      }
       L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',

@@ -18,7 +18,7 @@ comments: false
 
 <div class="image-txt-container">
  <img class="author-thumb-large" src="assets/images/osmar.png" alt="Osmar"> 
- <a>After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. </a>
+ <p>After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew. </p>
 </div>
 
 <br>
@@ -26,7 +26,7 @@ comments: false
 
 <div class="image-txt-container">
  <img class="author-thumb-large" src="assets/images/juliet.jpeg" alt="Juliet"> 
- <a>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP. </a>
+ <p>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP. </p>
 </div>
 
 

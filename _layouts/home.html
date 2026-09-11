@@ -93,7 +93,7 @@ layout: default
 </section>
 
 <!-- ROUND UPS -->
-{% assign roundups = site.posts | where_exp: "p", "p.tags contains 'roundup'" %}
+{% assign roundups = site.posts | where_exp: "p", "p.tags contains 'roundup'" | sort: "date" %}
 <section class="wrap roundups">
   <div class="sec-head">
     <h2>Round Ups</h2>

@@ -11,3 +11,80 @@
 .btn:hover { background: var(--espresso); color: var(--paper); border-color: var(--espresso); }
 .btn--ghost { background: transparent; color: var(--paper); }
 .btn--ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+
+/* ── Section head (shared: home, TL;DR, posts) ───────── */
+.sec-head { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap: 8px 16px; margin-bottom: 6px; }
+.sec-head .title-wrap { display:flex; align-items:baseline; gap: 18px; flex-wrap: wrap; }
+.sec-head h2 {
+  font-family:'Bebas Neue',sans-serif; font-weight:400; text-transform:uppercase;
+  font-size: clamp(38px, 5vw, 62px); line-height: 0.9;
+}
+.sec-head .geo { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color: var(--pencil); }
+
+/* ── Data readout — ledger cells ─────────────────────── */
+.readout {
+  display:grid; grid-template-columns: repeat(4, 1fr);
+  border: 1.5px solid var(--ink);
+  margin-bottom: 22px;
+}
+.readout__cell { padding: 10px 14px 12px; border-right: 1px solid var(--rule-lt); }
+.readout__cell:last-child { border-right: 0; }
+.readout__k { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--pencil); }
+.readout__v { font-family:'DM Mono',monospace; font-size:20px; font-weight:500; margin-top:2px; }
+.readout__v small { font-size: 11px; color: var(--pencil); }
+
+/* ── Six-metric scorebars ─────────────────────────────── */
+.scores { display:grid; grid-template-columns: 1fr 1fr; gap: 7px 32px; margin-bottom: 34px; max-width: 560px; }
+.score { display:grid; grid-template-columns: 74px 1fr 18px; align-items:center; gap: 12px; }
+.score__label { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); }
+.score__bar { display:flex; gap: 3px; }
+.score__bar i { flex:1; height: 11px; background: var(--paper-2); border: 1px solid var(--rule-lt); }
+.score__bar i.on { background: var(--espresso); border-color: var(--espresso); }
+.score__n { font-family:'DM Mono',monospace; font-size:12px; color:var(--pencil); text-align:right; }
+
+/* ── The ledger table (recent reviews, TL;DR) ────────── */
+.sheet { border: 1.5px solid var(--ink); overflow-x: auto; background: var(--paper); }
+table { width: 100%; border-collapse: collapse; min-width: 860px; }
+thead th {
+  font-family:'DM Mono',monospace; font-size:10.5px; font-weight: 500;
+  letter-spacing:0.16em; text-transform:uppercase;
+  text-align:left; color: var(--paper);
+  background: var(--ink);
+  padding: 10px 14px;
+  position: sticky; top: 0;
+}
+thead th.num, td.num { text-align: right; }
+tbody td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--rule-lt);
+  vertical-align: middle;
+}
+tbody tr:nth-child(even) { background: color-mix(in srgb, var(--paper-2) 45%, var(--paper)); }
+tbody tr:hover { background: var(--paper-2); }
+td.rank {
+  font-family:'DM Mono',monospace; font-size: 12px; color: var(--pencil);
+  border-right: 1px solid var(--rule-lt); width: 42px; text-align: center;
+  background: color-mix(in srgb, var(--paper-2) 55%, var(--paper));
+}
+td.shop a {
+  font-family:'Bebas Neue',sans-serif; font-size: 22px; letter-spacing: 0.02em;
+  text-decoration: none; line-height: 1;
+}
+td.shop a:hover { color: var(--stamp); }
+td.hood, td.best { font-family:'DM Mono',monospace; font-size: 11.5px; letter-spacing:0.06em; text-transform:uppercase; color: var(--espresso); }
+td.best { color: var(--pencil); font-style: normal; }
+td.num { font-family:'DM Mono',monospace; font-size: 13.5px; white-space: nowrap; }
+td .pen { display: block; margin-left: 0; text-align: right; }
+td.best .pen { text-align: left; }
+td .databar { display:inline-flex; gap:2px; margin-right: 8px; vertical-align: 1px; }
+td .databar i { width: 9px; height: 12px; background: var(--paper-2); border: 1px solid var(--rule-lt); }
+td .databar i.on { background: var(--espresso); border-color: var(--espresso); }
+td .databar i.half { background: linear-gradient(to right, var(--espresso) 50%, var(--paper-2) 50%); border-color: var(--espresso); }
+td.mtg { font-family:'DM Mono',monospace; font-size: 11.5px; letter-spacing: 0.1em; }
+td.mtg .no { color: var(--stamp); }
+tr.top td.rank { background: var(--ink); color: var(--paper); font-weight: 500; }
+.footnote {
+  font-family:'DM Mono',monospace; font-size: 11px; letter-spacing: 0.08em;
+  color: var(--pencil); padding: 10px 2px 0; line-height: 1.8;
+}
+.footnote em { font-style: normal; color: var(--stamp); }

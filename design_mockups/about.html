@@ -68,8 +68,7 @@
 
   /* ── Mission body ─────────────────────────── */
   .mission { padding-block: 40px 8px; }
-  .mission__grid { display: grid; grid-template-columns: 200px minmax(0, 640px); gap: 48px; align-items: start; }
-  .mission__label { font-family:'DM Mono',monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pencil); padding-top: 8px; border-top: 3px solid var(--ink); }
+  .mission__grid { max-width: 720px; }
   .mission__body p { font-size: 19px; line-height: 1.6; margin-bottom: 22px; }
   .mission__body p:last-child { margin-bottom: 0; }
 
@@ -103,8 +102,6 @@
   footer.site .row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: var(--pencil); }
 
   @media (max-width: 780px) {
-    .mission__grid { grid-template-columns: 1fr; gap: 16px; }
-    .mission__label { border-top: 0; padding-top: 0; }
     .who__grid { grid-template-columns: 1fr; gap: 32px; }
   }
 
@@ -128,7 +125,7 @@
   <div class="mast">
     <a class="mast__wordmark" href="#">REMOTE<span class="roast"> ROAST</span></a>
     <nav class="mast__nav" aria-label="Main">
-      <a href="#">Round Ups</a>
+      <a href="#">Reviews</a>
       <a href="#">TL;DR</a>
       <a href="#" class="active">About</a>
     </nav>
@@ -138,14 +135,12 @@
 
 <main class="wrap">
   <section class="abouthead">
-    <div class="abouthead__kicker">Who we are</div>
     <h1>About Remote Roast</h1>
     <p class="lead">Do you work remotely? Trying to find good coffee shops to work at? You've come to the right place!</p>
   </section>
 
   <section class="mission">
     <div class="mission__grid">
-      <div class="mission__label">The mission</div>
       <div class="mission__body">
         <p>In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn't break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?</p>
         <p>So, data nerds that we are, we decided to put all of our findings in one place so you don't have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.</p>
@@ -159,13 +154,11 @@
       <div class="bio">
         <img class="bio__photo" src="../assets/images/osmar.png" alt="Osmar">
         <div class="bio__name">Osmar</div>
-        <div class="bio__role">Reviewer</div>
         <p>After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew.</p>
       </div>
       <div class="bio">
         <img class="bio__photo" src="../assets/images/juliet.jpeg" alt="Juliet">
         <div class="bio__name">Juliet</div>
-        <div class="bio__role">Reviewer</div>
         <p>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP.</p>
       </div>
     </div>
@@ -173,7 +166,6 @@
 
   <section class="support">
     <div class="support__box">
-      <div class="support__label">Support the spreadsheet</div>
       <div class="support__title">Buy our next coffee!</div>
       <p class="support__sub">Thank you for your support! Help us continue to rate coffee shops!</p>
       <div class="support__actions">

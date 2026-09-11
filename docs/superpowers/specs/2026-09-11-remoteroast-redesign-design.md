@@ -51,7 +51,7 @@ Rules of use: espresso does the everyday accent work; **red (`--stamp`) is ratio
 - Signature elements: the **ledger table** (The Verdicts), **six-cell data readouts**, **DM Mono score bars**, hairline rules and double-rules under the masthead. These are the memorable, repeated devices.
 
 ### Shared chrome (all pages)
-- **Masthead:** `REMOTE ROAST` wordmark (ROAST in espresso) + nav, a double-rule divider, and on the homepage a strap line with the real tagline "Judging your café so you don't have to." Nav: **Round Ups · TL;DR · About** (logo = home). See §6 decision on nav.
+- **Masthead:** `REMOTE ROAST` wordmark (ROAST in espresso) + nav, a double-rule divider, and on the homepage a strap line with the real tagline "Judging your café so you don't have to." Nav: **Reviews · TL;DR · About** (logo = home). "Reviews" is a complete index of every review post *and* roundup post (see §3).
 - **Footer:** double/triple rule, "Remote Roast, est. 2023" and "All opinions final" in DM Mono.
 
 ---
@@ -87,6 +87,9 @@ Verbatim copy. Structure: "Who we are" kicker / "About Remote Roast" headline / 
 
 ### Round Ups post — `_layouts/roundup.html` / post.html roundup branch
 Inherits the post restyle; full-width body, no scorecard sidebar. Restyle only.
+
+### Reviews index — nav "Reviews" (new page or restyled `_layouts/archive.html`)
+A complete catalog of **all review posts and all roundup posts**, most-recent first, as a ledger-style list or card grid in the redesign language. This is distinct from TL;DR (ranked leaderboard + map of shop reviews only) and from the homepage (curated front page). The homepage keeps its own curated "Round Ups" content section; there is no separate "Round Ups" nav item.
 
 ---
 
@@ -129,12 +132,35 @@ In the mockups these are hardcoded; in the build they come from data:
 
 ---
 
-## 6. Decisions & open questions
+## 6. Decisions (resolved)
 
-1. **Nav labels.** Mockups use **Round Ups · TL;DR · About** (logo = home); the current theme nav is **Reviews · TL;DR · About**. "The Verdicts" is retired as a nav item because it's the same destination as TL;DR (it survives as the table heading there). *Recommendation:* Round Ups · TL;DR · About, with "Round Ups" linking to the homepage Round Ups section (anchor) since there's no separate roundups index. Confirm, or keep "Reviews."
-2. **Bathrooms field.** The hero readout and post facts show a bathroom count. Some posts have it inside the inline HTML table but not as front matter. *Recommendation:* add an optional `bathrooms:` front-matter field; hide the cell when absent.
-3. **"Reviewer" role label** on About/People cards is not from existing copy. *Recommendation:* keep as a small mono caption or drop — your call; trivial either way.
-4. **Roundup card excerpts** — use each post's real excerpt; confirm they read well or add an optional `blurb:` field.
+1. **Nav = Reviews · TL;DR · About.** "Reviews" is a full index of all reviews *and* roundups (§3). "The Verdicts" is retired as a nav item (survives as the TL;DR table heading). No separate "Round Ups" nav item.
+2. **Add optional `bathrooms:` front-matter field.** Hero readout and post facts show it; hide the cell when absent.
+3. **No invented copy.** Every user-facing string must be either existing site copy or approved by Juliet before it ships. See §6a.
+
+## 6a. Copy inventory — approval gate
+
+Rule: reuse existing theme copy wherever it exists; anything genuinely new needs Juliet's words before implementation. Post/bio/About body copy stays verbatim.
+
+**Reuse existing (no approval needed):** "The Shortcut", "TL;DR", stat labels "Reviews / Opinions / Chill", "Leaderboard", "Click a pin to explore", "Breakdown", "Profile", "Best For…" (+ its four cards), "Buy our next coffee!" + its blurb, "The Verdicts" + "don't @ us", "Who are we?", "The People Responsible For This", "The Breakdown", "Overall", "Find It", the "Judging your café so you don't have to" tagline, and "Minneapolis & St. Paul".
+
+**Reverted in mockups to existing labels:** post sidebar card → "The Breakdown" (was "The Numbers"); hero CTA → "Read the Review →" (was "Read the full report →"); post nav → "All Reviews →" (was "All the verdicts →").
+
+**Removed as invented decoration:** the "Reviewer" role label on bios; the "Support the spreadsheet" eyebrow on the About CTA; the scone figcaption; the TL;DR detail "Selected: … click any pin or row to swap" hint (it's a mockup annotation; the real panel is dynamic).
+
+**NEEDS JULIET'S WORDS (blocking):**
+- Homepage hero eyebrow — currently "Latest review" (placeholder).
+- Homepage recent-reviews section heading — currently "Recent Reviews" (placeholder).
+- Homepage CTA button under recent reviews — currently "All 14 shops, ranked and mapped → TL;DR" (placeholder).
+- TL;DR Verdicts table footnote — currently "MTGS? = would we take a Zoom call here" (placeholder; or drop the footnote).
+- Footer lines — currently "Remote Roast, est. 2023" / "All opinions final" (placeholder).
+- Reviews index page — heading + any intro line (new page, no existing copy).
+- **Round Up card blurbs** — the mockup uses invented one-liners; real build must use each roundup post's actual excerpt, or Juliet supplies a `blurb:` per post.
+
+*Data-composed strings (not invented, kept):* the hero byline assembled from real fields ("St Anthony Main, Minneapolis. Reviewed by Juliet, September 2024."), the post deck from the post's own `<h5>`, prev/next titles.
+
+## 6b. Open question
+- **Roundup blurb source** — use the post excerpt automatically, or add an optional `blurb:` field so you control it? (Affects the homepage Round Ups cards and the Reviews index.)
 
 ---
 
@@ -149,7 +175,7 @@ In the mockups these are hardcoded; in the build they come from data:
 
 ## 8. Files touched (summary)
 
-- **Restyle:** `_sass/_tokens.scss`, `_typography.scss`, `_components.scss`, `_layouts.scss`, `_stars.scss`; `_layouts/home.html`, `post.html`, `roundup.html`; `_pages/tldr.md`, `about.md`; `_includes/nav.html`, `footer.html`, `shop-card.html`, `leaderboard-row.html`, `radar-chart.html`, `stars.html`, `star_rating*`.
+- **Restyle:** `_sass/_tokens.scss`, `_typography.scss`, `_components.scss`, `_layouts.scss`, `_stars.scss`; `_layouts/home.html`, `post.html`, `roundup.html`, `archive.html`; `_pages/tldr.md`, `about.md`; `_includes/nav.html`, `footer.html`, `shop-card.html`, `leaderboard-row.html`, `radar-chart.html`, `stars.html`, `star_rating*`.
+- **Add:** a **Reviews index page** (nav "Reviews") listing all reviews + roundups — new `_pages/reviews.md` or restyled `archive.html`; optional `bathrooms:` (and maybe `blurb:`) front-matter fields; a verdicts-table partial.
 - **Delete / remove import:** `_sass/_blobs.scss`, `assets/js/blobs.js`, `_includes/blob-bg.html`, and any `#parallax-svg` / blob include references in `_layouts/default.html`.
-- **Possibly add:** optional `bathrooms:` (and maybe `blurb:`) front-matter fields; a verdicts-table partial.
 - **Unchanged:** GA4, lunr search, Disqus, feed/SEO, structured data, the Leaflet library include.

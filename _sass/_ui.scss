@@ -1,0 +1,13 @@
+// _sass/_ui.scss
+// Shared UI bits used across pages. This task adds just the button;
+// later tasks add more (sec-head, score bars, data readout, ledger table).
+// Ported verbatim from design_mockups/about.html <style>
+
+.btn {
+  display:inline-block; background: var(--paper); color: var(--ink);
+  font-family:'DM Mono',monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none; padding: 15px 26px; border: 1.5px solid var(--paper);
+}
+.btn:hover { background: var(--espresso); color: var(--paper); border-color: var(--espresso); }
+.btn--ghost { background: transparent; color: var(--paper); }
+.btn--ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }

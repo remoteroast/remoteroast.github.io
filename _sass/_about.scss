@@ -1,0 +1,55 @@
+// _sass/_about.scss
+// About page: hero, mission body, "who are we" bios, support CTA.
+// Ported verbatim from design_mockups/about.html <style>
+
+/* ── About hero ───────────────────────────── */
+.abouthead { padding-block: 48px 8px; max-width: 900px; }
+.abouthead__kicker {
+  font-family:'DM Mono',monospace; font-size: 12px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--espresso);
+}
+.abouthead h1 {
+  font-family:'Bebas Neue', Impact, sans-serif; font-weight: 400; text-transform: uppercase;
+  font-size: clamp(64px, 9vw, 118px); line-height: 0.9; letter-spacing: 0.01em;
+  margin: 12px 0 18px;
+}
+.abouthead .lead {
+  font-size: clamp(22px, 2.6vw, 30px); font-style: italic; line-height: 1.3;
+  color: var(--ink); max-width: 60ch;
+}
+
+/* ── Mission body ─────────────────────────── */
+.mission { padding-block: 40px 8px; }
+.mission__grid { max-width: 720px; }
+.mission__body p { font-size: 19px; line-height: 1.6; margin-bottom: 22px; }
+.mission__body p:last-child { margin-bottom: 0; }
+
+/* ── Who are we ───────────────────────────── */
+.who { padding-block: 64px 8px; }
+.who__title { font-family:'Bebas Neue',sans-serif; font-weight:400; text-transform:uppercase; font-size: clamp(38px,5vw,56px); line-height: 0.9; margin-bottom: 28px; }
+.who__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.bio { border-top: 3px solid var(--ink); padding-top: 20px; }
+.bio__photo { width: 100%; aspect-ratio: 1/1; object-fit: cover; border: 1.5px solid var(--ink); filter: grayscale(25%) contrast(1.04); margin-bottom: 16px; }
+.bio__name { font-family:'Bebas Neue',sans-serif; font-size: 34px; text-transform: uppercase; line-height: 1; }
+.bio__role { font-family:'DM Mono',monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--espresso); margin: 6px 0 12px; }
+.bio p { font-size: 16.5px; line-height: 1.55; }
+
+/* ── Support CTA ──────────────────────────── */
+.support { padding-block: 64px 80px; }
+.support__box { border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); padding: 40px 40px 44px; }
+.support__label { font-family:'DM Mono',monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #C89A6B; margin-bottom: 10px; }
+.support__title { font-family:'Bebas Neue',sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(32px, 4vw, 48px); line-height: 0.95; }
+.support__sub { font-size: 18px; margin: 12px 0 26px; max-width: 52ch; color: #E8DFD2; }
+.support__actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 780px) {
+  .who__grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 640px) {
+  .abouthead { padding-block: 28px 4px; }
+  .mission__body p { font-size: 17px; }
+  .support__box { padding: 28px 22px 30px; }
+  .support__actions .btn { display: block; text-align: center; }
+  .bio__photo { aspect-ratio: 4/3; }
+}

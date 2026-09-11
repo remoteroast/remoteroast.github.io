@@ -124,7 +124,7 @@ In the mockups these are hardcoded; in the build they come from data:
 - **Recent Reviews list** — `site.posts` where tag `review`, sorted by date desc, first 5, excluding the hero.
 - **Leaderboard + Verdicts table** — all review posts sorted by `rating` desc; each row from front matter (`title`, `categories`, `rating`, `wifi`, `drip`, `meeting`, `bestfor`, `lat`/`lng`).
 - **Hero readout + score bars** — the hero post's `wifi`, `drip`, `meeting`, bathrooms(*), and `scores.{coffee,wifi,seating,vibe,outlet,quiet}`.
-- **Round Up cards** — roundup posts' title, date, and **real excerpt** (mockup blurbs are placeholder).
+- **Round Up cards** — roundup posts' title, month/year, and `blurb` (falls back to the existing `description` front-matter value).
 - **Map pins** — `lat`/`lng` per review (existing `window.__shops`).
 - **Bios** — `_config.yml` (homepage) and `_pages/about.md` (About), verbatim.
 
@@ -148,19 +148,23 @@ Rule: reuse existing theme copy wherever it exists; anything genuinely new needs
 
 **Removed as invented decoration:** the "Reviewer" role label on bios; the "Support the spreadsheet" eyebrow on the About CTA; the scone figcaption; the TL;DR detail "Selected: … click any pin or row to swap" hint (it's a mockup annotation; the real panel is dynamic).
 
-**NEEDS JULIET'S WORDS (blocking):**
-- Homepage hero eyebrow — currently "Latest review" (placeholder).
-- Homepage recent-reviews section heading — currently "Recent Reviews" (placeholder).
-- Homepage CTA button under recent reviews — currently "All 14 shops, ranked and mapped → TL;DR" (placeholder).
-- TL;DR Verdicts table footnote — currently "MTGS? = would we take a Zoom call here" (placeholder; or drop the footnote).
-- Footer lines — currently "Remote Roast, est. 2023" / "All opinions final" (placeholder).
-- Reviews index page — heading + any intro line (new page, no existing copy).
-- **Round Up card blurbs** — the mockup uses invented one-liners; real build must use each roundup post's actual excerpt, or Juliet supplies a `blurb:` per post.
+**Approved by Juliet (final):**
+- Homepage hero eyebrow — "Latest review". ✓
+- Homepage recent-reviews heading — "Recent Reviews". ✓
+- Homepage CTA button — "All shops, ranked and mapped → TL;DR" (number dropped). ✓
+- TL;DR Verdicts footnote — "MTGS? = would we take a Zoom call here". ✓
+- Footer lines — "Remote Roast, est. 2023" / "All opinions final". ✓
+- **Round Up card blurbs** — use each roundup post's existing `description` front-matter value (real copy, in voice); card kicker is the post month/year. Add an optional `blurb:` front-matter field that overrides `description` when Juliet wants different card copy. Current values:
+  - Spring Round Up 1 → "A little recap of the first half of spring!"
+  - Spring/Summer Round Up → "Spring part 2 plus a little bit of summer!"
+  - Summer Round Up → "It's cold. We're sad. Let's reflect on Summer."
 
-*Data-composed strings (not invented, kept):* the hero byline assembled from real fields ("St Anthony Main, Minneapolis. Reviewed by Juliet, September 2024."), the post deck from the post's own `<h5>`, prev/next titles.
+**Reviews index heading + intro — Juliet asked for a suggestion (pending approval):**
+- Heading: **"Every Review"** (mono sub: "Reviews + round ups, newest first")
+- Optional intro line: **"Every shop we've hauled a laptop into, plus the round ups. Newest first."**
+- Alternates for the heading: "The Whole List" · "All Of It" · "The Catalog".
 
-## 6b. Open question
-- **Roundup blurb source** — use the post excerpt automatically, or add an optional `blurb:` field so you control it? (Affects the homepage Round Ups cards and the Reviews index.)
+*Data-composed strings (not invented, kept):* the hero byline from real fields ("St Anthony Main, Minneapolis. Reviewed by Juliet, September 2024."), roundup card kicker (post month/year), the post deck from the post's own `<h5>`, prev/next titles.
 
 ---
 

@@ -159,10 +159,9 @@ Rule: reuse existing theme copy wherever it exists; anything genuinely new needs
   - Spring/Summer Round Up → "Spring part 2 plus a little bit of summer!"
   - Summer Round Up → "It's cold. We're sad. Let's reflect on Summer."
 
-**Reviews index heading + intro — Juliet asked for a suggestion (pending approval):**
+**Reviews index heading + intro — approved:**
 - Heading: **"Every Review"** (mono sub: "Reviews + round ups, newest first")
-- Optional intro line: **"Every shop we've hauled a laptop into, plus the round ups. Newest first."**
-- Alternates for the heading: "The Whole List" · "All Of It" · "The Catalog".
+- Intro line: **"Every shop we've hauled a laptop into, plus the round ups. Newest first."**
 
 *Data-composed strings (not invented, kept):* the hero byline from real fields ("St Anthony Main, Minneapolis. Reviewed by Juliet, September 2024."), roundup card kicker (post month/year), the post deck from the post's own `<h5>`, prev/next titles.
 

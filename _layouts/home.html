@@ -16,7 +16,7 @@ layout: default
     <p class="hero__where">{{ featured.categories[0] }}{% if featured.categories[1] %}, {{ featured.categories[1] }}{% endif %}. Reviewed by {{ author.display_name }}, {{ featured.date | date: "%B %Y" }}.</p>
     <p class="hero__quote">{{ featured.excerpt | strip_html | truncatewords: 30 }}</p>
 
-    <div class="readout" role="table" aria-label="Key measurements">
+    <div class="readout" aria-label="Key measurements">
       <div class="readout__cell"><div class="readout__k">Wifi</div><div class="readout__v">{{ featured.wifi }} <small>mbps</small></div></div>
       <div class="readout__cell"><div class="readout__k">Drip</div><div class="readout__v">${{ featured.drip }}</div></div>
       <div class="readout__cell"><div class="readout__k">Meetings</div><div class="readout__v">{{ featured.meeting }}</div></div>

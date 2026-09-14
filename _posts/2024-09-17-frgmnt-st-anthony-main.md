@@ -12,6 +12,7 @@ meeting: "Yes"
 maps: "https://maps.app.goo.gl/6ABabjJQt9fxonCY6" #! REPLACE !!!!!
 wifi: "150"
 drip: "3.49"
+bathrooms: 4
 lat: 44.986123
 lng: -93.258371
 bestfor: "Best Aesthetic"

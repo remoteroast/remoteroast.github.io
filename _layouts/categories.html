@@ -4,23 +4,47 @@ layout: default
 permalink: "/categories.html"
 ---
 
-<div class="container">
-  <div class="categories-page" style="padding: 48px 0;">
-    <h1 style="margin-bottom: 32px;">{{ page.title }}</h1>
-    {% for category in site.categories %}
-      <div class="categories-page__section">
-        <h2 class="categories-page__heading" id="{{ category[0] | replace: ' ', '-' }}">
-          {{ category[0] }}
-          <span style="font-size:0.5em;opacity:0.5;margin-left:12px;">{{ category[1].size }}</span>
-        </h2>
-        <div class="verdicts__grid">
-          {% for post in category[1] %}
-            {% if post.title %}
-              {% include shop-card.html post=post idx=forloop.index %}
-            {% endif %}
-          {% endfor %}
-        </div>
+<div class="wrap">
+  <section class="reviewshead">
+    <div class="reviewshead__kicker">Browse by category</div>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">Every review and round up, grouped by category.</p>
+  </section>
+
+  {% for category in site.categories %}
+    <section class="reviewslist">
+      <h2 class="categories-page__heading" id="{{ category[0] | replace: ' ', '-' }}">
+        {{ category[0] }}
+        <span style="font-size:0.5em;opacity:0.5;margin-left:12px;">{{ category[1].size }}</span>
+      </h2>
+      <div class="sheet">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Shop / Title</th>
+              <th scope="col">Type</th>
+              <th scope="col">Neighborhood</th>
+              <th scope="col">Reviewed</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for post in category[1] %}
+              {% if post.title %}
+              {% assign full = post.rating | floor %}
+              {% assign half_pos = full | plus: 1 %}
+              <tr>
+                <td class="shop"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+                <td class="hood">{% if post.tags contains 'review' %}Review{% else %}Round Up{% endif %}</td>
+                <td class="hood">{% if post.tags contains 'review' %}{{ post.categories[0] }}{% else %}—{% endif %}</td>
+                <td class="hood">{{ post.date | date: "%b %Y" }}</td>
+                <td class="num">{% if post.rating %}<span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}{% else %}—{% endif %}</td>
+              </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-    {% endfor %}
-  </div>
+    </section>
+  {% endfor %}
 </div>

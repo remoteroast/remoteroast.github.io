@@ -149,17 +149,6 @@ layout: default
 
 <script>
 (function () {
-  // Animate score bars
-  var fills = document.querySelectorAll('.js-bar-fill');
-  if (fills.length) {
-    setTimeout(function () {
-      fills.forEach(function (f) {
-        var val = parseFloat(f.dataset.val) || 0;
-        f.style.width = ((val / 5) * 100) + '%';
-      });
-    }, 400);
-  }
-
   // Label table cells for mobile stacking
   document.querySelectorAll('table.table').forEach(function (table) {
     var headers = Array.prototype.slice.call(table.querySelectorAll('thead th')).map(function (th) {
@@ -234,7 +223,7 @@ layout: default
         '<div style="font-family:\'DM Mono\',monospace;min-width:160px;padding:4px 2px;">' +
         '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:#0D0D0D;line-height:1;margin-bottom:4px;">{{ page.title | escape }}</div>' +
         '<div style="font-size:10px;color:#5C5A57;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;">{{ page.categories[0] }}{% if page.categories[1] %} · {{ page.categories[1] }}{% endif %}</div>' +
-        '<a href="' + mapsUrl + '" target="_blank" rel="noopener" style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#D4AA20;border-bottom:1px solid #D4AA20;text-decoration:none;">Directions →</a>' +
+        '<a href="' + mapsUrl + '" target="_blank" rel="noopener" style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#52341E;border-bottom:1px solid #52341E;text-decoration:none;">Directions →</a>' +
         '</div>';
       L.marker([{{ page.lat }}, {{ page.lng }}], {
         icon: L.divIcon({ html: svg, iconSize: [24, 30], iconAnchor: [12, 30], className: '' })

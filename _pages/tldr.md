@@ -30,12 +30,12 @@ window.__shops = [
 ];
 </script>
 
+<div class="wrap">
+
 <!-- Hero -->
 <section class="tldr-hero">
-  <div class="tldr-hero__left">
-    <div class="tldr-hero__label">The Shortcut</div>
+  <div>
     <h1 class="tldr-hero__title">TL;DR</h1>
-    <p class="tldr-hero__sub">All {{ review_posts.size }} reviews. Ranked. Mapped. So you don't have to read the whole thing — though you should.</p>
   </div>
   <div class="tldr-hero__stats">
     <div class="tldr-hero__stat">
@@ -53,15 +53,17 @@ window.__shops = [
   </div>
 </section>
 
+<p class="tldr-hero__sub">All {{ review_posts.size }} reviews. Ranked. Mapped. So you don't have to read the whole thing — though you should.</p>
+
 <!-- Map + Leaderboard -->
 <section class="tldr-main">
-  <div class="tldr-map-panel">
+  <div class="map-col">
     <div id="tldr-map" aria-label="Map of reviewed coffee shops" role="application"></div>
-    <div class="tldr-map-panel__hint">Click a pin to explore</div>
+    <div class="map-col__hint">Click a pin to explore</div>
   </div>
-  <div class="tldr-leaderboard">
-    <div class="tldr-leaderboard__header">Leaderboard</div>
-    <div class="tldr-leaderboard__body">
+  <div class="board">
+    <div class="board__head">Leaderboard</div>
+    <div class="board__body">
       {% assign rank = 0 %}
       {% for post in review_posts %}
         {% assign rank = rank | plus: 1 %}
@@ -93,73 +95,78 @@ window.__shops = [
   </div>
 </section>
 
-<!-- Best For -->
+<!-- Best For — 4 random shops (re-picked on every build), from each review's own bestfor field -->
+{% assign bestfor_eligible = review_posts | where_exp: "p", "p.bestfor" %}
+{% assign bestfor_posts = bestfor_eligible | sample_n: 4 %}
 <section class="tldr-bestfor">
   <div class="tldr-bestfor__label">Best For...</div>
   <div class="tldr-bestfor__grid">
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Coffee</div>
-      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
-      <div class="tldr-bestfor__card-reason">Pineapple espresso. Iconic. Weird. Perfect.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Seating</div>
-      <div class="tldr-bestfor__card-winner">FRGMNT</div>
-      <div class="tldr-bestfor__card-reason">Freaking huge. Freaking seated. Never kicked out.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Vibe</div>
-      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
-      <div class="tldr-bestfor__card-reason">The playlist was doing something. We don't ask questions.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Most Caffeinated Trip</div>
-      <div class="tldr-bestfor__card-winner">Roots Roasting</div>
-      <div class="tldr-bestfor__card-reason">The beans hit different. We didn't sleep for 11 hours. 10/10.</div>
-    </div>
+    {% for post in bestfor_posts %}
+    <a class="tldr-bestfor__card" href="{{ post.url | relative_url }}">
+      <div class="tldr-bestfor__card-label">{{ post.bestfor }}</div>
+      <div class="tldr-bestfor__card-winner">{{ post.title }}</div>
+    </a>
+    {% endfor %}
   </div>
 </section>
 
-<!-- Data table -->
-<div class="container" style="margin-top:48px;">
-  {% include tilted-tag.html text="THE NUMBERS" idx=3 %}
-  <div class="table-responsive" style="margin-top:16px;">
-    <table class="table">
+<!-- The Verdicts ledger -->
+{% assign ranked_posts = review_posts | sort: "rating" | reverse %}
+<section class="tldr-verdicts">
+  <div class="sec-head">
+    <div class="title-wrap">
+      <h2>The Verdicts</h2>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <table>
       <thead>
         <tr>
-          <th>Coffee Shop</th>
-          <th>City</th>
-          <th>Stars</th>
-          <th>Wifi (mbps)</th>
-          <th>Meetings?</th>
-          <th>$ Drip</th>
+          <th scope="col" class="num">#</th>
+          <th scope="col">Shop</th>
+          <th scope="col">Neighborhood</th>
+          <th scope="col" class="rating">Rating</th>
+          <th scope="col" class="num">Wifi</th>
+          <th scope="col" class="num">Drip</th>
+          <th scope="col">MTGS?</th>
+          <th scope="col">Best For</th>
         </tr>
       </thead>
       <tbody>
-        {% for post in review_posts %}
-        <tr>
-          <td><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
-          <td>{% if post.maps %}<a href="{{ post.maps }}" target="_blank" rel="noopener">{{ post.categories[0] }}</a>{% else %}{{ post.categories[0] }}{% endif %}</td>
-          <td>{% include stars.html rating=post.rating %}</td>
-          <td>{{ post.wifi }}</td>
-          <td>{{ post.meeting }}</td>
-          <td>{% if post.drip %}${{ post.drip }}{% endif %}</td>
+        {% assign vrank = 0 %}
+        {% for post in ranked_posts %}
+        {% assign vrank = vrank | plus: 1 %}
+        {% assign full = post.rating | floor %}
+        {% assign half_pos = full | plus: 1 %}
+        <tr{% if vrank == 1 %} class="top"{% endif %}>
+          <td class="rank">{% if vrank < 10 %}0{% endif %}{{ vrank }}</td>
+          <td class="shop"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+          <td class="hood">{% if post.maps %}<a href="{{ post.maps }}" target="_blank" rel="noopener">{{ post.categories[0] }}</a>{% else %}{{ post.categories[0] }}{% endif %}</td>
+          <td class="rating"><span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}</td>
+          <td class="num">{{ post.wifi }}</td>
+          <td class="num">{% if post.drip %}${{ post.drip }}{% endif %}</td>
+          <td class="mtg">{% if post.meeting == "No" %}<span class="no">{{ post.meeting }}</span>{% else %}{{ post.meeting }}{% endif %}</td>
+          <td class="best">{{ post.bestfor }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
+  <p class="footnote"><em>MTGS?</em> = would we take a Zoom call here.</p>
+</section>
 
-  <div class="cta-block" style="margin:48px 0;">
-    <div class="cta-block__title">Buy our next coffee!</div>
-    <p class="cta-block__sub">Help us keep rating. No paywalls, no sponsored content, just data.</p>
-    <div class="cta-block__actions">
-      <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn"
-         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
-      <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn btn--secondary"
-         onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
-    </div>
+<div class="cta-block" style="margin:48px 0;">
+  <div class="cta-block__title">Buy our next coffee!</div>
+  <p class="cta-block__sub">Help us keep rating. No paywalls, no sponsored content, just data.</p>
+  <div class="cta-block__actions">
+    <a href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener" class="btn"
+       onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'juliet'})">Buy Juliet a coffee</a>
+    <a href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener" class="btn btn--secondary"
+       onclick="if(typeof rrTrack==='function') rrTrack('venmo_click', {author: 'osmar'})">Buy Osmar a coffee</a>
   </div>
+</div>
+
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>

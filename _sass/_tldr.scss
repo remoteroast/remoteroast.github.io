@@ -1,0 +1,206 @@
+// _sass/_tldr.scss
+// TL;DR page: hero, map + leaderboard, JS-driven detail panel, Best For.
+// Ported from design_mockups/tldr-leaderboard.html — class names kept as
+// the existing tldr-* / leaderboard-row / det-* BEM contract that
+// assets/js/tldr-map.js depends on; visuals match the mockup's
+// .tldr-hero* / .map-col* / .board* / .row* / .detail* / .bestfor*.
+
+/* ── TL;DR hero ───────────────────────────── */
+.tldr-hero {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 32px; flex-wrap: wrap; padding: 48px 0 36px;
+}
+.tldr-hero__label {
+  font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--espresso);
+}
+.tldr-hero__title {
+  font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; text-transform: uppercase;
+  font-size: clamp(64px, 9vw, 128px); line-height: 0.88; letter-spacing: 0.01em;
+  margin: 10px 0 8px;
+}
+.tldr-hero__sub {
+  font-style: italic; font-size: clamp(17px, 1.8vw, 20px); color: var(--ink);
+  margin: 0 0 28px;
+}
+.tldr-hero__stats { display: flex; border: 1.5px solid var(--ink); }
+.tldr-hero__stat { padding: 14px 26px 16px; border-right: 1px solid var(--rule-lt); text-align: center; }
+.tldr-hero__stat:last-child { border-right: 0; }
+.tldr-hero__stat-n { font-family: 'Bebas Neue', sans-serif; font-size: 44px; line-height: 1; }
+.tldr-hero__stat-label {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--pencil); margin-top: 4px;
+}
+
+/* ── Map + leaderboard ────────────────────── */
+/* Independent panels (not one shared box) so the leaderboard can be
+   shorter than the map without leaving blank space inside a shared border. */
+.tldr-main {
+  display: grid; grid-template-columns: 1.55fr 1fr; gap: 20px;
+  align-items: start; margin-bottom: 32px;
+}
+.map-col { border: 1.5px solid var(--ink); position: relative; }
+#tldr-map { width: 100%; height: 100%; min-height: 460px; background: var(--paper-2); }
+.map-col__hint {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 500;
+  border-top: 1px solid var(--rule-lt); padding: 8px 14px; background: var(--paper);
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--pencil);
+}
+
+.board { display: flex; flex-direction: column; border: 1.5px solid var(--ink); }
+.board__head {
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--paper); background: var(--ink); padding: 10px 16px;
+}
+/* Show 5 rows (each ~76.5px), scroll vertically for the rest; never scroll horizontally */
+.board__body { overflow-y: auto; overflow-x: hidden; max-height: 384px; }
+
+/* Leaderboard row — the class + data-* attrs are read directly by
+   assets/js/tldr-map.js (querySelectorAll('.leaderboard-row'),
+   dataset.lat/lng/shop). Do not rename. */
+.leaderboard-row {
+  display: grid; grid-template-columns: 30px 1fr auto; align-items: center; gap: 12px;
+  padding: 11px 16px; border-bottom: 1px solid var(--rule-lt); cursor: pointer;
+  text-align: left; width: 100%; background: transparent;
+}
+.leaderboard-row:hover { background: var(--paper-2); }
+.leaderboard-row.is-active { background: var(--paper-2); box-shadow: inset 3px 0 0 var(--stamp); }
+.leaderboard-row__info { display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.leaderboard-row__name { overflow-wrap: break-word; }
+.leaderboard-row__rank { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--pencil); }
+.leaderboard-row.is-active .leaderboard-row__rank { color: var(--stamp); }
+.leaderboard-row__name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.02em; line-height: 1.05;
+  text-decoration: none; color: var(--ink);
+  /* .leaderboard-row__info is a column flex container, whose default
+     align-items:stretch forces children to fill the full cross-axis
+     width regardless of display type — align-self here is what actually
+     shrinks the clickable hit area down to the text itself. Without it,
+     clicking anywhere to the right of the visible title (still inside
+     the info column) hit the link and navigated, when it should have
+     fallen through to the row's map-select handler. */
+  display: inline-block;
+  align-self: flex-start;
+  max-width: 100%;
+}
+.leaderboard-row__name:hover { color: var(--stamp); }
+.leaderboard-row__sub {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--pencil); margin-top: 3px;
+}
+.leaderboard-row__stars { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--espresso); white-space: nowrap; }
+.leaderboard-row__stars .stars { display: inline-flex; gap: 1px; }
+
+/* ── Detail panel (populated at runtime by tldr-map.js) ──
+   #tldr-detail / #det-img / #det-hood / #det-name / #det-link / #det-bars /
+   #det-radar / #det-bestfor / #det-author are the exact IDs the JS fills —
+   keep them. Styling only. */
+.tldr-detail {
+  display: grid; grid-template-columns: 0.9fr 1fr 1fr;
+  border: 1.5px solid var(--ink);
+}
+.tldr-detail__image-col { position: relative; border-right: 1px solid var(--rule-lt); min-height: 300px; }
+.tldr-detail__image { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tldr-detail__overlay {
+  position: absolute; inset: auto 0 0 0; padding: 16px;
+  /* Solid scrim (not a gradient) so text stays readable over both very
+     light and very dark photos — a gradient left the top line (hood)
+     sitting on the near-transparent edge. */
+  background: rgba(13,13,13,0.78);
+  color: var(--paper);
+}
+.tldr-detail__hood { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #E8D9C4; }
+.tldr-detail__name {
+  font-family: 'Bebas Neue', sans-serif; font-weight: 400; text-transform: uppercase;
+  font-size: 34px; line-height: 0.95; margin: 4px 0 10px;
+  /* It's an <h2>; the global heading reset sets color:var(--ink), which
+     wins over the inherited light overlay color (direct rules beat
+     inheritance) — without this override it was dark text on a dark
+     scrim. */
+  color: var(--paper);
+}
+.tldr-detail__bestfor {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #E8D9C4; margin-bottom: 8px;
+}
+.tldr-detail__cta {
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--paper); text-underline-offset: 3px;
+}
+.tldr-detail__bars-col, .tldr-detail__radar-col {
+  padding: 16px 18px 20px; border-right: 1px solid var(--rule-lt);
+}
+.tldr-detail__radar-col { border-right: 0; display: flex; flex-direction: column; align-items: center; }
+.tldr-detail__section-label {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--pencil); margin-bottom: 14px; align-self: flex-start;
+}
+.tldr-detail__bars-col .tldr-detail__section-label { align-self: auto; }
+
+/* score-bar — markup generated by tldr-map.js selectShop() (.score-bar,
+   .score-bar__header/__label/__value/__track/__fill). Keep class names. */
+.score-bar { display: grid; grid-template-columns: 66px 1fr 16px; align-items: center; gap: 10px; margin-bottom: 9px; }
+.score-bar__header { display: contents; }
+.score-bar__label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.score-bar__value { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--pencil); text-align: right; order: 3; }
+.score-bar__track {
+  height: 12px; background: var(--paper-2); border: 1px solid var(--rule-lt); position: relative; overflow: hidden;
+}
+.score-bar__fill { height: 100%; background: var(--espresso); }
+
+#det-radar svg { display: block; margin: 0 auto; }
+#det-author { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pencil); }
+#det-author img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; }
+
+/* ── Best For cards ───────────────────────── */
+.tldr-bestfor { padding: 56px 0 8px; }
+.tldr-bestfor__label {
+  font-family: 'Bebas Neue', sans-serif; font-weight: 400; text-transform: uppercase;
+  font-size: clamp(30px, 4vw, 44px); margin-bottom: 20px;
+}
+.tldr-bestfor__grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px solid var(--ink); border-bottom: 0; }
+.tldr-bestfor__card {
+  display: block; text-decoration: none; padding: 18px 18px 20px;
+  border-right: 1px solid var(--rule-lt); border-bottom: 1.5px solid var(--ink);
+}
+.tldr-bestfor__card:nth-child(4n) { border-right: 0; }
+.tldr-bestfor__card:hover { background: var(--paper-2); }
+.tldr-bestfor__card-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--espresso); }
+.tldr-bestfor__card-winner { font-family: 'Bebas Neue', sans-serif; font-size: 24px; text-transform: uppercase; margin: 6px 0 0; line-height: 0.95; color: var(--ink); }
+.tldr-bestfor__card:hover .tldr-bestfor__card-winner { color: var(--stamp); }
+
+/* ── Verdicts table section spacing ───────── */
+.tldr-verdicts { padding-block: 48px 8px; }
+
+@media (max-width: 900px) {
+  .tldr-main { grid-template-columns: 1fr; }
+  .tldr-detail { grid-template-columns: 1fr; }
+  .tldr-detail__image-col { border-right: 0; border-bottom: 1px solid var(--rule-lt); }
+  .tldr-detail__bars-col, .tldr-detail__radar-col { border-right: 0; border-bottom: 1px solid var(--rule-lt); }
+  .tldr-bestfor__grid { grid-template-columns: 1fr 1fr; }
+  .tldr-bestfor__card:nth-child(4n) { border-right: 1px solid var(--rule-lt); }
+  .tldr-bestfor__card:nth-child(2n) { border-right: 0; }
+}
+
+@media (max-width: 640px) {
+  .tldr-hero { padding: 28px 0 24px; gap: 20px; }
+  .tldr-hero__stats { width: 100%; }
+  .tldr-hero__stat { flex: 1; padding: 12px 8px 14px; }
+  #tldr-map { min-height: 300px; }
+  .tldr-bestfor { padding: 40px 0 8px; }
+  .tldr-bestfor__grid { grid-template-columns: 1fr; }
+  .tldr-bestfor__card { border-right: 0; border-bottom: 1px solid var(--rule-lt); }
+  .tldr-bestfor__card:last-child { border-bottom: 0; }
+  .tldr-detail__name { font-size: 30px; }
+
+  .tldr-verdicts .sheet table { min-width: 0; }
+  .tldr-verdicts thead { display: none; }
+  .tldr-verdicts tbody, .tldr-verdicts tr, .tldr-verdicts td { display: block; width: 100%; }
+  .tldr-verdicts tr { border-top: 1px solid var(--rule-lt); padding: 12px 14px; }
+  .tldr-verdicts tr:nth-child(even) { background: color-mix(in srgb, var(--paper-2) 45%, var(--paper)); }
+  .tldr-verdicts td { padding: 2px 0; border: 0; }
+  .tldr-verdicts td.shop a { font-size: 24px; }
+  .tldr-verdicts td.num, .tldr-verdicts td.mtg, .tldr-verdicts td.rank { text-align: left; }
+  .tldr-verdicts td.rank { background: transparent; }
+}

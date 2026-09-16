@@ -10,7 +10,7 @@
 
   function pinSvg(size, fill, stroke) {
     size = size || 28;
-    fill = fill || '#D4AA20';
+    fill = fill || '#52341E';
     stroke = stroke || '#0D0D0D';
     var r = Math.round(size / 2);
     return '<svg width="' + size + '" height="' + Math.round(size * 1.25) + '" viewBox="0 0 24 30" xmlns="http://www.w3.org/2000/svg">' +
@@ -23,7 +23,7 @@
     var size = active ? 32 : 24;
     return L.divIcon({
       className: '',
-      html: pinSvg(size, '#D4AA20', '#0D0D0D'),
+      html: pinSvg(size, active ? '#C8311C' : '#52341E', '#0D0D0D'),
       iconSize: [size, Math.round(size * 1.25)],
       iconAnchor: [Math.round(size / 2), Math.round(size * 1.25)],
       popupAnchor: [0, -Math.round(size * 1.25)]
@@ -57,9 +57,8 @@
       if (window.matchMedia('(max-width: 768px)').matches) {
         map.dragging.disable();
       }
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
       }).addTo(map);
 
@@ -67,12 +66,12 @@
         var popup = L.popup({ closeButton: false }).setContent(
           '<div style="font-family:\'DM Mono\',monospace;min-width:160px;padding:4px;">' +
           '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;line-height:1;margin-bottom:4px;color:#0D0D0D;">' + shop.title + '</div>' +
-          '<div style="font-size:10px;color:#D4AA20;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">' + (shop.city || '') + '</div>' +
+          '<div style="font-size:10px;color:#52341E;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">' + (shop.city || '') + '</div>' +
           '<div style="margin-bottom:8px;">' + renderStars(shop.rating) + '</div>' +
           (shop.bestfor ? '<div style="font-family:\'DM Mono\',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#5C5A57;margin-bottom:8px;">Best For · ' + shop.bestfor + '</div>' : '') +
           '<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">' +
-          '<a href="' + shop.url + '" style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#0D0D0D;border-bottom:1px solid #D4AA20;text-decoration:none;">Read Review →</a>' +
-          (shop.maps ? '<a href="' + shop.maps + '" target="_blank" rel="noopener" style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#D4AA20;border-bottom:1px solid #D4AA20;text-decoration:none;">Directions →</a>' : '') +
+          '<a href="' + shop.url + '" style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#0D0D0D;border-bottom:1px solid #52341E;text-decoration:none;">Read Review →</a>' +
+          (shop.maps ? '<a href="' + shop.maps + '" target="_blank" rel="noopener" style="font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#52341E;border-bottom:1px solid #52341E;text-decoration:none;">Directions →</a>' : '') +
           '</div>' +
           '</div>'
         );
@@ -179,16 +178,13 @@
     });
   }
 
-  // Leaderboard clicks
+  // Leaderboard clicks — only the shop name (the <a>) navigates to the
+  // review, on every device. Clicking anywhere else in the row (rank,
+  // city, stars, padding) just selects the shop on the map/detail panel.
   document.querySelectorAll('.leaderboard-row').forEach(function (row, idx) {
     row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
       var isMobile = window.innerWidth < 768;
-      // On desktop: let the shop name link navigate normally
-      // On mobile: intercept the link and show detail instead (CTA in detail panel is the nav entry point)
-      if (e.target.tagName === 'A') {
-        if (!isMobile) return;
-        e.preventDefault();
-      }
       var shopTitle = row.dataset.shop;
       var lat = parseFloat(row.dataset.lat);
       var lng = parseFloat(row.dataset.lng);
@@ -223,8 +219,8 @@
       var filled = i <= rating;
       html += '<svg width="13" height="13" viewBox="0 0 14 14">' +
         '<polygon points="7,1 8.8,5.2 13.3,5.5 10,8.4 11,13 7,10.5 3,13 4,8.4 0.7,5.5 5.2,5.2" ' +
-        'fill="' + (filled ? '#D4AA20' : 'transparent') + '" ' +
-        'stroke="' + (filled ? '#D4AA20' : 'rgba(13,13,13,0.25)') + '" stroke-width="0.8"/>' +
+        'fill="' + (filled ? '#52341E' : 'transparent') + '" ' +
+        'stroke="' + (filled ? '#52341E' : 'rgba(13,13,13,0.25)') + '" stroke-width="0.8"/>' +
         '</svg>';
     }
     return html + '</span>';
@@ -254,10 +250,10 @@
       var a = (i * 60 - 90) * Math.PI / 180, r = (Math.min(5, Math.max(0, s)) / 5) * rMax;
       return (cx + Math.cos(a) * r).toFixed(1) + ',' + (cy + Math.sin(a) * r).toFixed(1);
     }).join(' ');
-    out.push('<polygon points="'+dp+'" fill="#D4AA20" fill-opacity="0.2" stroke="#D4AA20" stroke-width="1.5"/>');
+    out.push('<polygon points="'+dp+'" fill="#52341E" fill-opacity="0.2" stroke="#52341E" stroke-width="1.5"/>');
     vals.forEach(function (s, i) {
       var a = (i * 60 - 90) * Math.PI / 180, r = (Math.min(5, Math.max(0, s)) / 5) * rMax;
-      out.push('<circle cx="'+(cx+Math.cos(a)*r).toFixed(1)+'" cy="'+(cy+Math.sin(a)*r).toFixed(1)+'" r="3" fill="#D4AA20"/>');
+      out.push('<circle cx="'+(cx+Math.cos(a)*r).toFixed(1)+'" cy="'+(cy+Math.sin(a)*r).toFixed(1)+'" r="3" fill="#52341E"/>');
     });
     out.push('</svg>');
     return out.join('');

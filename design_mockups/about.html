@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOCKUP: About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #F2EDE6;
+    --paper-2:  #EAE3D7;
+    --ink:      #0D0D0D;
+    --espresso: #52341E;
+    --pencil:   #8A8378;
+    --stamp:    #C8311C;
+    --rule:     rgba(13,13,13,0.85);
+    --rule-lt:  rgba(13,13,13,0.18);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { overflow-x: hidden; }
+  img { max-width: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+
+  /* ── Masthead (shared) ────────────────────── */
+  header.site { padding-top: 56px; }
+  .mast { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-bottom: 10px; }
+  .mast__wordmark {
+    font-family:'Bebas Neue', Impact, sans-serif;
+    font-size: clamp(34px, 4.5vw, 54px); line-height: 0.9; letter-spacing: 0.015em;
+    text-decoration: none;
+  }
+  .mast__wordmark .roast { color: var(--espresso); }
+  nav.mast__nav { display:flex; gap: 28px; }
+  nav.mast__nav a {
+    font-family:'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent;
+  }
+  nav.mast__nav a:hover { border-bottom-color: var(--stamp); }
+  nav.mast__nav a.active { border-bottom-color: var(--ink); }
+  .dbl-rule { border-top: 3px solid var(--rule); border-bottom: 1px solid var(--rule); height: 6px; }
+
+  /* ── About hero ───────────────────────────── */
+  .abouthead { padding-block: 48px 8px; max-width: 900px; }
+  .abouthead__kicker {
+    font-family:'DM Mono',monospace; font-size: 12px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--espresso);
+  }
+  .abouthead h1 {
+    font-family:'Bebas Neue', Impact, sans-serif; font-weight: 400; text-transform: uppercase;
+    font-size: clamp(64px, 9vw, 118px); line-height: 0.9; letter-spacing: 0.01em;
+    margin: 12px 0 18px;
+  }
+  .abouthead .lead {
+    font-size: clamp(22px, 2.6vw, 30px); font-style: italic; line-height: 1.3;
+    color: var(--ink); max-width: 60ch;
+  }
+
+  /* ── Mission body ─────────────────────────── */
+  .mission { padding-block: 40px 8px; }
+  .mission__grid { max-width: 720px; }
+  .mission__body p { font-size: 19px; line-height: 1.6; margin-bottom: 22px; }
+  .mission__body p:last-child { margin-bottom: 0; }
+
+  /* ── Who are we ───────────────────────────── */
+  .who { padding-block: 64px 8px; }
+  .who__title { font-family:'Bebas Neue',sans-serif; font-weight:400; text-transform:uppercase; font-size: clamp(38px,5vw,56px); line-height: 0.9; margin-bottom: 28px; }
+  .who__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .bio { border-top: 3px solid var(--ink); padding-top: 20px; }
+  .bio__photo { width: 100%; aspect-ratio: 1/1; object-fit: cover; border: 1.5px solid var(--ink); filter: grayscale(25%) contrast(1.04); margin-bottom: 16px; }
+  .bio__name { font-family:'Bebas Neue',sans-serif; font-size: 34px; text-transform: uppercase; line-height: 1; }
+  .bio__role { font-family:'DM Mono',monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--espresso); margin: 6px 0 12px; }
+  .bio p { font-size: 16.5px; line-height: 1.55; }
+
+  /* ── Support CTA ──────────────────────────── */
+  .support { padding-block: 64px 80px; }
+  .support__box { border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); padding: 40px 40px 44px; }
+  .support__label { font-family:'DM Mono',monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #C89A6B; margin-bottom: 10px; }
+  .support__title { font-family:'Bebas Neue',sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(32px, 4vw, 48px); line-height: 0.95; }
+  .support__sub { font-size: 18px; margin: 12px 0 26px; max-width: 52ch; color: #E8DFD2; }
+  .support__actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display:inline-block; background: var(--paper); color: var(--ink);
+    font-family:'DM Mono',monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+    text-decoration: none; padding: 15px 26px; border: 1.5px solid var(--paper);
+  }
+  .btn:hover { background: var(--espresso); color: var(--paper); border-color: var(--espresso); }
+  .btn--ghost { background: transparent; color: var(--paper); }
+  .btn--ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+
+  footer.site { border-top: 3px solid var(--ink); padding: 20px 0 40px; }
+  footer.site .row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: var(--pencil); }
+
+  @media (max-width: 780px) {
+    .who__grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  @media (max-width: 640px) {
+    .wrap { padding-inline: 18px; }
+    header.site { padding-top: 28px; }
+    .mast { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .mast__wordmark { font-size: 40px; }
+    nav.mast__nav { gap: 16px 20px; flex-wrap: wrap; }
+    .abouthead { padding-block: 28px 4px; }
+    .mission__body p { font-size: 17px; }
+    .support__box { padding: 28px 22px 30px; }
+    .support__actions .btn { display: block; text-align: center; }
+    .bio__photo { aspect-ratio: 4/3; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site wrap">
+  <div class="mast">
+    <a class="mast__wordmark" href="#">REMOTE<span class="roast"> ROAST</span></a>
+    <nav class="mast__nav" aria-label="Main">
+      <a href="#">Reviews</a>
+      <a href="#">TL;DR</a>
+      <a href="#" class="active">About</a>
+    </nav>
+  </div>
+  <div class="dbl-rule" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+  <section class="abouthead">
+    <h1>About Remote Roast</h1>
+    <p class="lead">Do you work remotely? Trying to find good coffee shops to work at? You've come to the right place!</p>
+  </section>
+
+  <section class="mission">
+    <div class="mission__grid">
+      <div class="mission__body">
+        <p>In the age of remote work, it can be easy to get stuck in your house. But when we decided to come together and work at local coffee shops, we had to search around for places with good wifi, comfortable work environments, and prices that wouldn't break the bank. We wanted to know which places were good for meetings. Where could we go for fun seasonal drinks when we wanted a little treat? If we were staying for a while, did they have good food? And most importantly, with all the caffeine we were putting in our bodies -- how many bathrooms did they have?</p>
+        <p>So, data nerds that we are, we decided to put all of our findings in one place so you don't have to scour Yelp reviews to see if the wifi is fast enough to load TikTok on your breaks from hard work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <h2 class="who__title">Who are we?</h2>
+    <div class="who__grid">
+      <div class="bio">
+        <img class="bio__photo" src="../assets/images/osmar.png" alt="Osmar">
+        <div class="bio__name">Osmar</div>
+        <p>After dropping out of bartending school, Osmar is now a computational neuroscience researcher at the University of Minnesota. His favorite espresso drink is an iced vanilla americano (light ice), and he's also a big fan of iced chai and london fog lattes. When not at a coffee shop, he can be found setting off fires in kitchens. Despite being incredibly chaotic in the kitchen, he does make mean shrimp stew.</p>
+      </div>
+      <div class="bio">
+        <img class="bio__photo" src="../assets/images/juliet.jpeg" alt="Juliet">
+        <div class="bio__name">Juliet</div>
+        <p>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="support">
+    <div class="support__box">
+      <div class="support__title">Buy our next coffee!</div>
+      <p class="support__sub">Thank you for your support! Help us continue to rate coffee shops!</p>
+      <div class="support__actions">
+        <a class="btn" href="https://account.venmo.com/u/juliet-kelson" target="_blank" rel="noopener">Buy Juliet a coffee</a>
+        <a class="btn btn--ghost" href="https://account.venmo.com/u/osmar-delrio" target="_blank" rel="noopener">Buy Osmar a coffee</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap row">
+    <span>Remote Roast, est. 2023</span>
+    <span>All opinions final</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+// _sass/_chrome.scss
+// Shared chrome: masthead, nav, footer, .wrap
+// Ported verbatim from design_mockups/about.html <style>
+
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+
+/* ── Masthead (shared) ────────────────────── */
+header.site { padding-top: 56px; }
+.mast { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-bottom: 10px; }
+.mast__wordmark {
+  font-family:'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(34px, 4.5vw, 54px); line-height: 0.9; letter-spacing: 0.015em;
+  text-decoration: none;
+}
+.mast__wordmark .roast { color: var(--espresso); }
+nav.mast__nav { display:flex; gap: 28px; }
+nav.mast__nav a {
+  font-family:'DM Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent;
+}
+nav.mast__nav a:hover { border-bottom-color: var(--stamp); }
+nav.mast__nav a.active { border-bottom-color: var(--ink); }
+.dbl-rule { border-top: 3px solid var(--rule); border-bottom: 1px solid var(--rule); height: 6px; }
+
+footer.site { border-top: 3px solid var(--ink); padding: 20px 0 40px; }
+footer.site .row { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color: var(--pencil); }
+
+a:focus-visible, [role="button"]:focus-visible, button:focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  .wrap { padding-inline: 18px; }
+  header.site { padding-top: 28px; }
+  .mast { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .mast__wordmark { font-size: 40px; }
+  nav.mast__nav { gap: 16px 20px; flex-wrap: wrap; }
+}

@@ -6,6 +6,7 @@ categories: ["2023"]
 tags: [roundup]
 image: assets/images/summer_roundup.png
 description: "It's cold. We're sad. Let's reflect on Summer."
+blurb: "It's cold. We're sad. Let's reflect on Summer."
 intro: "Did you think we'd be consistent in posting every week? That's on us for lying but also on you for believing us."
 outro: "That's what we've got, folks! Stick around for more round ups, and keep an eye on our Instagram for new reviews as we release them!"
 shops:

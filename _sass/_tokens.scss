@@ -1,21 +1,32 @@
 // _sass/_tokens.scss
 
-// Color
-$bg:        #F2EDE6;   // warm paper white — primary background
-$bg-alt:    #E8E1D4;   // slightly darker paper for cards/sections
-$ink:       #0D0D0D;   // primary text
-$ink-soft:  #1E1C1A;   // body copy
-$ink-mid:   #5C5A57;   // secondary/meta text (use sparingly)
-$accent:    #D4AA20;   // gold — tags, accents, primary CTAs
-$accent-2:  #B58F0E;   // gold hover
-$border:    rgba(13, 13, 13, 0.12);
+// Universal box-sizing reset (matches design_mockups/*.html) — without this,
+// any element combining a percentage width with padding/border renders wider
+// than its parent, which is exactly what caused the TL;DR leaderboard rows
+// to overflow their column.
+*, *::before, *::after { box-sizing: border-box; }
 
-// Blob palette (parallax background shapes)
-$blob-red:    #C8311C;
-$blob-green:  #2F6B3D;
-$blob-navy:   #1F3A6F;
-$blob-purple: #5C2D7A;
-$blob-orange: #E27A2A;
+// Color — redesign palette (see spec §2)
+$bg:        #F2EDE6;   // --paper
+$bg-alt:    #EAE3D7;   // --paper-2
+$ink:       #0D0D0D;
+$ink-soft:  #1E1C1A;
+$ink-mid:   #8A8378;   // --pencil
+$accent:    #52341E;   // --espresso (was gold)
+$accent-2:  #52341E;   // espresso hover
+$stamp:     #C8311C;   // verdict red
+$border:    rgba(13, 13, 13, 0.18);
+
+:root {
+  --paper: #F2EDE6;
+  --paper-2: #EAE3D7;
+  --ink: #0D0D0D;
+  --espresso: #52341E;
+  --pencil: #8A8378;
+  --stamp: #C8311C;
+  --rule: rgba(13,13,13,0.85);
+  --rule-lt: rgba(13,13,13,0.18);
+}
 
 // Type scale (px, mobile-first)
 $f-xs:   12px;
@@ -44,7 +55,6 @@ $container-max: 1280px;
 $gutter: 24px;
 
 // Z
-$z-blob: 0;
 $z-content: 10;
 $z-nav: 100;
 $z-modal: 1000;

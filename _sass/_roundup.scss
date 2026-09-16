@@ -1,0 +1,108 @@
+// _sass/_roundup.scss
+// Roundup layout body — reuses .arthead (from _post.scss) and the shared
+// .readout / .scores / .databar ledger bits from _ui.scss. Full-width in .wrap,
+// no scorecard sidebar (roundups cover multiple shops, not one).
+
+.roundup-copy {
+  max-width: 720px;
+  p { margin-bottom: 22px; font-size: 19px; line-height: 1.6; }
+}
+
+figure.roundup-cover img { width: 360px; max-width: 100%; }
+
+.roundup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 8px 0 44px;
+  border-top: 1.5px solid var(--ink);
+}
+
+.roundup-shop {
+  padding: 32px 0;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.roundup-shop__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 14px;
+}
+
+.roundup-shop__hood {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pencil);
+  margin-bottom: 4px;
+}
+
+.roundup-shop__name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 0.95;
+  margin: 0 0 8px;
+
+  a { color: var(--ink); text-decoration: none; }
+  a:hover { color: var(--stamp); }
+}
+
+.roundup-shop__highlight {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--espresso);
+  margin-bottom: 8px;
+}
+
+.roundup-shop__stars { margin-top: 2px; }
+
+.roundup-shop__photo { margin: 0 0 18px; }
+figure.roundup-shop__photo img { width: 260px; max-width: 100%; display: block; border: 1.5px solid var(--ink); }
+
+.roundup-shop__readout { margin-bottom: 18px; max-width: 480px; }
+
+.roundup-shop__scores { margin-bottom: 18px; }
+
+.roundup-shop__bullets {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  max-width: 660px;
+}
+.roundup-shop__bullets li {
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.roundup-shop__bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--espresso);
+}
+
+.roundup-shop__link {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration-color: var(--stamp);
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .roundup-shop { padding: 24px 0; }
+  .roundup-shop__head { flex-direction: column; }
+  .roundup-shop__readout { max-width: none; }
+}

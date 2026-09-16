@@ -11,6 +11,7 @@ meeting: "Yes"
 maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
 wifi: "110"
 drip: "2.75"
+bathrooms: 2
 lat: 44.9521471
 lng: -93.2976927
 bestfor: "Best seasonal drinks"

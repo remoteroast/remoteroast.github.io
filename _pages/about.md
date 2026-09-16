@@ -31,7 +31,7 @@ comments: false
       <div class="bio">
         <img class="bio__photo" src="{{ 'assets/images/juliet.jpeg' | relative_url }}" alt="Juliet">
         <div class="bio__name">Juliet</div>
-        <p>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Data Analyst at the Star Tribune. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP.</p>
+        <p>After four years as a barista at a Minnesota coffee chain that shall not be named, Juliet is now a Senior Data Analyst at Chicago Public Media. Her favorite espresso drink is a hot americano with not too much water, but she also loves a plain old coffee or a fun flavored latte every once in a while. Juliet also plays in Twin Cities band Good Luck Alaska that recently released their debut EP.</p>
       </div>
     </div>
   </section>

@@ -4,7 +4,9 @@ title: Reviews
 permalink: /reviews
 ---
 
-{% assign entries = site.posts | where_exp: "p", "p.tags contains 'review' or p.tags contains 'roundup'" | sort: "date" | reverse %}
+{% assign review_entries = site.posts | where_exp: "p", "p.tags contains 'review'" %}
+{% assign roundup_entries = site.posts | where_exp: "p", "p.tags contains 'roundup'" %}
+{% assign entries = review_entries | concat: roundup_entries | sort: "date" | reverse %}
 
 <div class="wrap">
   <section class="reviewshead">

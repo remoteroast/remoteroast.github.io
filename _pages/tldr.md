@@ -95,9 +95,17 @@ window.__shops = [
   </div>
 </section>
 
-<!-- Best For — 4 random shops (re-picked on every build), from each review's own bestfor field -->
+<!-- Best For — 4 shops, rotated to a different starting point on every build
+     (re-picked from each review's own bestfor field). Uses only core Liquid
+     filters (modulo/slice/concat) — no custom plugin, since GitHub Pages'
+     native build runs in safe mode and ignores everything in _plugins/. -->
 {% assign bestfor_eligible = review_posts | where_exp: "p", "p.bestfor" %}
-{% assign bestfor_posts = bestfor_eligible | sample_n: 4 %}
+{% assign bestfor_total = bestfor_eligible.size %}
+{% assign bestfor_safe_total = bestfor_total | at_least: 1 %}
+{% assign bestfor_seed = site.time | date: "%s" | modulo: bestfor_safe_total %}
+{% assign bestfor_head = bestfor_eligible | slice: bestfor_seed, bestfor_total %}
+{% assign bestfor_tail = bestfor_eligible | slice: 0, bestfor_seed %}
+{% assign bestfor_posts = bestfor_head | concat: bestfor_tail | slice: 0, 4 %}
 <section class="tldr-bestfor">
   <div class="tldr-bestfor__label">Best For...</div>
   <div class="tldr-bestfor__grid">

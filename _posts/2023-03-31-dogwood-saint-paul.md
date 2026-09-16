@@ -11,6 +11,7 @@ meeting: "Yes"
 maps: "https://goo.gl/maps/kbAe9j9VgzNmC6aw7"
 wifi: "78"
 drip: "3.25"
+bathrooms: 1
 lat: 44.9700
 lng: -93.1837
 bestfor: "Best Quiet Spot"

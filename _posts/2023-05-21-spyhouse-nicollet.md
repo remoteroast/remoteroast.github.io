@@ -11,6 +11,7 @@ meeting: "No"
 maps: "https://goo.gl/maps/BUy9LfKApF46ZUeq7"
 wifi: "21"
 drip: "3.50"
+bathrooms: 1
 lat: 44.9574423
 lng: -93.277698
 bestfor: "Best Big Space"

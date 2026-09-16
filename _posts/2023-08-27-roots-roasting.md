@@ -11,6 +11,7 @@ meeting: "Maybe"
 maps: "https://goo.gl/maps/XdkC9J2pY9uN7cqUA" #! REPLACE !!!!!
 wifi: "120"
 drip: "2.75"
+bathrooms: 1
 lat: 44.9340523
 lng: -93.1659627
 bestfor: "Best Concentration Vibes"

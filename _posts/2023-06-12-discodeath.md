@@ -11,6 +11,7 @@ meeting: "Maybe"
 maps: "https://goo.gl/maps/iirgCA9jYEwJY1UJ7" #! REPLACE !!!!!
 wifi: "200"
 drip: "5"
+bathrooms: 1
 lat: 44.9554416
 lng: -93.288875
 bestfor: "Best Matcha Latte"

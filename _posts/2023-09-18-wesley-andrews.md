@@ -11,6 +11,7 @@ meeting: "Maybe"
 maps: "https://maps.app.goo.gl/DssEBSnnDfem9EZWA" #! REPLACE !!!!!
 wifi: "21"
 drip: "4"
+bathrooms: 1
 lat: 44.9553763
 lng: -93.2760413
 bestfor: "Most Interesting Menu"

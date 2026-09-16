@@ -48,18 +48,30 @@ layout: default
         {% if page.rating %}<span class="r">{{ page.rating }}/5</span>{% endif %}
       </div>
       {% if page.wifi or page.drip or page.meeting or page.bathrooms %}
+      {% comment %} 2-column grid: if the cell count is odd, the last
+      present cell spans the full row instead of leaving a dangling empty
+      box where a 4th cell would have been (most posts have no bathrooms
+      field, so this is the common case, not an edge case). {% endcomment %}
+      {% assign fact_str = "" %}
+      {% if page.wifi %}{% assign fact_str = fact_str | append: "wifi," %}{% endif %}
+      {% if page.drip %}{% assign fact_str = fact_str | append: "drip," %}{% endif %}
+      {% if page.meeting %}{% assign fact_str = fact_str | append: "meeting," %}{% endif %}
+      {% if page.bathrooms %}{% assign fact_str = fact_str | append: "bathrooms," %}{% endif %}
+      {% assign fact_list = fact_str | split: "," %}
+      {% assign fact_odd = fact_list.size | modulo: 2 %}
+      {% assign last_fact = fact_list | last %}
       <div class="statcard__facts">
         {% if page.wifi %}
-        <div class="statcard__cell"><div class="statcard__k">Wifi</div><div class="statcard__v">{{ page.wifi }} <small>mbps</small></div></div>
+        <div class="statcard__cell{% if fact_odd == 1 and last_fact == 'wifi' %} statcard__cell--full{% endif %}"><div class="statcard__k">Wifi</div><div class="statcard__v">{{ page.wifi }} <small>mbps</small></div></div>
         {% endif %}
         {% if page.drip %}
-        <div class="statcard__cell"><div class="statcard__k">Drip</div><div class="statcard__v">${{ page.drip }}</div></div>
+        <div class="statcard__cell{% if fact_odd == 1 and last_fact == 'drip' %} statcard__cell--full{% endif %}"><div class="statcard__k">Drip</div><div class="statcard__v">${{ page.drip }}</div></div>
         {% endif %}
         {% if page.meeting %}
-        <div class="statcard__cell"><div class="statcard__k">Meetings</div><div class="statcard__v">{{ page.meeting | upcase }}</div></div>
+        <div class="statcard__cell{% if fact_odd == 1 and last_fact == 'meeting' %} statcard__cell--full{% endif %}"><div class="statcard__k">Meetings</div><div class="statcard__v">{{ page.meeting | upcase }}</div></div>
         {% endif %}
         {% if page.bathrooms %}
-        <div class="statcard__cell"><div class="statcard__k">Bathrooms</div><div class="statcard__v">{{ page.bathrooms }}</div></div>
+        <div class="statcard__cell{% if fact_odd == 1 and last_fact == 'bathrooms' %} statcard__cell--full{% endif %}"><div class="statcard__k">Bathrooms</div><div class="statcard__v">{{ page.bathrooms }}</div></div>
         {% endif %}
       </div>
       {% endif %}

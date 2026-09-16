@@ -36,6 +36,7 @@
 .statcard__facts { display:grid; grid-template-columns: 1fr 1fr; }
 .statcard__cell { padding: 12px 16px; border-bottom: 1px solid var(--rule-lt); }
 .statcard__cell:nth-child(odd) { border-right: 1px solid var(--rule-lt); }
+.statcard__cell--full { grid-column: 1 / -1; border-right: 0; }
 .statcard__k { font-family:'DM Mono',monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pencil); }
 .statcard__v { font-family:'DM Mono',monospace; font-size: 19px; font-weight: 500; margin-top: 2px; }
 .statcard__v small { font-size: 11px; color: var(--pencil); }

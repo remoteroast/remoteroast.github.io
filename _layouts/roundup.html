@@ -15,7 +15,7 @@ layout: default
   </div>
 
   {% if page.image %}
-  <figure class="artphoto" style="margin-top: 0;">
+  <figure class="artphoto roundup-cover" style="margin-top: 0;">
     <img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | prepend: '/' | relative_url }}{% endif %}" alt="{{ page.title }}">
   </figure>
   {% endif %}
@@ -31,24 +31,24 @@ layout: default
   <!-- Shop cards, ledger look -->
   <div class="roundup-list">
     {% for shop in page.shops %}
-    <article class="roundup-card">
-      <div class="roundup-card__head">
-        <div class="roundup-card__id">
-          <span class="roundup-card__hood">{{ shop.hood }}{% if shop.city %} · {{ shop.city }}{% endif %}</span>
-          <h2 class="roundup-card__name"><a href="{{ shop.slug | prepend: '/' | relative_url }}">{{ shop.name }}</a></h2>
-          {% if shop.stars %}<div class="roundup-card__stars">{% include stars.html rating=shop.stars %}</div>{% endif %}
+    <article class="roundup-shop">
+      <div class="roundup-shop__head">
+        <div class="roundup-shop__id">
+          <span class="roundup-shop__hood">{{ shop.hood }}{% if shop.city %} · {{ shop.city }}{% endif %}</span>
+          <h2 class="roundup-shop__name"><a href="{{ shop.slug | prepend: '/' | relative_url }}">{{ shop.name }}</a></h2>
+          {% if shop.highlight %}<div class="roundup-shop__highlight">{{ shop.highlight }}</div>{% endif %}
+          {% if shop.stars %}<div class="roundup-shop__stars">{% include stars.html rating=shop.stars %}</div>{% endif %}
         </div>
-        {% if shop.highlight %}<div class="roundup-card__highlight">{{ shop.highlight }}</div>{% endif %}
       </div>
 
       {% if shop.image %}
-      <figure class="artphoto roundup-card__photo">
+      <figure class="artphoto roundup-shop__photo">
         <img src="{{ shop.image | prepend: '/assets/images/' | relative_url }}" alt="{{ shop.name }}">
       </figure>
       {% endif %}
 
       {% if shop.wifi or shop.drip or shop.meetings %}
-      <div class="readout roundup-card__readout">
+      <div class="readout roundup-shop__readout">
         {% if shop.wifi %}
         <div class="readout__cell"><div class="readout__k">Wifi</div><div class="readout__v">{{ shop.wifi }} <small>mbps</small></div></div>
         {% endif %}
@@ -62,7 +62,7 @@ layout: default
       {% endif %}
 
       {% if shop.scores %}
-      <div class="scores roundup-card__scores">
+      <div class="scores roundup-shop__scores">
         {% assign score_keys = "coffee,wifi,seating,vibe,outlet,quiet" | split: "," %}
         {% assign score_labels = "Coffee,Wifi,Seating,Vibe,Outlets,Quiet" | split: "," %}
         {% for key in score_keys %}
@@ -79,14 +79,14 @@ layout: default
       {% endif %}
 
       {% if shop.bullets %}
-      <ul class="roundup-card__bullets">
+      <ul class="roundup-shop__bullets">
         {% for bullet in shop.bullets %}
         <li>{{ bullet }}</li>
         {% endfor %}
       </ul>
       {% endif %}
 
-      <a href="{{ shop.slug | prepend: '/' | relative_url }}" class="roundup-card__link">Read Full Review →</a>
+      <a href="{{ shop.slug | prepend: '/' | relative_url }}" class="roundup-shop__link">Read Full Review →</a>
     </article>
     {% endfor %}
   </div>

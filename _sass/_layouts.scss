@@ -184,37 +184,6 @@
   }
 }
 
-.pro-tip {
-  background: #0D0D0D;
-  padding: 20px 24px;
-  margin: 8px 0 32px;
-  &__label {
-    display: inline-block;
-    background: $accent;
-    color: $ink;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    font-weight: bold;
-    margin-bottom: 12px;
-  }
-  p {
-    font-family: 'Newsreader', serif;
-    font-style: italic;
-    font-size: $f-sm;
-    color: rgba(245,243,238,0.85);
-    line-height: 1.5;
-    margin: 0 !important;
-    a {
-      color: $accent;
-      text-decoration: underline;
-      &:hover { color: lighten($accent, 15%); }
-    }
-  }
-}
-
 .post-sidebar {
   padding-left: 40px;
   padding-top: 52px;

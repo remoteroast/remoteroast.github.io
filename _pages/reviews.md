@@ -8,7 +8,6 @@ permalink: /reviews
 
 <div class="wrap">
   <section class="reviewshead">
-    <div class="reviewshead__kicker">Reviews + round ups, newest first</div>
     <h1>Every Review</h1>
     <p class="lead">Every shop we've hauled a laptop into, plus the round ups. Newest first.</p>
   </section>
@@ -22,7 +21,7 @@ permalink: /reviews
             <th scope="col">Type</th>
             <th scope="col">Neighborhood</th>
             <th scope="col">Reviewed</th>
-            <th scope="col">Rating</th>
+            <th scope="col" class="rating">Rating</th>
           </tr>
         </thead>
         <tbody>
@@ -34,7 +33,7 @@ permalink: /reviews
             <td class="hood">{% if entry.tags contains 'review' %}Review{% else %}Round Up{% endif %}</td>
             <td class="hood">{% if entry.tags contains 'review' %}{{ entry.categories[0] }}{% else %}—{% endif %}</td>
             <td class="hood">{{ entry.date | date: "%b %Y" }}</td>
-            <td class="num">{% if entry.tags contains 'review' %}<span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and entry.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ entry.rating }}{% else %}—{% endif %}</td>
+            <td class="rating">{% if entry.tags contains 'review' %}<span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and entry.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ entry.rating }}{% else %}—{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>

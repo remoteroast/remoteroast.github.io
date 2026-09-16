@@ -8,6 +8,8 @@
   p { margin-bottom: 22px; font-size: 19px; line-height: 1.6; }
 }
 
+figure.roundup-cover img { width: 360px; max-width: 100%; }
+
 .roundup-list {
   display: flex;
   flex-direction: column;
@@ -16,12 +18,12 @@
   border-top: 1.5px solid var(--ink);
 }
 
-.roundup-card {
+.roundup-shop {
   padding: 32px 0;
   border-bottom: 1.5px solid var(--ink);
 }
 
-.roundup-card__head {
+.roundup-shop__head {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -30,7 +32,7 @@
   margin-bottom: 14px;
 }
 
-.roundup-card__hood {
+.roundup-shop__hood {
   display: block;
   font-family: 'DM Mono', monospace;
   font-size: 11px;
@@ -40,7 +42,7 @@
   margin-bottom: 4px;
 }
 
-.roundup-card__name {
+.roundup-shop__name {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -52,45 +54,45 @@
   a:hover { color: var(--stamp); }
 }
 
-.roundup-card__stars { margin-top: 2px; }
-
-.roundup-card__highlight {
-  font-family: 'Caveat', cursive;
-  font-weight: 600;
-  font-size: 22px;
-  color: var(--stamp);
-  transform: rotate(-1.5deg);
-  white-space: nowrap;
+.roundup-shop__highlight {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--espresso);
+  margin-bottom: 8px;
 }
 
-.roundup-card__photo { margin: 0 0 18px; }
-.roundup-card__photo img { width: 100%; display: block; border: 1.5px solid var(--ink); }
+.roundup-shop__stars { margin-top: 2px; }
 
-.roundup-card__readout { margin-bottom: 18px; max-width: 480px; }
+.roundup-shop__photo { margin: 0 0 18px; }
+figure.roundup-shop__photo img { width: 260px; max-width: 100%; display: block; border: 1.5px solid var(--ink); }
 
-.roundup-card__scores { margin-bottom: 18px; }
+.roundup-shop__readout { margin-bottom: 18px; max-width: 480px; }
 
-.roundup-card__bullets {
+.roundup-shop__scores { margin-bottom: 18px; }
+
+.roundup-shop__bullets {
   list-style: none;
   margin: 0 0 16px;
   padding: 0;
   max-width: 660px;
 }
-.roundup-card__bullets li {
+.roundup-shop__bullets li {
   font-size: 17px;
   line-height: 1.6;
   padding-left: 20px;
   position: relative;
   margin-bottom: 10px;
 }
-.roundup-card__bullets li::before {
+.roundup-shop__bullets li::before {
   content: '—';
   position: absolute;
   left: 0;
   color: var(--espresso);
 }
 
-.roundup-card__link {
+.roundup-shop__link {
   font-family: 'DM Mono', monospace;
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -100,7 +102,7 @@
 }
 
 @media (max-width: 640px) {
-  .roundup-card { padding: 24px 0; }
-  .roundup-card__head { flex-direction: column; }
-  .roundup-card__readout { max-width: none; }
+  .roundup-shop { padding: 24px 0; }
+  .roundup-shop__head { flex-direction: column; }
+  .roundup-shop__readout { max-width: none; }
 }

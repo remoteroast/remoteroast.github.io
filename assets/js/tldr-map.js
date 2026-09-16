@@ -57,9 +57,8 @@
       if (window.matchMedia('(max-width: 768px)').matches) {
         map.dragging.disable();
       }
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19
       }).addTo(map);
 
@@ -179,16 +178,13 @@
     });
   }
 
-  // Leaderboard clicks
+  // Leaderboard clicks — only the shop name (the <a>) navigates to the
+  // review, on every device. Clicking anywhere else in the row (rank,
+  // city, stars, padding) just selects the shop on the map/detail panel.
   document.querySelectorAll('.leaderboard-row').forEach(function (row, idx) {
     row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
       var isMobile = window.innerWidth < 768;
-      // On desktop: let the shop name link navigate normally
-      // On mobile: intercept the link and show detail instead (CTA in detail panel is the nav entry point)
-      if (e.target.tagName === 'A') {
-        if (!isMobile) return;
-        e.preventDefault();
-      }
       var shopTitle = row.dataset.shop;
       var lat = parseFloat(row.dataset.lat);
       var lng = parseFloat(row.dataset.lng);

@@ -21,8 +21,7 @@
 
 /* ── Two-column body ──────────────────────── */
 .artgrid {
-  display: grid; grid-template-columns: minmax(0, 660px) 330px; gap: 56px;
-  justify-content: space-between;
+  display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 56px;
   padding: 28px 0 72px; align-items: start;
 }
 
@@ -52,7 +51,7 @@
 .post-sidebar-map__address { font-family:'DM Mono',monospace; font-size: 10px; color: var(--pencil); margin-top: 8px; letter-spacing: 0.08em; }
 
 /* article body */
-.artbody { max-width: 660px; }
+.artbody { max-width: none; min-width: 0; }
 .artbody p { margin-bottom: 22px; font-size: 19px; line-height: 1.6; }
 .artbody h2, .artbody h5, .artbody h6 {
   font-family:'Bebas Neue',sans-serif; font-weight: 400; text-transform: uppercase;

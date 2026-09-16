@@ -4,13 +4,19 @@
 // Ported verbatim from design_mockups/about.html <style>
 
 .btn {
-  display:inline-block; background: var(--paper); color: var(--ink);
+  display:inline-block; background: var(--ink); color: var(--paper);
   font-family:'DM Mono',monospace; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
-  text-decoration: none; padding: 15px 26px; border: 1.5px solid var(--paper);
+  text-decoration: none; padding: 15px 26px; border: 1.5px solid var(--ink);
 }
 .btn:hover { background: var(--espresso); color: var(--paper); border-color: var(--espresso); }
-.btn--ghost { background: transparent; color: var(--paper); }
+/* Inverted button — used on dark backgrounds (About support box) */
+.btn--ghost { background: transparent; color: var(--paper); border-color: var(--paper); }
 .btn--ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.support__box .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.support__box .btn:hover { background: var(--espresso); color: var(--paper); border-color: var(--espresso); }
+/* Outlined button — used alongside a primary .btn (CTA blocks, TL;DR support) */
+.btn--secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--secondary:hover { background: var(--ink); color: var(--paper); }
 
 /* ── Section head (shared: home, TL;DR, posts) ───────── */
 .sec-head { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap: 8px 16px; margin-bottom: 6px; }
@@ -54,6 +60,9 @@ thead th {
   position: sticky; top: 0;
 }
 thead th.num, td.num { text-align: right; }
+/* Rating columns left-align so the rating squares line up regardless of
+   how many digits the number itself has (3 vs 3.5 vs 4.5). */
+thead th.rating, td.rating { text-align: left; }
 tbody td {
   padding: 12px 14px;
   border-top: 1px solid var(--rule-lt);

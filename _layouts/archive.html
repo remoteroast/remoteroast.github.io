@@ -4,7 +4,6 @@ layout: default
 
 <div class="wrap">
   <section class="reviewshead">
-    <div class="reviewshead__kicker">{{ page.type | capitalize }}</div>
     <h1>{{ page.title }}</h1>
     <p class="lead">Every review and round up filed under "{{ page.title }}".</p>
   </section>
@@ -18,7 +17,7 @@ layout: default
             <th scope="col">Type</th>
             <th scope="col">Neighborhood</th>
             <th scope="col">Reviewed</th>
-            <th scope="col">Rating</th>
+            <th scope="col" class="rating">Rating</th>
           </tr>
         </thead>
         <tbody>
@@ -30,7 +29,7 @@ layout: default
             <td class="hood">{% if post.tags contains 'review' %}Review{% else %}Round Up{% endif %}</td>
             <td class="hood">{% if post.tags contains 'review' %}{{ post.categories[0] }}{% else %}—{% endif %}</td>
             <td class="hood">{{ post.date | date: "%b %Y" }}</td>
-            <td class="num">{% if post.rating %}<span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}{% else %}—{% endif %}</td>
+            <td class="rating">{% if post.rating %}<span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}{% else %}—{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>

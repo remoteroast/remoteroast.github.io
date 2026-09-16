@@ -27,34 +27,6 @@
 .star--empty  { color: $ink; opacity: 0.18; }
 
 // ─── Buttons ──────────────────────────────────────────────────────────────────
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  font-family: 'DM Mono', monospace;
-  font-size: $f-sm;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  border: 2px solid $ink;
-  background: $accent;
-  color: $ink;
-  box-shadow: 3px 3px 0 $ink;
-  transition: transform 0.1s, box-shadow 0.1s;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 $ink;
-    background: $accent-2;
-    color: $ink;
-  }
-}
-
-.btn--secondary {
-  background: transparent;
-  &:hover { background: $bg-alt; }
-}
-
 // ─── Shop Card ────────────────────────────────────────────────────────────────
 .shop-card {
   display: block;
@@ -224,54 +196,6 @@ table.table {
   }
 }
 
-
-// ─── Leaderboard ─────────────────────────────────────────────────────────────
-.leaderboard-row {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr auto;
-  align-items: center;
-  gap: $s-4;
-  padding: $s-4 $s-5;
-  border-bottom: 1px solid $border;
-  cursor: pointer;
-  transition: background 0.1s;
-
-  &:hover { background: $bg-alt; }
-
-  &.is-active {
-    background: $bg-alt;
-    border-left: 3px solid $accent;
-  }
-
-  &__rank {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: $f-xl;
-    color: $ink;
-    line-height: 1;
-  }
-
-  &__name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: $f-lg;
-    color: $ink;
-    line-height: 1.1;
-    text-decoration: none;
-
-    &:hover { color: $accent-2; }
-  }
-
-  &__sub {
-    font-family: 'DM Mono', monospace;
-    font-size: $f-xs;
-    color: $ink-mid;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  &__stars {
-    font-size: 14px;
-  }
-}
 
 // ─── Accessibility ────────────────────────────────────────────────────────────
 *:focus-visible {

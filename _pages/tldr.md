@@ -35,7 +35,6 @@ window.__shops = [
 <!-- Hero -->
 <section class="tldr-hero">
   <div>
-    <div class="tldr-hero__label">The Shortcut</div>
     <h1 class="tldr-hero__title">TL;DR</h1>
   </div>
   <div class="tldr-hero__stats">
@@ -96,30 +95,18 @@ window.__shops = [
   </div>
 </section>
 
-<!-- Best For -->
+<!-- Best For — 4 random shops (re-picked on every build), from each review's own bestfor field -->
+{% assign bestfor_eligible = review_posts | where_exp: "p", "p.bestfor" %}
+{% assign bestfor_posts = bestfor_eligible | sample_n: 4 %}
 <section class="tldr-bestfor">
   <div class="tldr-bestfor__label">Best For...</div>
   <div class="tldr-bestfor__grid">
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Coffee</div>
-      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
-      <div class="tldr-bestfor__card-reason">Pineapple espresso. Iconic. Weird. Perfect.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Seating</div>
-      <div class="tldr-bestfor__card-winner">FRGMNT</div>
-      <div class="tldr-bestfor__card-reason">Freaking huge. Freaking seated. Never kicked out.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Best Vibe</div>
-      <div class="tldr-bestfor__card-winner">Wesley Andrews</div>
-      <div class="tldr-bestfor__card-reason">The playlist was doing something. We don't ask questions.</div>
-    </div>
-    <div class="tldr-bestfor__card">
-      <div class="tldr-bestfor__card-label">Most Caffeinated Trip</div>
-      <div class="tldr-bestfor__card-winner">Roots Roasting</div>
-      <div class="tldr-bestfor__card-reason">The beans hit different. We didn't sleep for 11 hours. 10/10.</div>
-    </div>
+    {% for post in bestfor_posts %}
+    <a class="tldr-bestfor__card" href="{{ post.url | relative_url }}">
+      <div class="tldr-bestfor__card-label">{{ post.bestfor }}</div>
+      <div class="tldr-bestfor__card-winner">{{ post.title }}</div>
+    </a>
+    {% endfor %}
   </div>
 </section>
 
@@ -139,7 +126,7 @@ window.__shops = [
           <th scope="col" class="num">#</th>
           <th scope="col">Shop</th>
           <th scope="col">Neighborhood</th>
-          <th scope="col" class="num">Rating</th>
+          <th scope="col" class="rating">Rating</th>
           <th scope="col" class="num">Wifi</th>
           <th scope="col" class="num">Drip</th>
           <th scope="col">MTGS?</th>
@@ -156,7 +143,7 @@ window.__shops = [
           <td class="rank">{% if vrank < 10 %}0{% endif %}{{ vrank }}</td>
           <td class="shop"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
           <td class="hood">{% if post.maps %}<a href="{{ post.maps }}" target="_blank" rel="noopener">{{ post.categories[0] }}</a>{% else %}{{ post.categories[0] }}{% endif %}</td>
-          <td class="num"><span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}</td>
+          <td class="rating"><span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}</td>
           <td class="num">{{ post.wifi }}</td>
           <td class="num">{% if post.drip %}${{ post.drip }}{% endif %}</td>
           <td class="mtg">{% if post.meeting == "No" %}<span class="no">{{ post.meeting }}</span>{% else %}{{ post.meeting }}{% endif %}</td>

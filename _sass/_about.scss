@@ -16,7 +16,7 @@
 
 /* ── Mission body ─────────────────────────── */
 .mission { padding-block: 40px 8px; }
-.mission__grid { max-width: 720px; }
+.mission__grid { max-width: none; }
 .mission__body p { font-size: 19px; line-height: 1.6; margin-bottom: 22px; }
 .mission__body p:last-child { margin-bottom: 0; }
 

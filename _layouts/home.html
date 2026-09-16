@@ -12,7 +12,7 @@ layout: default
 <section class="wrap hero">
   <div>
     <div class="hero__label">Latest review</div>
-    <h1 class="hero__title">{{ featured.title }}</h1>
+    <h1 class="hero__title"><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h1>
     <p class="hero__where">{{ featured.categories[0] }}{% if featured.categories[1] %}, {{ featured.categories[1] }}{% endif %}. Reviewed by {{ author.display_name }}, {{ featured.date | date: "%B %Y" }}.</p>
     <p class="hero__quote">{{ featured.excerpt | strip_html | truncatewords: 30 }}</p>
 
@@ -60,7 +60,6 @@ layout: default
     <div class="title-wrap">
       <h2>Recent Reviews</h2>
     </div>
-    <span class="geo">Minneapolis &amp; St. Paul</span>
   </div>
 
   <div class="sheet">
@@ -70,7 +69,7 @@ layout: default
           <th scope="col">Shop</th>
           <th scope="col">Neighborhood</th>
           <th scope="col">Reviewed</th>
-          <th scope="col">Rating</th>
+          <th scope="col" class="rating">Rating</th>
         </tr>
       </thead>
       <tbody>
@@ -81,14 +80,14 @@ layout: default
           <td class="shop"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
           <td class="hood">{{ post.categories[0] }}</td>
           <td class="hood">{{ post.date | date: "%b %Y" }}</td>
-          <td class="num"><span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}</td>
+          <td class="rating"><span class="databar">{% for i in (1..5) %}<i{% if i <= full %} class="on"{% elsif i == half_pos and post.rating > full %} class="half"{% endif %}></i>{% endfor %}</span>{{ post.rating }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
   <div style="margin-top: 20px;">
-    <a class="btn" href="{{ '/tldr' | relative_url }}">All shops, ranked and mapped → TL;DR</a>
+    <a class="btn" href="{{ '/tldr' | relative_url }}">All stats → TL;DR</a>
   </div>
 </section>
 
@@ -97,7 +96,6 @@ layout: default
 <section class="wrap roundups">
   <div class="sec-head">
     <h2>Round Ups</h2>
-    <span class="geo">multi-shop</span>
   </div>
   <div class="roundups__grid">
     {% for post in roundups %}

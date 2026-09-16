@@ -1,5 +1,11 @@
 // _sass/_tokens.scss
 
+// Universal box-sizing reset (matches design_mockups/*.html) — without this,
+// any element combining a percentage width with padding/border renders wider
+// than its parent, which is exactly what caused the TL;DR leaderboard rows
+// to overflow their column.
+*, *::before, *::after { box-sizing: border-box; }
+
 // Color — redesign palette (see spec §2)
 $bg:        #F2EDE6;   // --paper
 $bg-alt:    #EAE3D7;   // --paper-2

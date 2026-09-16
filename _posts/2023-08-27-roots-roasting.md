@@ -11,7 +11,7 @@ meeting: "Maybe"
 maps: "https://goo.gl/maps/XdkC9J2pY9uN7cqUA" #! REPLACE !!!!!
 wifi: "120"
 drip: "2.75"
-bathrooms: 1
+bathrooms: 2
 lat: 44.9340523
 lng: -93.1659627
 bestfor: "Best Concentration Vibes"
@@ -46,7 +46,7 @@ scores:
       <th scope="col"># Tables</th>
       <th scope="col"># Seats</th>
       <th scope="col">% Crowded</th>
-      <th scope="col" style="color:#D55672;"># Bathrooms</th>
+      <th scope="col"># Bathrooms</th>
     </tr>
   </thead>
   <tbody>
@@ -56,7 +56,7 @@ scores:
       <td>12</td>
       <td>34</td>
       <td>70%</td>
-      <td style="color:#D55672;">2</td>
+      <td>2</td>
     </tr>
   </tbody>
   </table>
